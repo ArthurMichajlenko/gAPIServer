@@ -31,17 +31,57 @@ func main() {
 	e.Use(middleware.Recover())
 	// Routes
 	e.GET("/", hello)
+	e.GET("/couriers", getCouriers)
+	e.GET("/clients", getClients)
+	e.GET("/orders", getOrders)
 	// Start server
 	e.Logger.Fatal(e.Start(":1323"))
 
 }
 
-// Handler
+// Handlers
 func hello(c echo.Context) error {
+	return c.String(http.StatusOK, "Hello World")
+}
+
+func getCouriers(c echo.Context) error {
+	var couriers Couriers
+	err := db.Select(&couriers, "SELECT * FROM couriers")
+	if err != nil {
+		log.Println(err)
+	}
+	return c.JSON(http.StatusOK, &couriers)
+}
+
+func getClients(c echo.Context) error {
+	var clients Clients
+	err := db.Select(&clients, "SELECT * FROM clients")
+	if err != nil {
+		log.Println(err)
+	}
+	return c.JSON(http.StatusOK, &clients)
+}
+
+func getOrders(c echo.Context) error {
 	var orders Orders
 	err := db.Select(&orders, "SELECT * FROM orders")
 	if err != nil {
 		log.Println(err)
 	}
+	for i, order := range orders {
+		err := db.Select(&order.ConsistsTo, "SELECT product, quantity, price FROM consists_to WHERE id = ?", order.ID)
+		if err != nil {
+			log.Println(err)
+		}
+		orders[i].ConsistsTo = order.ConsistsTo
+	}
+	for i, order := range orders {
+		err := db.Select(&order.ConsistsFrom, "SELECT product, quantity, price FROM consists_from WHERE id = ?", order.ID)
+		if err != nil {
+			log.Println(err)
+		}
+		orders[i].ConsistsFrom = order.ConsistsFrom
+	}
 	return c.JSON(http.StatusOK, &orders)
 }
+
