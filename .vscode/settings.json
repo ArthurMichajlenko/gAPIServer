@@ -1,0 +1,20 @@
+{
+    "sqltools.connections": [
+        {
+            "database": "gelibert",
+            "dialect": "MySQL",
+            "name": "MySQL",
+            "password": "Nfnmzyf",
+            "port": 3306,
+            "server": "localhost",
+            "username": "root"
+        },
+        {
+            "database": "./gelibert.db",
+            "dialect": "SQLite",
+            "isActive": false,
+            "isConnected": false,
+            "name": "SQLite"
+        }
+    ]
+}
