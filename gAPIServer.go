@@ -22,7 +22,6 @@ func main() {
 	log.Println("Hello World")
 	var orders Orders
 	err := db.Select(&orders, "SELECT * FROM orders")
-	log.Println("Test")
 	if err != nil {
 		log.Println(err)
 	}
