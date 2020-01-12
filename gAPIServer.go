@@ -1,10 +1,10 @@
 package main
 
 import (
-	"log"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/jmoiron/sqlx"
 	_ "github.com/mattn/go-sqlite3"
+	"log"
 )
 
 var db *sqlx.DB
@@ -21,10 +21,10 @@ func init() {
 func main() {
 	log.Println("Hello World")
 	var orders Orders
-	err:=db.Select(&orders, "SELECT * FROM orders")
+	err := db.Select(&orders, "SELECT * FROM orders")
+	log.Println("Test")
 	if err != nil {
 		log.Println(err)
 	}
 	log.Println(orders)
 }
-
