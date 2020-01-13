@@ -39,6 +39,7 @@ func main() {
 	g.GET("/clients", getClients)
 	g.GET("/orders", getOrders)
 	// Start server
+	// e.HideBanner=true
 	e.Logger.Fatal(e.Start(":1323"))
 
 }
