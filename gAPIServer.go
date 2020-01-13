@@ -1,7 +1,9 @@
 package main
 
 import (
+	"github.com/dgrijalva/jwt-go"
 	"log"
+	"time"
 
 	"net/http"
 
@@ -31,9 +33,11 @@ func main() {
 	e.Use(middleware.Recover())
 	// Routes
 	e.GET("/", hello)
-	e.GET("/couriers", getCouriers)
-	e.GET("/clients", getClients)
-	e.GET("/orders", getOrders)
+	e.POST("/login", login)
+	g := e.Group("/data", middleware.JWT([]byte("gelibert")))
+	g.GET("/couriers", getCouriers)
+	g.GET("/clients", getClients)
+	g.GET("/orders", getOrders)
 	// Start server
 	e.Logger.Fatal(e.Start(":1323"))
 
@@ -64,10 +68,30 @@ func getClients(c echo.Context) error {
 
 func getOrders(c echo.Context) error {
 	var orders Orders
-	err := db.Select(&orders, "SELECT * FROM orders")
+	var couriers Couriers
+	user := c.Get("user").(*jwt.Token)
+	claims := user.Claims.(jwt.MapClaims)
+	imei := claims["imei"].(string)
+	err := db.Select(&couriers, "SELECT * FROM couriers WHERE imei = ?", imei)
 	if err != nil {
 		log.Println(err)
 	}
+	// log.Println(imei, couriers[0].Name, couriers[0].ID)
+	if c.QueryParam("client") == "" {
+		err := db.Select(&orders, "SELECT * FROM orders WHERE courier_id = ?", couriers[0].ID)
+		if err != nil {
+			log.Println(err)
+		}
+	} else {
+		err := db.Select(&orders, "SELECT * FROM orders WHERE client_id = ? AND courier_id = ?", c.QueryParam("client"), couriers[0].ID)
+		if err != nil {
+			log.Println(err)
+		}
+	}
+	// err = db.Select(&orders, "SELECT * FROM orders WHERE courier_id = ? AND client_id = ?", c.QueryParam("courier"), c.QueryParam("client"))
+	// if err != nil {
+	// 	log.Println(err)
+	// }
 	for i, order := range orders {
 		err := db.Select(&order.ConsistsTo, "SELECT product, quantity, price FROM consists_to WHERE id = ?", order.ID)
 		if err != nil {
@@ -85,3 +109,23 @@ func getOrders(c echo.Context) error {
 	return c.JSON(http.StatusOK, &orders)
 }
 
+func login(c echo.Context) error {
+	var couriers Couriers
+	// imei := c.QueryParam("imei")
+	imei := c.FormValue("imei")
+	err := db.Select(&couriers, "SELECT * FROM couriers WHERE imei = ?", imei)
+	if err != nil {
+		log.Println(err)
+	}
+	if couriers == nil {
+		return echo.ErrUnauthorized
+	}
+	token := jwt.New(jwt.SigningMethodHS256)
+	claims := token.Claims.(jwt.MapClaims)
+	claims["imei"] = imei
+	claims["exp"] = time.Now().Add(time.Hour * 72).Unix()
+	t, err := token.SignedString([]byte("gelibert"))
+	return c.JSON(http.StatusOK, map[string]string{
+		"token": t,
+	})
+}
