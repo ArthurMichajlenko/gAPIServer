@@ -124,7 +124,8 @@ func login(c echo.Context) error {
 	token := jwt.New(jwt.SigningMethodHS256)
 	claims := token.Claims.(jwt.MapClaims)
 	claims["imei"] = imei
-	claims["exp"] = time.Now().Add(time.Hour * 72).Unix()
+	// claims["exp"] = time.Now().Add(time.Hour * 72).Unix()
+	// claims["exp"] = time.Now().Add(time.Minute * 30).Unix()
 	t, err := token.SignedString([]byte("gelibert"))
 	return c.JSON(http.StatusOK, map[string]string{
 		"token": t,
