@@ -51,7 +51,10 @@ func hello(c echo.Context) error {
 
 func getCouriers(c echo.Context) error {
 	var couriers Couriers
-	err := db.Select(&couriers, "SELECT * FROM couriers")
+	user := c.Get("user").(*jwt.Token)
+	claims := user.Claims.(jwt.MapClaims)
+	imei := claims["imei"].(string)
+	err := db.Select(&couriers, "SELECT * FROM couriers WHERE imei = ?", imei)
 	if err != nil {
 		log.Println(err)
 	}
@@ -59,10 +62,29 @@ func getCouriers(c echo.Context) error {
 }
 
 func getClients(c echo.Context) error {
+	var courierID int
+	var clientIDs []int
+	var client Client
 	var clients Clients
-	err := db.Select(&clients, "SELECT * FROM clients")
+	user := c.Get("user").(*jwt.Token)
+	claims := user.Claims.(jwt.MapClaims)
+	imei := claims["imei"].(string)
+	row := db.QueryRowx("SELECT id FROM couriers WHERE imei = ?", imei)
+	err := row.Scan(&courierID)
 	if err != nil {
 		log.Println(err)
+	}
+	err = db.Select(&clientIDs, "SELECT client_id FROM orders WHERE courier_id = ?", courierID)
+	if err != nil {
+		log.Println(err)
+	}
+	for _, clientID := range clientIDs {
+		row := db.QueryRowx("SELECT * FROM clients WHERE id = ?", clientID)
+		err := row.Scan(&client.ID, &client.Name, &client.Tel, &client.Address)
+		if err != nil {
+			log.Println(err)
+		}
+		clients = append(clients, client)
 	}
 	return c.JSON(http.StatusOK, &clients)
 }
