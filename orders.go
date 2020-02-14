@@ -37,4 +37,5 @@ type Consist struct {
 	Product  string  `json:"product" db:"product"`
 	Quantity float64 `json:"quantity" db:"quantity"`
 	Price    float64 `json:"price" db:"price"`
+	ExtInfo  string  `json:"ext_info" db:"ext_info"`
 }
