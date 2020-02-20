@@ -1,6 +1,9 @@
 package main
 
-import "encoding/json"
+import (
+	"encoding/json"
+	"time"
+)
 
 // Orders slice of Order
 type Orders []Order
@@ -28,8 +31,9 @@ type Order struct {
 	OrderCost     float64   `json:"order_cost" db:"order_cost"`
 	Delivered     int       `json:"delivered" db:"delivered"`
 	DeliveryDelay int       `json:"delivery_delay" db:"delivery_delay"`
-	DateStart     string    `json:"date_start" db:"date_start"`
-	DateFinish    string    `json:"date_finish" db:"date_finish"`
+	DateStart     time.Time `json:"date_start" db:"date_start"`
+	DateFinish    time.Time `json:"date_finish" db:"date_finish"`
+	TimeStamp     time.Time `json:"timestamp" db:"timestamp"`
 }
 
 //Consist products of Order (Delivery: 'true' deliver to Client, 'false' return from Client)
