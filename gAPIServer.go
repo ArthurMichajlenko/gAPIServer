@@ -38,6 +38,7 @@ func main() {
 	g.GET("/couriers", getCouriers)
 	g.GET("/clients", getClients)
 	g.GET("/orders", getOrders)
+	// g.PUT("/orders", putOrders)
 	// Start server
 	// e.HideBanner=true
 	e.Logger.Fatal(e.Start(":1323"))
@@ -116,14 +117,14 @@ func getOrders(c echo.Context) error {
 	// 	log.Println(err)
 	// }
 	for i, order := range orders {
-		err := db.Select(&order.ConsistsTo, "SELECT product, quantity, price FROM consists_to WHERE id = ?", order.ID)
+		err := db.Select(&order.ConsistsTo, "SELECT product, quantity, price, ext_info FROM consists_to WHERE id = ?", order.ID)
 		if err != nil {
 			log.Println(err)
 		}
 		orders[i].ConsistsTo = order.ConsistsTo
 	}
 	for i, order := range orders {
-		err := db.Select(&order.ConsistsFrom, "SELECT product, quantity, price FROM consists_from WHERE id = ?", order.ID)
+		err := db.Select(&order.ConsistsFrom, "SELECT product, quantity, price, ext_info FROM consists_from WHERE id = ?", order.ID)
 		if err != nil {
 			log.Println(err)
 		}
