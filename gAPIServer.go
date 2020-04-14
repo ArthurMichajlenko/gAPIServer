@@ -36,9 +36,10 @@ func main() {
 	e.POST("/login", login)
 	g := e.Group("/data", middleware.JWT([]byte("gelibert")))
 	g.GET("/couriers", getCouriers)
+	g.PUT("/couriers", putCouriers)
 	g.GET("/clients", getClients)
 	g.GET("/orders", getOrders)
-	// g.PUT("/orders", putOrders)
+	g.PUT("/orders", putOrders)
 	// Start server
 	// e.HideBanner=true
 	e.Logger.Fatal(e.Start(":1323"))
@@ -60,6 +61,10 @@ func getCouriers(c echo.Context) error {
 		log.Println(err)
 	}
 	return c.JSON(http.StatusOK, &couriers)
+}
+
+func putCouriers(c echo.Context) error {
+	return c.String(http.StatusOK, "Test PUT courier")
 }
 
 func getClients(c echo.Context) error {
@@ -131,6 +136,10 @@ func getOrders(c echo.Context) error {
 		orders[i].ConsistsFrom = order.ConsistsFrom
 	}
 	return c.JSON(http.StatusOK, &orders)
+}
+
+func putOrders(c echo.Context) error {
+	return c.String(http.StatusOK, "Test Put orders")
 }
 
 func login(c echo.Context) error {
