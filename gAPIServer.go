@@ -60,7 +60,10 @@ func getCouriers(c echo.Context) error {
 	if err != nil {
 		log.Println(err)
 	}
-	return c.JSON(http.StatusOK, &couriers)
+	if err := c.Bind(couriers); err != nil {
+		log.Println(err)
+	}
+	return c.JSON(http.StatusOK, couriers)
 }
 
 func putCouriers(c echo.Context) error {
@@ -92,7 +95,10 @@ func getClients(c echo.Context) error {
 		}
 		clients = append(clients, client)
 	}
-	return c.JSON(http.StatusOK, &clients)
+	if err := c.Bind(clients); err != nil {
+		log.Println(err)
+	}
+	return c.JSON(http.StatusOK, clients)
 }
 
 func getOrders(c echo.Context) error {
@@ -135,7 +141,10 @@ func getOrders(c echo.Context) error {
 		}
 		orders[i].ConsistsFrom = order.ConsistsFrom
 	}
-	return c.JSON(http.StatusOK, &orders)
+	if err := c.Bind(orders); err != nil {
+		log.Println(err)
+	}
+	return c.JSON(http.StatusOK, orders)
 }
 
 func putOrders(c echo.Context) error {
