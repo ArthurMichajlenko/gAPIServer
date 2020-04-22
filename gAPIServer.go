@@ -65,14 +65,20 @@ func getCouriers(c echo.Context) error {
 
 func putCouriers(c echo.Context) error {
 	var courier Courier
+	var couriers Couriers
 	// var couriers Couriers
 	if err := c.Bind(&courier); err != nil {
-	// if err := c.Bind(&couriers); err != nil {
+		// if err := c.Bind(&couriers); err != nil {
 		log.Println(err)
 	}
-	log.Println(courier.ID)
-	return c.NoContent(http.StatusNoContent)
-	// return c.JSON(http.StatusOK, courier.ID)
+	err := db.Select(&couriers, "SELECT * FROM couriers WHERE imei = ?", courier.Imei)
+	if err != nil {
+		log.Println(err)
+	}
+	couriers[0].Latitude = courier.Latitude
+	couriers[0].Longitude = courier.Longitude
+	// return c.NoContent(http.StatusNoContent)
+	return c.JSON(http.StatusOK, couriers[0])
 	// return c.String(http.StatusOK, "Test PUT courier")
 }
 
@@ -148,7 +154,28 @@ func getOrders(c echo.Context) error {
 }
 
 func putOrders(c echo.Context) error {
-	return c.String(http.StatusOK, "Test Put orders")
+	var (
+		order  Order
+		orders Orders
+	)
+	if err := c.Bind(&order); err != nil {
+		log.Println(err)
+	}
+	err := db.Select(&orders, "SELECT * FROM orders WHERE id = ?", order.ID)
+	if err != nil {
+		log.Println(err)
+	}
+	err = db.Select(&order.ConsistsTo, "SELECT product, quantity, price, ext_info FROM consists_to WHERE id = ?", order.ID)
+	if err != nil {
+		log.Println(err)
+	}
+	orders[0].ConsistsTo = order.ConsistsTo
+	err = db.Select(&order.ConsistsFrom, "SELECT product, quantity, price, ext_info FROM consists_from WHERE id = ?", order.ID)
+	if err != nil {
+		log.Println(err)
+	}
+	orders[0].ConsistsFrom = order.ConsistsFrom
+	return c.JSON(http.StatusOK, orders)
 }
 
 func login(c echo.Context) error {
