@@ -18,7 +18,6 @@ var db *sqlx.DB
 
 func init() {
 	var err error
-	// db, err = sqlx.Connect("sqlite3", "gelibert.db")
 	db, err = sqlx.Connect("mysql", "root:Nfnmzyf@tcp(localhost:3306)/gelibert?parseTime=true&loc=Local")
 	if err != nil {
 		log.Println(err)
@@ -56,6 +55,7 @@ func getCouriers(c echo.Context) error {
 	user := c.Get("user").(*jwt.Token)
 	claims := user.Claims.(jwt.MapClaims)
 	imei := claims["imei"].(string)
+	// err := db.Select(&couriers, "SELECT id, imei, tel, name, car_number FROM couriers WHERE imei = ?", imei)
 	err := db.Select(&couriers, "SELECT * FROM couriers WHERE imei = ?", imei)
 	if err != nil {
 		log.Println(err)
@@ -64,22 +64,16 @@ func getCouriers(c echo.Context) error {
 }
 
 func putCouriers(c echo.Context) error {
-	var courier Courier
-	var couriers Couriers
-	// var couriers Couriers
+	var courier CourierCl
 	if err := c.Bind(&courier); err != nil {
-		// if err := c.Bind(&couriers); err != nil {
 		log.Println(err)
 	}
-	err := db.Select(&couriers, "SELECT * FROM couriers WHERE imei = ?", courier.Imei)
+	_, err := db.NamedExec(`INSERT INTO geodata (imei, courier_id, latitude, longitude, address) 
+							VALUES (:imei, :id, :latitude, :longitude, :address)`, &courier)
 	if err != nil {
 		log.Println(err)
 	}
-	couriers[0].Latitude = courier.Latitude
-	couriers[0].Longitude = courier.Longitude
-	// return c.NoContent(http.StatusNoContent)
-	return c.JSON(http.StatusOK, couriers[0])
-	// return c.String(http.StatusOK, "Test PUT courier")
+	return c.NoContent(http.StatusNoContent)
 }
 
 func getClients(c echo.Context) error {
@@ -120,7 +114,6 @@ func getOrders(c echo.Context) error {
 	if err != nil {
 		log.Println(err)
 	}
-	// log.Println(imei, couriers[0].Name, couriers[0].ID)
 	if c.QueryParam("client") == "" {
 		err := db.Select(&orders, "SELECT * FROM orders WHERE courier_id = ?", couriers[0].ID)
 		if err != nil {
@@ -182,6 +175,7 @@ func login(c echo.Context) error {
 	var couriers Couriers
 	// imei := c.QueryParam("imei")
 	imei := c.FormValue("imei")
+	// err := db.Select(&couriers, "SELECT id, imei, tel, name, car_number FROM couriers WHERE imei = ?", imei)
 	err := db.Select(&couriers, "SELECT * FROM couriers WHERE imei = ?", imei)
 	if err != nil {
 		log.Println(err)
