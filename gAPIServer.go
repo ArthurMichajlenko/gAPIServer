@@ -52,17 +52,17 @@ func hello(c echo.Context) error {
 
 func getCouriers(c echo.Context) error {
 	var couriers Couriers
-	var courier CourierCl 
+	var courier CourierCl
 	user := c.Get("user").(*jwt.Token)
 	claims := user.Claims.(jwt.MapClaims)
 	imei := claims["imei"].(string)
 	err := db.Select(&couriers, "SELECT id, imei, tel, name, car_number FROM couriers WHERE imei = ?", imei)
 	// err := db.Select(&couriers, "SELECT * FROM couriers WHERE imei = ?", imei)
-	courier.ID=couriers[0].ID
-	courier.Imei=couriers[0].Imei
-	courier.Tel=couriers[0].Tel
-	courier.Name=couriers[0].Name
-	courier.CarNumber=couriers[0].CarNumber
+	courier.ID = couriers[0].ID
+	courier.Imei = couriers[0].Imei
+	courier.Tel = couriers[0].Tel
+	courier.Name = couriers[0].Name
+	courier.CarNumber = couriers[0].CarNumber
 	if err != nil {
 		log.Println(err)
 	}
