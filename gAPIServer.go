@@ -102,7 +102,8 @@ func getClients(c echo.Context) error {
 	}
 	for _, clientID := range clientIDs {
 		row := db.QueryRowx("SELECT * FROM clients WHERE id = ?", clientID)
-		err := row.Scan(&client.ID, &client.Name, &client.Tel, &client.Address)
+		// err := row.Scan(&client.ID, &client.Name, &client.Tel, &client.Address)
+		err := row.Scan(&client.ID, &client.Name, &client.Tel)
 		if err != nil {
 			log.Println(err)
 		}
@@ -137,18 +138,11 @@ func getOrders(c echo.Context) error {
 	// 	log.Println(err)
 	// }
 	for i, order := range orders {
-		err := db.Select(&order.ConsistsTo, "SELECT product, quantity, price, ext_info FROM consists_to WHERE id = ?", order.ID)
+		err := db.Select(&order.Consists, "SELECT product, quantity, price, ext_info FROM consists WHERE id = ?", order.ID)
 		if err != nil {
 			log.Println(err)
 		}
-		orders[i].ConsistsTo = order.ConsistsTo
-	}
-	for i, order := range orders {
-		err := db.Select(&order.ConsistsFrom, "SELECT product, quantity, price, ext_info FROM consists_from WHERE id = ?", order.ID)
-		if err != nil {
-			log.Println(err)
-		}
-		orders[i].ConsistsFrom = order.ConsistsFrom
+		orders[i].Consists = order.Consists
 	}
 	return c.JSON(http.StatusOK, orders)
 }
@@ -165,16 +159,11 @@ func putOrders(c echo.Context) error {
 	if err != nil {
 		log.Println(err)
 	}
-	err = db.Select(&order.ConsistsTo, "SELECT product, quantity, price, ext_info FROM consists_to WHERE id = ?", order.ID)
+	err = db.Select(&order.Consists, "SELECT product, quantity, price, ext_info FROM consists WHERE id = ?", order.ID)
 	if err != nil {
 		log.Println(err)
 	}
-	orders[0].ConsistsTo = order.ConsistsTo
-	err = db.Select(&order.ConsistsFrom, "SELECT product, quantity, price, ext_info FROM consists_from WHERE id = ?", order.ID)
-	if err != nil {
-		log.Println(err)
-	}
-	orders[0].ConsistsFrom = order.ConsistsFrom
+	orders[0].Consists = order.Consists
 	return c.JSON(http.StatusOK, orders)
 }
 

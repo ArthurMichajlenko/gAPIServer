@@ -19,8 +19,7 @@ func (r *Clients) Marshal() ([]byte, error) {
 
 // Client is a single clients
 type Client struct {
-	ID      int    `json:"id" db:"id"`
-	Name    string `json:"name" db:"name"`
-	Tel     string `json:"tel" db:"tel"`
-	Address string `json:"address" db:"address"`
+	ID   string `json:"id" db:"id"`
+	Name string `json:"name" db:"name"`
+	Tel  string `json:"tel" db:"tel"`
 }
