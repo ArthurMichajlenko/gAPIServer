@@ -16,5 +16,6 @@
             "isConnected": false,
             "name": "SQLite"
         }
-    ]
+    ],
+    "sqltools.useNodeRuntime": true
 }
