@@ -1,0 +1,20 @@
+{
+    "sqltools.connections": [
+        {
+            "database": "gelibert",
+            "name": "MySQL",
+            "password": "Nfnmzyf",
+            "port": 3306,
+            "server": "localhost",
+            "username": "root",
+            "driver": "MySQL"
+        },
+        {
+            "database": "/Users/arthur/Projects/Gelibert/frontend/gelibert/assets/gelibert.db",
+            "driver": "SQLite",
+            "name": "Gelibert",
+            "previewLimit": 50
+        }
+    ],
+    "sqltools.useNodeRuntime": true
+}
