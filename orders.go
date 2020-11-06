@@ -23,7 +23,7 @@ func (r *Orders) Marshal() ([]byte, error) {
 // Order ...
 type Order struct {
 	ID            string    `json:"id" db:"id"`
-	CourierID     int       `json:"courier_id" db:"courier_id"`
+	CourierID     string    `json:"courier_id" db:"courier_id"`
 	ClientID      string    `json:"client_id" db:"client_id"`
 	PaymentMethod string    `json:"payment_method" db:"payment_method"`
 	Consists      []Consist `json:"consists_to" db:"consists_to"`

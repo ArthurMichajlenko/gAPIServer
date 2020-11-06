@@ -22,23 +22,23 @@ func (r *Couriers) Marshal() ([]byte, error) {
 
 // Courier is a single courier
 type Courier struct {
-	ID        int    `json:"id" db:"id"`
-	Imei      int64  `json:"imei" db:"imei"`
-	Tel       string `json:"tel" db:"tel"`
-	Name      string `json:"name" db:"name"`
-	CarNumber string `json:"car_number" db:"car_number"`
-	TimeStamp time.Time `json:"timestamp" db:"timestamp"`
+	ID         string    `json:"id" db:"id"`
+	MacAddress string    `json:"mac_address" db:"mac_address"`
+	Tel        string    `json:"tel" db:"tel"`
+	Name       string    `json:"name" db:"name"`
+	CarNumber  string    `json:"car_number" db:"car_number"`
+	TimeStamp  time.Time `json:"timestamp" db:"timestamp"`
 }
 
 // Geodata geodata about courier
 type Geodata struct {
-	ID        int     `json:"id" db:"id"`
-	Imei      int64   `json:"imei" db:"imei"`
-	CourierID int     `json:"courier_id" db:"courier_id"`
-	Latitude  float64 `json:"latitude" db:"latitude"`
-	Longitude float64 `json:"longitude" db:"longitude"`
-	Address   string  `json:"address" db:"address"`
-	TimeStamp time.Time `json:"timestamp" db:"timestamp"`
+	ID         int       `json:"id" db:"id"`
+	MacAddress string    `json:"mac_address" db:"mac_address"`
+	CourierID  string    `json:"courier_id" db:"courier_id"`
+	Latitude   float64   `json:"latitude" db:"latitude"`
+	Longitude  float64   `json:"longitude" db:"longitude"`
+	Address    string    `json:"address" db:"address"`
+	TimeStamp  time.Time `json:"timestamp" db:"timestamp"`
 }
 
 // UnmarshalGeodata decode Geodata from JSON
@@ -55,15 +55,15 @@ func (r *Geodata) Marshal() ([]byte, error) {
 
 // CourierCl courier data for REST from mobile client
 type CourierCl struct {
-	ID        int     `json:"id" db:"id"`
-	Imei      int64   `json:"imei" db:"imei"`
-	Tel       string  `json:"tel" db:"tel"`
-	Name      string  `json:"name" db:"name"`
-	CarNumber string  `json:"car_number" db:"car_number"`
-	Latitude  float64 `json:"latitude" db:"latitude"`
-	Longitude float64 `json:"longitude" db:"longitude"`
-	Address   string  `json:"address" db:"address"`
-	TimeStamp time.Time `json:"timestamp" db:"timestamp"`
+	ID         string    `json:"id" db:"id"`
+	MacAddress string    `json:"mac_address" db:"mac_address"`
+	Tel        string    `json:"tel" db:"tel"`
+	Name       string    `json:"name" db:"name"`
+	CarNumber  string    `json:"car_number" db:"car_number"`
+	Latitude   float64   `json:"latitude" db:"latitude"`
+	Longitude  float64   `json:"longitude" db:"longitude"`
+	Address    string    `json:"address" db:"address"`
+	TimeStamp  time.Time `json:"timestamp" db:"timestamp"`
 }
 
 // UnmarshalCourierCl decode CourierCl from JSON

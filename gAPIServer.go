@@ -55,11 +55,11 @@ func getCouriers(c echo.Context) error {
 	var courier CourierCl
 	user := c.Get("user").(*jwt.Token)
 	claims := user.Claims.(jwt.MapClaims)
-	imei := claims["imei"].(string)
-	err := db.Select(&couriers, "SELECT id, imei, tel, name, car_number FROM couriers WHERE imei = ?", imei)
-	// err := db.Select(&couriers, "SELECT * FROM couriers WHERE imei = ?", imei)
+	macAddress := claims["macAddress"].(string)
+	err := db.Select(&couriers, "SELECT id, macAddress, tel, name, car_number FROM couriers WHERE macAddress = ?", macAddress)
+	// err := db.Select(&couriers, "SELECT * FROM couriers WHERE macAddress = ?", macAddress)
 	courier.ID = couriers[0].ID
-	courier.Imei = couriers[0].Imei
+	courier.MacAddress = couriers[0].MacAddress
 	courier.Tel = couriers[0].Tel
 	courier.Name = couriers[0].Name
 	courier.CarNumber = couriers[0].CarNumber
@@ -75,8 +75,8 @@ func putCouriers(c echo.Context) error {
 	if err := c.Bind(&courier); err != nil {
 		log.Println(err)
 	}
-	_, err := db.NamedExec(`INSERT INTO geodata (imei, courier_id, latitude, longitude, address) 
-							VALUES (:imei, :id, :latitude, :longitude, :address)`, &courier)
+	_, err := db.NamedExec(`INSERT INTO geodata (macAddress, courier_id, latitude, longitude, address) 
+							VALUES (:macAddress, :id, :latitude, :longitude, :address)`, &courier)
 	if err != nil {
 		log.Println(err)
 	}
@@ -90,8 +90,8 @@ func getClients(c echo.Context) error {
 	var clients Clients
 	user := c.Get("user").(*jwt.Token)
 	claims := user.Claims.(jwt.MapClaims)
-	imei := claims["imei"].(string)
-	row := db.QueryRowx("SELECT id FROM couriers WHERE imei = ?", imei)
+	macAddress := claims["macAddress"].(string)
+	row := db.QueryRowx("SELECT id FROM couriers WHERE macAddress = ?", macAddress)
 	err := row.Scan(&courierID)
 	if err != nil {
 		log.Println(err)
@@ -117,8 +117,8 @@ func getOrders(c echo.Context) error {
 	var couriers Couriers
 	user := c.Get("user").(*jwt.Token)
 	claims := user.Claims.(jwt.MapClaims)
-	imei := claims["imei"].(string)
-	err := db.Select(&couriers, "SELECT * FROM couriers WHERE imei = ?", imei)
+	macAddress := claims["macAddress"].(string)
+	err := db.Select(&couriers, "SELECT * FROM couriers WHERE macAddress = ?", macAddress)
 	if err != nil {
 		log.Println(err)
 	}
@@ -169,10 +169,10 @@ func putOrders(c echo.Context) error {
 
 func login(c echo.Context) error {
 	var couriers Couriers
-	// imei := c.QueryParam("imei")
-	imei := c.FormValue("imei")
-	// err := db.Select(&couriers, "SELECT id, imei, tel, name, car_number FROM couriers WHERE imei = ?", imei)
-	err := db.Select(&couriers, "SELECT * FROM couriers WHERE imei = ?", imei)
+	// macAddress := c.QueryParam("macAddress")
+	macAddress := c.FormValue("macAddress")
+	// err := db.Select(&couriers, "SELECT id, macAddress, tel, name, car_number FROM couriers WHERE macAddress = ?", macAddress)
+	err := db.Select(&couriers, "SELECT * FROM couriers WHERE macAddress = ?", macAddress)
 	if err != nil {
 		log.Println(err)
 	}
@@ -181,7 +181,7 @@ func login(c echo.Context) error {
 	}
 	token := jwt.New(jwt.SigningMethodHS256)
 	claims := token.Claims.(jwt.MapClaims)
-	claims["imei"] = imei
+	claims["macAddress"] = macAddress
 	// claims["exp"] = time.Now().Add(time.Hour * 72).Unix()
 	// claims["exp"] = time.Now().Add(time.Minute * 30).Unix()
 	t, err := token.SignedString([]byte("gelibert"))
