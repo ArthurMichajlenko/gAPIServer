@@ -15,3 +15,4 @@
 # vendor/
 gAPIServer
 gelibert.db
+test.*
