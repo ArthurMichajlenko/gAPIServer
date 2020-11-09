@@ -56,7 +56,7 @@ func getCouriers(c echo.Context) error {
 	user := c.Get("user").(*jwt.Token)
 	claims := user.Claims.(jwt.MapClaims)
 	macAddress := claims["macAddress"].(string)
-	err := db.Select(&couriers, "SELECT id, macAddress, tel, name, car_number FROM couriers WHERE macAddress = ?", macAddress)
+	err := db.Select(&couriers, "SELECT id, macAddress, tel, name, car_number FROM couriers WHERE mac_address = ?", macAddress)
 	// err := db.Select(&couriers, "SELECT * FROM couriers WHERE macAddress = ?", macAddress)
 	courier.ID = couriers[0].ID
 	courier.MacAddress = couriers[0].MacAddress
@@ -172,7 +172,7 @@ func login(c echo.Context) error {
 	// macAddress := c.QueryParam("macAddress")
 	macAddress := c.FormValue("macAddress")
 	// err := db.Select(&couriers, "SELECT id, macAddress, tel, name, car_number FROM couriers WHERE macAddress = ?", macAddress)
-	err := db.Select(&couriers, "SELECT * FROM couriers WHERE macAddress = ?", macAddress)
+	err := db.Select(&couriers, "SELECT * FROM couriers WHERE mac_address = ?", macAddress)
 	if err != nil {
 		log.Println(err)
 	}
