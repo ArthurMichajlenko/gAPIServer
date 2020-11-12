@@ -2,6 +2,7 @@ package main
 
 import (
 	"log"
+	"os"
 
 	"github.com/dgrijalva/jwt-go"
 
@@ -46,8 +47,18 @@ func main() {
 }
 
 // Handlers
+// func hello(c echo.Context) error {
+// 	return c.String(http.StatusOK, "Hello World")
+// }
 func hello(c echo.Context) error {
-	return c.String(http.StatusOK, "Hello World")
+	var res Response1C
+	jsonFile, err := os.Open("Response1C.json")
+	if err != nil {
+		return err
+	}
+	defer jsonFile.Close()
+	res.FillFrom1C(jsonFile)
+	return c.JSON(http.StatusOK, res)
 }
 
 func getCouriers(c echo.Context) error {
@@ -56,8 +67,7 @@ func getCouriers(c echo.Context) error {
 	user := c.Get("user").(*jwt.Token)
 	claims := user.Claims.(jwt.MapClaims)
 	macAddress := claims["macAddress"].(string)
-	err := db.Select(&couriers, "SELECT id, macAddress, tel, name, car_number FROM couriers WHERE mac_address = ?", macAddress)
-	// err := db.Select(&couriers, "SELECT * FROM couriers WHERE macAddress = ?", macAddress)
+	err := db.Select(&couriers, "SELECT id, mac_address, tel, name, car_number FROM couriers WHERE mac_address = ?", macAddress)
 	courier.ID = couriers[0].ID
 	courier.MacAddress = couriers[0].MacAddress
 	courier.Tel = couriers[0].Tel
@@ -75,8 +85,8 @@ func putCouriers(c echo.Context) error {
 	if err := c.Bind(&courier); err != nil {
 		log.Println(err)
 	}
-	_, err := db.NamedExec(`INSERT INTO geodata (macAddress, courier_id, latitude, longitude, address) 
-							VALUES (:macAddress, :id, :latitude, :longitude, :address)`, &courier)
+	_, err := db.NamedExec(`INSERT INTO geodata (mac_address, courier_id, latitude, longitude, address) 
+							VALUES (:mac_address, :id, :latitude, :longitude, :address)`, &courier)
 	if err != nil {
 		log.Println(err)
 	}
@@ -84,15 +94,14 @@ func putCouriers(c echo.Context) error {
 }
 
 func getClients(c echo.Context) error {
-	var courierID int
-	var clientIDs []int
+	var courierID string
+	var clientIDs []string
 	var client Client
 	var clients Clients
 	user := c.Get("user").(*jwt.Token)
 	claims := user.Claims.(jwt.MapClaims)
 	macAddress := claims["macAddress"].(string)
-	row := db.QueryRowx("SELECT id FROM couriers WHERE macAddress = ?", macAddress)
-	err := row.Scan(&courierID)
+	err := db.QueryRowx("SELECT id FROM couriers WHERE mac_address = ?", macAddress).Scan(&courierID)
 	if err != nil {
 		log.Println(err)
 	}
@@ -101,9 +110,7 @@ func getClients(c echo.Context) error {
 		log.Println(err)
 	}
 	for _, clientID := range clientIDs {
-		row := db.QueryRowx("SELECT * FROM clients WHERE id = ?", clientID)
-		// err := row.Scan(&client.ID, &client.Name, &client.Tel, &client.Address)
-		err := row.Scan(&client.ID, &client.Name, &client.Tel)
+		err := db.QueryRowx("SELECT * FROM clients WHERE id = ?", clientID).Scan(&client.ID, &client.Name, &client.Tel)
 		if err != nil {
 			log.Println(err)
 		}
@@ -117,8 +124,8 @@ func getOrders(c echo.Context) error {
 	var couriers Couriers
 	user := c.Get("user").(*jwt.Token)
 	claims := user.Claims.(jwt.MapClaims)
-	macAddress := claims["macAddress"].(string)
-	err := db.Select(&couriers, "SELECT * FROM couriers WHERE macAddress = ?", macAddress)
+	macAddress := claims["macAddress"]
+	err := db.Select(&couriers, "SELECT * FROM couriers WHERE mac_address = ?", macAddress)
 	if err != nil {
 		log.Println(err)
 	}
@@ -138,7 +145,7 @@ func getOrders(c echo.Context) error {
 	// 	log.Println(err)
 	// }
 	for i, order := range orders {
-		err := db.Select(&order.Consists, "SELECT product, quantity, price, ext_info FROM consists WHERE id = ?", order.ID)
+		err := db.Select(&order.Consists, "SELECT * FROM consists WHERE orders_id = ?", order.ID)
 		if err != nil {
 			log.Println(err)
 		}
@@ -159,7 +166,7 @@ func putOrders(c echo.Context) error {
 	if err != nil {
 		log.Println(err)
 	}
-	err = db.Select(&order.Consists, "SELECT product, quantity, price, ext_info FROM consists WHERE id = ?", order.ID)
+	err = db.Select(&order.Consists, "SELECT product, quantity, price, ext_info FROM consists WHERE orders_id = ?", order.ID)
 	if err != nil {
 		log.Println(err)
 	}
@@ -171,7 +178,6 @@ func login(c echo.Context) error {
 	var couriers Couriers
 	// macAddress := c.QueryParam("macAddress")
 	macAddress := c.FormValue("macAddress")
-	// err := db.Select(&couriers, "SELECT id, macAddress, tel, name, car_number FROM couriers WHERE macAddress = ?", macAddress)
 	err := db.Select(&couriers, "SELECT * FROM couriers WHERE mac_address = ?", macAddress)
 	if err != nil {
 		log.Println(err)

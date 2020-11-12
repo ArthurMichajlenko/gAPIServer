@@ -26,7 +26,7 @@ type Order struct {
 	CourierID     string    `json:"courier_id" db:"courier_id"`
 	ClientID      string    `json:"client_id" db:"client_id"`
 	PaymentMethod string    `json:"payment_method" db:"payment_method"`
-	Consists      []Consist `json:"consists_to" db:"consists_to"`
+	Consists      []Consist `json:"consists" db:"consists"`
 	OrderCost     float64   `json:"order_cost" db:"order_cost"`
 	Delivered     int       `json:"delivered" db:"delivered"`
 	DeliveryDelay int       `json:"delivery_delay" db:"delivery_delay"`
@@ -36,11 +36,13 @@ type Order struct {
 	Address       string    `json:"address" db:"address"`
 }
 
-//Consist products of Order (Delivery: 'true' deliver to Client, 'false' return from Client)
+//Consist products of Order
 type Consist struct {
+	ID        int     `json:"id" db:"id"`
 	Product   string  `json:"product" db:"product"`
 	Quantity  float64 `json:"quantity" db:"quantity"`
 	Price     float64 `json:"price" db:"price"`
 	ExtInfo   string  `json:"ext_info" db:"ext_info"`
 	Direction int     `json:"direction" db:"direction"`
+	OrdersID  string  `json:"orders_id" db:"orders_id"`
 }
