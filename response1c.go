@@ -108,9 +108,15 @@ func (r *Response1C) FillFrom1C(src io.Reader, db *sqlx.DB) error {
 			log.Println(err)
 		}
 		for _, consist := range res.Consists {
+			var direction int
+			if consist.Direction == "" {
+				direction = 0
+			} else {
+				direction =1
+			}
 			_, err := db.Exec(`INSERT INTO 
-							consists (product, quantity, price, ext_info, orders_id) 
-							VALUES (?, ?, ?, ?, ?)`, consist.Product, consist.Quantity, consist.Price, consist.EXTInfo, consist.ID)
+							consists (product, quantity, price, ext_info, orders_id, direction) 
+							VALUES (?, ?, ?, ?, ?, ?)`, consist.Product, consist.Quantity, consist.Price, consist.EXTInfo, consist.ID, direction)
 			if err != nil {
 				log.Println(err)
 			}
