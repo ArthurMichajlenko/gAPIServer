@@ -12,7 +12,6 @@ import (
 	"github.com/jmoiron/sqlx"
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
-	_ "github.com/mattn/go-sqlite3"
 )
 
 var db *sqlx.DB
@@ -57,7 +56,7 @@ func hello(c echo.Context) error {
 		return err
 	}
 	defer jsonFile.Close()
-	res.FillFrom1C(jsonFile)
+	res.FillFrom1C(jsonFile, db)
 	return c.JSON(http.StatusOK, res)
 }
 
@@ -101,7 +100,7 @@ func getClients(c echo.Context) error {
 	user := c.Get("user").(*jwt.Token)
 	claims := user.Claims.(jwt.MapClaims)
 	macAddress := claims["macAddress"].(string)
-	err := db.QueryRowx("SELECT id FROM couriers WHERE mac_address = ?", macAddress).Scan(&courierID)
+	err := db.QueryRow("SELECT id FROM couriers WHERE mac_address = ?", macAddress).Scan(&courierID)
 	if err != nil {
 		log.Println(err)
 	}
@@ -110,7 +109,7 @@ func getClients(c echo.Context) error {
 		log.Println(err)
 	}
 	for _, clientID := range clientIDs {
-		err := db.QueryRowx("SELECT * FROM clients WHERE id = ?", clientID).Scan(&client.ID, &client.Name, &client.Tel)
+		err := db.QueryRow("SELECT * FROM clients WHERE id = ?", clientID).Scan(&client.ID, &client.Name, &client.Tel)
 		if err != nil {
 			log.Println(err)
 		}
@@ -166,6 +165,7 @@ func putOrders(c echo.Context) error {
 	if err != nil {
 		log.Println(err)
 	}
+	// err = db.Select(&order.Consists, "SELECT product, quantity, price, ext_info FROM consists WHERE orders_id = ?", order.ID)
 	err = db.Select(&order.Consists, "SELECT product, quantity, price, ext_info FROM consists WHERE orders_id = ?", order.ID)
 	if err != nil {
 		log.Println(err)

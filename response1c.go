@@ -1,9 +1,15 @@
 package main
 
 import (
+	"database/sql"
 	"encoding/json"
 	"io"
 	"io/ioutil"
+	"log"
+	"time"
+
+	_ "github.com/go-sql-driver/mysql"
+	"github.com/jmoiron/sqlx"
 )
 
 // Response1C ...
@@ -22,12 +28,94 @@ func (r *Response1C) Marshal() ([]byte, error) {
 }
 
 // FillFrom1C ...
-func (r *Response1C) FillFrom1C(src io.Reader) error {
+func (r *Response1C) FillFrom1C(src io.Reader, db *sqlx.DB) error {
 	data, err := ioutil.ReadAll(src)
 	if err != nil {
 		return err
 	}
 	*r, err = UnmarshalResponse1C(data)
+	for _, res := range *r {
+		// for _, client := range (*r)[0].Clients {
+		var courier Courier
+		err := db.Get(&courier, "SELECT id FROM couriers WHERE id = ?", res.CourierID)
+		switch err {
+		case nil:
+			// log.Println("Courier found")
+			_, err1 := db.Exec(`UPDATE couriers 
+								SET tel=?, name=?, car_number=? 
+								WHERE id=?`, res.CourierTel, res.CourierName, res.CourierCarNumber, res.CourierID)
+			if err1 != nil {
+				log.Println(err1)
+			}
+		case sql.ErrNoRows:
+			// log.Println("Courier not found")
+			_, err1 := db.Exec(`INSERT INTO 
+								couriers (id, mac_address, tel, name, car_number) 
+								VALUES (?, ?, ?, ?, ?)`, res.CourierID, res.CourierImei, res.CourierTel, res.CourierName, res.CourierCarNumber)
+			if err1 != nil {
+				log.Println(err1)
+			}
+		default:
+			log.Println(err)
+		}
+		for _, client := range res.Clients {
+			err := db.Get(&client, "SELECT id FROM clients WHERE id = ?", client.ClientID)
+			switch err {
+			case nil:
+				// log.Println("Client found")
+				_, err1 := db.Exec(`UPDATE clients
+									SET name=?, tel=?
+									WHERE id=?`, client.ClientName, client.ClientTel, client.ClientID)
+				if err1 != nil {
+					log.Println(err1)
+				}
+			case sql.ErrNoRows:
+				// log.Println("Client not found")
+				_, err1 := db.Exec(`INSERT INTO 
+									clients (id, name, tel) 
+									VALUES (?, ?, ?)`, client.ClientID, client.ClientName, client.ClientTel)
+				if err1 != nil {
+					log.Println(err1)
+				}
+			default:
+				log.Println(err)
+			}
+			err = db.Get(&client, "SELECT id FROM orders WHERE id = ?", client.OrderID)
+			switch err {
+			case nil:
+				// log.Println("Order found")
+				_, err1 := db.Exec(`UPDATE orders 
+									SET courier_id=?, payment_method=?, order_cost=?, address=? 
+									WHERE id=?`, res.CourierID, client.PaymentMethod, client.OrderCost, client.Address, client.OrderID)
+				if err1 != nil {
+					log.Println(err1)
+				}
+			case sql.ErrNoRows:
+				// log.Println("Orders not found")
+				_, err1 := db.Exec(`INSERT INTO 
+									orders (id, courier_id, client_id, payment_method, order_cost, address, date_start) 
+									VALUES (?, ?, ?, ?, ?, ?, ?)
+									`, client.OrderID, res.CourierID, client.ClientID, client.PaymentMethod, client.OrderCost, client.Address, time.Now().Format("2006-01-02 15:04:05"))
+				if err1 != nil {
+					log.Println(err1)
+				}
+			default:
+				log.Println(err)
+			}
+		}
+		_, err = db.Exec("TRUNCATE TABLE consists")
+		if err != nil {
+			log.Println(err)
+		}
+		for _, consist := range res.Consists {
+			_, err := db.Exec(`INSERT INTO 
+							consists (product, quantity, price, ext_info, orders_id) 
+							VALUES (?, ?, ?, ?, ?)`, consist.Product, consist.Quantity, consist.Price, consist.EXTInfo, consist.ID)
+			if err != nil {
+				log.Println(err)
+			}
+		}
+	}
 	return err
 }
 
@@ -45,7 +133,7 @@ type Response1CElement struct {
 
 // Client1C ...
 type Client1C struct {
-	ClientID      string `json:"client_id"`
+	ClientID      string `json:"client_id" db:"id"`
 	ClientName    string `json:"client_name"`
 	ClientTel     string `json:"client_tel"`
 	OrderID       string `json:"order_id"`
@@ -61,10 +149,10 @@ type Client1C struct {
 
 // Consist1C ...
 type Consist1C struct {
-	ID        string `json:"id"`
+	ID        string `json:"id" db:"orders_id"`
 	Product   string `json:"product"`
 	Quantity  int64  `json:"quantity"`
 	Price     int64  `json:"price"`
-	EXTInfo   string `json:"ext_info"`
+	EXTInfo   string `json:"ext_info" db:"ext_info"`
 	Direction string `json:"direction"`
 }
