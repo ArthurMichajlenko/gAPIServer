@@ -42,8 +42,8 @@ func (r *Response1C) FillFrom1C(src io.Reader, db *sqlx.DB) error {
 		case nil:
 			// log.Println("Courier found")
 			_, err1 := db.Exec(`UPDATE couriers 
-								SET tel=?, name=?, car_number=? 
-								WHERE id=?`, res.CourierTel, res.CourierName, res.CourierCarNumber, res.CourierID)
+								SET tel=?, name=?, car_number=?, mac_address=? 
+								WHERE id=?`, res.CourierTel, res.CourierName, res.CourierCarNumber, res.CourierImei, res.CourierID)
 			if err1 != nil {
 				log.Println(err1)
 			}
