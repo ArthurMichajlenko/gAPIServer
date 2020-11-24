@@ -18,7 +18,8 @@ var db *sqlx.DB
 
 func init() {
 	var err error
-	db, err = sqlx.Connect("mysql", "root:Nfnmzyf@tcp(localhost:3306)/gelibert?parseTime=true&loc=Local")
+	// db, err = sqlx.Connect("mysql", "root:Nfnmzyf@tcp(localhost:3306)/gelibert?parseTime=true&loc=Local")
+	db, err = sqlx.Connect("mysql", "gelibert:gelibert@tcp(localhost:3306)/gelibert?parseTime=true&loc=Local")
 	if err != nil {
 		log.Println(err)
 	}
