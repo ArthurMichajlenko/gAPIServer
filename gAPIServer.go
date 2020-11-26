@@ -7,7 +7,9 @@ import (
 	"github.com/dgrijalva/jwt-go"
 
 	"net/http"
+	"net/url"
 
+	"github.com/dimchansky/utfbom"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/jmoiron/sqlx"
 	"github.com/labstack/echo/v4"
@@ -177,9 +179,24 @@ func putOrders(c echo.Context) error {
 
 func login(c echo.Context) error {
 	var couriers Couriers
+	var res1C Response1C
 	// macAddress := c.QueryParam("macAddress")
 	macAddress := c.FormValue("macAddress")
-	err := db.Select(&couriers, "SELECT * FROM couriers WHERE mac_address = ?", macAddress)
+
+	url := "http://10.10.11.158/trade/hs/ObmenLogistica/V1/Document?IMEI=" + url.QueryEscape(macAddress)
+	req, err := http.NewRequest("GET", url, nil)
+	if err != nil {
+		log.Println(err)
+	}
+	req.Header.Add("Authorization", "Basic TG9naXN0aWM6MTIzNA==")
+	res, err := http.DefaultClient.Do(req)
+	if err != nil {
+		log.Println(err)
+	}
+	defer res.Body.Close()
+	res1C.FillFrom1C(utfbom.SkipOnly(res.Body), db)
+
+	err = db.Select(&couriers, "SELECT * FROM couriers WHERE mac_address = ?", macAddress)
 	if err != nil {
 		log.Println(err)
 	}
