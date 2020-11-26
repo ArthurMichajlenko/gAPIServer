@@ -2,7 +2,7 @@ package main
 
 import (
 	"log"
-	"os"
+	// "os"
 
 	"github.com/dgrijalva/jwt-go"
 
@@ -53,14 +53,15 @@ func main() {
 // 	return c.String(http.StatusOK, "Hello World")
 // }
 func hello(c echo.Context) error {
-	var res Response1C
-	jsonFile, err := os.Open("Response1C.json")
-	if err != nil {
-		return err
-	}
-	defer jsonFile.Close()
-	res.FillFrom1C(jsonFile, db)
-	return c.JSON(http.StatusOK, res)
+	// var res Response1C
+	// jsonFile, err := os.Open("Response1C.json")
+	// if err != nil {
+	// 	return err
+	// }
+	// defer jsonFile.Close()
+	// res.FillFrom1C(jsonFile, db)
+	// return c.JSON(http.StatusOK, res)
+	return c.String(http.StatusOK, "Hello World!")
 }
 
 func getCouriers(c echo.Context) error {
