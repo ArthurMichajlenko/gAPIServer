@@ -1,0 +1,898 @@
+[
+    {
+        "courier_id": "u00000084",
+        "courier_imei": "E0:98:61:6D:85:BA",
+        "courier_tel": "",
+        "courier_name": "MANTEA PETRU",
+        "courier_car_number": "ZKX311  ",
+        "courier_timestamp": "",
+        "Clients": [
+            {
+                "client_id": "000000511",
+                "client_name": "MOLDRETAIL GROUP S.R.L. ",
+                "client_tel": "060806102",
+                "order_id": "uAQ01108506    ",
+                "payment_method": "Перечисление",
+                "order_cost": 1566.12,
+                "delivered": "",
+                "delivery_delay": "",
+                "date_start": "",
+                "date_finish": "",
+                "time_stamp": "",
+                "address": "m.Chisinau, str. Independentii 4/1 UNI №10"
+            },
+            {
+                "client_id": "000000511",
+                "client_name": "MOLDRETAIL GROUP S.R.L. ",
+                "client_tel": "060806102",
+                "order_id": "uAQ01108508    ",
+                "payment_method": "Перечисление",
+                "order_cost": 1336.39,
+                "delivered": "",
+                "delivery_delay": "",
+                "date_start": "",
+                "date_finish": "",
+                "time_stamp": "",
+                "address": "m. Chisinau,sos.Muncesti, 162 A"
+            },
+            {
+                "client_id": "000000511",
+                "client_name": "MOLDRETAIL GROUP S.R.L. ",
+                "client_tel": "060806102",
+                "order_id": "uAQ01108510    ",
+                "payment_method": "Перечисление",
+                "order_cost": 3680.04,
+                "delivered": "",
+                "delivery_delay": "",
+                "date_start": "",
+                "date_finish": "",
+                "time_stamp": "",
+                "address": "m.Chisinau, str. Sarmisegetuza 35/1 L-42"
+            },
+            {
+                "client_id": "000000511",
+                "client_name": "MOLDRETAIL GROUP S.R.L. ",
+                "client_tel": "060806102",
+                "order_id": "uAQ01108518    ",
+                "payment_method": "Перечисление",
+                "order_cost": 2101.56,
+                "delivered": "",
+                "delivery_delay": "",
+                "date_start": "",
+                "date_finish": "",
+                "time_stamp": "",
+                "address": "m.Chisinau,b-dul  Dacia 16"
+            },
+            {
+                "client_id": "000000511",
+                "client_name": "MOLDRETAIL GROUP S.R.L. ",
+                "client_tel": "060806102",
+                "order_id": "uAQ01108519    ",
+                "payment_method": "Перечисление",
+                "order_cost": 1285.84,
+                "delivered": "",
+                "delivery_delay": "",
+                "date_start": "",
+                "date_finish": "",
+                "time_stamp": "",
+                "address": "m.Chisinau, str. Hristo Botev 17\n\nBotanica"
+            },
+            {
+                "client_id": "000000511",
+                "client_name": "MOLDRETAIL GROUP S.R.L. ",
+                "client_tel": "060806102",
+                "order_id": "uAQ01108538    ",
+                "payment_method": "Перечисление",
+                "order_cost": 2893.42,
+                "delivered": "",
+                "delivery_delay": "",
+                "date_start": "",
+                "date_finish": "",
+                "time_stamp": "",
+                "address": "str.Muncesti 330"
+            }
+        ],
+        "Consists": [
+            {
+                "id": "uAQ01108506    ",
+                "product": "MAIONEZA Provansall 250 g PET",
+                "quantity": 12,
+                "price": 16.38,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108506    ",
+                "product": "A/I AQUA UNIQA 0.75L N/G Sport LEMON",
+                "quantity": 24,
+                "price": 7.15,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108506    ",
+                "product": "A/U  STILL PIERSICA 1.25L",
+                "quantity": 6,
+                "price": 8.2,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108506    ",
+                "product": "A/M ROUA ARGINTIE 3.0 gaz",
+                "quantity": 40,
+                "price": 7.8,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108506    ",
+                "product": "KU GUAVA&GRAPEFRUIT 1.5L",
+                "quantity": 6,
+                "price": 10.4,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108506    ",
+                "product": "KU LIME&PEPPERMINT 1.5L",
+                "quantity": 18,
+                "price": 10.4,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108506    ",
+                "product": "KU MARAKUIA&MANDARIN 1.5L",
+                "quantity": 12,
+                "price": 10.4,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108506    ",
+                "product": "KU MERE-PERE 1.5L",
+                "quantity": 12,
+                "price": 10.4,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108506    ",
+                "product": "KU PORTOCALE&VISINA 1.5L",
+                "quantity": 12,
+                "price": 10.4,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108506    ",
+                "product": "Otet de masa 6% 1L (квадратный)",
+                "quantity": 12,
+                "price": 8.51,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108506    ",
+                "product": "Otet de masa 9% 1L (квадратный)",
+                "quantity": 12,
+                "price": 9.22,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108508    ",
+                "product": "A/I AQUA UNIQA 6.0+1.0 N",
+                "quantity": 10,
+                "price": 16.65,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108508    ",
+                "product": "A/I AQUA UNIQA 3.5 N",
+                "quantity": 8,
+                "price": 10.5,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108508    ",
+                "product": "A/U  PLUS LEMON 1.5L",
+                "quantity": 6,
+                "price": 8.2,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108508    ",
+                "product": "A/M ROUA ARGINTIE 3.0 gaz",
+                "quantity": 8,
+                "price": 7.8,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108508    ",
+                "product": "A/M ROUA ARGINTIE 1.5 gaz",
+                "quantity": 36,
+                "price": 5.8,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108508    ",
+                "product": "A/M ROUA ARGINTIE 3.0  mediu gaz",
+                "quantity": 4,
+                "price": 7.8,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108508    ",
+                "product": "TUTI FRUTI 1.5L BAUTURA TOPIC",
+                "quantity": 6,
+                "price": 6.4,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108508    ",
+                "product": "Provansali M-za Belmar 700ml dou-pac./10",
+                "quantity": 10,
+                "price": 34.54,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108508    ",
+                "product": "Provansali M-za Belmar 200ml./30",
+                "quantity": 15,
+                "price": 10.95,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108508    ",
+                "product": "Otet de masa 9% 1L (квадратный)",
+                "quantity": 12,
+                "price": 9.22,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108508    ",
+                "product": "Otet de masa 9% 0.5L",
+                "quantity": 12,
+                "price": 6.3,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108510    ",
+                "product": "MAIONEZA Provansall 250 g PET",
+                "quantity": 12,
+                "price": 16.38,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108510    ",
+                "product": "A/U  PLUS MAR 0.5L",
+                "quantity": 12,
+                "price": 4.8,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108510    ",
+                "product": "A/I AQUA UNIQA 3.5 N",
+                "quantity": 12,
+                "price": 10.5,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108510    ",
+                "product": "A/U  PLUS CAPSUNA MILK 1.5L",
+                "quantity": 6,
+                "price": 8.2,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108510    ",
+                "product": "A/I AQUA UNIQA 0.75L N/G Sport LEMON",
+                "quantity": 12,
+                "price": 7.15,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108510    ",
+                "product": "A/U  STILL  LEMON 1.25L",
+                "quantity": 12,
+                "price": 8.2,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108510    ",
+                "product": "A/U  STILL PIERSICA 1.25L",
+                "quantity": 6,
+                "price": 8.2,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108510    ",
+                "product": "A/M ROUA ARGINTIE 3.0 gaz",
+                "quantity": 24,
+                "price": 7.8,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108510    ",
+                "product": "A/M ROUA ARGINTIE 3.0  mediu gaz",
+                "quantity": 20,
+                "price": 7.8,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108510    ",
+                "product": "CVAS 3.0L",
+                "quantity": 4,
+                "price": 11.1,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108510    ",
+                "product": "CREM SODA 1.5L BAUTURA TOPIC",
+                "quantity": 6,
+                "price": 6.4,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108510    ",
+                "product": "LIMONADA 1.5L BAUTURA TOPIC",
+                "quantity": 6,
+                "price": 6.4,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108510    ",
+                "product": "TUTI FRUTI 1.5L BAUTURA TOPIC",
+                "quantity": 12,
+                "price": 6.4,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108510    ",
+                "product": "KU LIME&PEPPERMINT 1.5L",
+                "quantity": 36,
+                "price": 10.4,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108510    ",
+                "product": "KU MARAKUIA&MANDARIN 1.5L",
+                "quantity": 36,
+                "price": 10.4,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108510    ",
+                "product": "KU MERE-PERE 1.5L",
+                "quantity": 24,
+                "price": 10.4,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108510    ",
+                "product": "KU GUAVA&GRAPEFRUIT 1.5L",
+                "quantity": 36,
+                "price": 10.4,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108510    ",
+                "product": "Porumb p/u pop-corn 300 gr./20",
+                "quantity": 20,
+                "price": 11.46,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108510    ",
+                "product": "Provansali M-za Belmar 450ml dou-pac./12",
+                "quantity": 12,
+                "price": 24.3,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108510    ",
+                "product": "Provansali M-za Belmar b/s 250ml./12 albastra ",
+                "quantity": 12,
+                "price": 15.1,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108510    ",
+                "product": "Otet de masa 6% 1L (квадратный)",
+                "quantity": 12,
+                "price": 8.51,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108510    ",
+                "product": "Otet de masa 9% 1L (квадратный)",
+                "quantity": 12,
+                "price": 9.22,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108510    ",
+                "product": "Otet de masa 9% 0.5L",
+                "quantity": 12,
+                "price": 6.3,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108510    ",
+                "product": "Otet de mere 5% 1L (квадратный)",
+                "quantity": 12,
+                "price": 9.41,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108518    ",
+                "product": "MAIONEZA Provansall 250 g PET",
+                "quantity": 12,
+                "price": 16.38,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108518    ",
+                "product": "A/I AQUA UNIQA 3.5 N",
+                "quantity": 12,
+                "price": 10.5,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108518    ",
+                "product": "A/M ROUA ARGINTIE 3.0  mediu gaz",
+                "quantity": 24,
+                "price": 7.8,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108518    ",
+                "product": "A/M ROUA ARGINTIE 3.0 gaz",
+                "quantity": 24,
+                "price": 7.8,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108518    ",
+                "product": "A/M ROUA ARGINTIE 1.5 gaz",
+                "quantity": 36,
+                "price": 5.8,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108518    ",
+                "product": "CVAS 3.0L",
+                "quantity": 8,
+                "price": 11.1,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108518    ",
+                "product": "KU GUAVA&GRAPEFRUIT 1.5L",
+                "quantity": 12,
+                "price": 10.4,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108518    ",
+                "product": "KU MARAKUIA&MANDARIN 1.5L",
+                "quantity": 12,
+                "price": 10.4,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108518    ",
+                "product": "KU MERE-PERE 1.5L",
+                "quantity": 12,
+                "price": 10.4,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108518    ",
+                "product": "Bors acru 0.5L pet./15",
+                "quantity": 15,
+                "price": 6.1,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108518    ",
+                "product": "Bors acru 1L pet./6",
+                "quantity": 18,
+                "price": 8.65,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108518    ",
+                "product": "Porumb p/u pop-corn 300 gr./20",
+                "quantity": 20,
+                "price": 11.46,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108518    ",
+                "product": "Otet de masa 6% 0.5L",
+                "quantity": 12,
+                "price": 5.83,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108518    ",
+                "product": "Otet de masa 9% 1L (квадратный)",
+                "quantity": 12,
+                "price": 9.22,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108518    ",
+                "product": "Otet de masa 9% 0.5L",
+                "quantity": 12,
+                "price": 6.3,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108519    ",
+                "product": "A/I AQUA UNIQA 6.0+1.0 N",
+                "quantity": 12,
+                "price": 16.65,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108519    ",
+                "product": "A/I AQUA UNIQA 3.5 N",
+                "quantity": 12,
+                "price": 10.5,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108519    ",
+                "product": "A/U  PLUS CAPSUNA MILK 1.5L",
+                "quantity": 6,
+                "price": 8.2,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108519    ",
+                "product": "A/U  PLUS MAR 1.5L",
+                "quantity": 6,
+                "price": 8.2,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108519    ",
+                "product": "A/I AQUA UNIQA 1.5 gaz",
+                "quantity": 6,
+                "price": 7.6,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108519    ",
+                "product": "A/I AQUA UNIQA 0.75L N/G Sport LEMON",
+                "quantity": 6,
+                "price": 7.15,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108519    ",
+                "product": "A/M ROUA ARGINTIE 3.0 gaz",
+                "quantity": 12,
+                "price": 7.8,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108519    ",
+                "product": "A/M ROUA ARGINTIE 1.5  mediu gaz",
+                "quantity": 12,
+                "price": 5.8,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108519    ",
+                "product": "A/M ROUA ARGINTIE 3.0  mediu gaz",
+                "quantity": 12,
+                "price": 7.8,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108519    ",
+                "product": "KU LIME&PEPPERMINT 1.5L",
+                "quantity": 6,
+                "price": 10.4,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108519    ",
+                "product": "KU MARAKUIA&MANDARIN 1.5L",
+                "quantity": 6,
+                "price": 10.4,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108519    ",
+                "product": "KU MERE-PERE 1.5L",
+                "quantity": 6,
+                "price": 10.4,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108519    ",
+                "product": "Bors acru 1L pet./6",
+                "quantity": 6,
+                "price": 8.65,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108519    ",
+                "product": "M-н Belmar \"Butterbrod\"  60% 200g/20",
+                "quantity": 10,
+                "price": 9.1,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108519    ",
+                "product": "Otet de masa 9% 1L (квадратный)",
+                "quantity": 12,
+                "price": 9.22,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108519    ",
+                "product": "Otet de masa 9% 0.5L",
+                "quantity": 12,
+                "price": 6.3,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108538    ",
+                "product": "MAIONEZA Provansall 250 g PET",
+                "quantity": 12,
+                "price": 16.38,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108538    ",
+                "product": "A/I AQUA UNIQA 6.0+1.0 N",
+                "quantity": 20,
+                "price": 16.65,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108538    ",
+                "product": "A/I AQUA UNIQA 3.5 N",
+                "quantity": 28,
+                "price": 10.5,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108538    ",
+                "product": "A/I AQUA UNIQA 0.75L N/G Sport LEMON",
+                "quantity": 6,
+                "price": 7.15,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108538    ",
+                "product": "A/I AQUA UNIQA 0.75L N/G Sport",
+                "quantity": 6,
+                "price": 7.15,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108538    ",
+                "product": "A/U  STILL  LEMON 1.25L",
+                "quantity": 6,
+                "price": 8.2,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108538    ",
+                "product": "A/M ROUA ARGINTIE 3.0 gaz",
+                "quantity": 8,
+                "price": 7.8,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108538    ",
+                "product": "A/M ROUA ARGINTIE 1.5  mediu gaz",
+                "quantity": 12,
+                "price": 5.8,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108538    ",
+                "product": "CVAS 3.0L",
+                "quantity": 4,
+                "price": 11.1,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108538    ",
+                "product": "LIMONADA 1.5L BAUTURA TOPIC",
+                "quantity": 12,
+                "price": 6.4,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108538    ",
+                "product": "TUTI FRUTI 1.5L BAUTURA TOPIC",
+                "quantity": 12,
+                "price": 6.4,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108538    ",
+                "product": "CREM SODA 1.5L BAUTURA TOPIC",
+                "quantity": 12,
+                "price": 6.4,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108538    ",
+                "product": "KU GUAVA&GRAPEFRUIT 1.5L",
+                "quantity": 12,
+                "price": 10.4,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108538    ",
+                "product": "KU PORTOCALE&VISINA 1.5L",
+                "quantity": 6,
+                "price": 10.4,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108538    ",
+                "product": "KU LIME&PEPPERMINT 1.5L",
+                "quantity": 12,
+                "price": 10.4,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108538    ",
+                "product": "KU MARAKUIA&MANDARIN 1.5L",
+                "quantity": 12,
+                "price": 10.4,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108538    ",
+                "product": "KU MERE-PERE 1.5L",
+                "quantity": 24,
+                "price": 10.4,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108538    ",
+                "product": "Bors acru 0.5L pet./15",
+                "quantity": 15,
+                "price": 6.1,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108538    ",
+                "product": "Bors acru 1L pet./6",
+                "quantity": 6,
+                "price": 8.65,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108538    ",
+                "product": "Porumb p/u pop-corn 300 gr./20",
+                "quantity": 20,
+                "price": 11.46,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108538    ",
+                "product": "Ketchup p/u frigarui Belmar 350ml/18",
+                "quantity": 18,
+                "price": 15.17,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108538    ",
+                "product": "M-н \"Моале на здоровье\" Belmar 250 гр./36 ",
+                "quantity": 10,
+                "price": 12.04,
+                "ext_info": "",
+                "direction": ""
+            },
+            {
+                "id": "uAQ01108538    ",
+                "product": "Otet de masa 9% 0.5L",
+                "quantity": 12,
+                "price": 6.3,
+                "ext_info": "",
+                "direction": ""
+            }
+        ]
+    }
+]

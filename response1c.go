@@ -49,6 +49,9 @@ func (r *Response1C) FillFrom1C(src io.Reader, db *sqlx.DB) error {
 			}
 		case sql.ErrNoRows:
 			// log.Println("Courier not found")
+			if res.CourierID == "" {
+				return err
+			}
 			_, err1 := db.Exec(`INSERT INTO 
 								couriers (id, mac_address, tel, name, car_number) 
 								VALUES (?, ?, ?, ?, ?)`, res.CourierID, res.CourierImei, res.CourierTel, res.CourierName, res.CourierCarNumber)
@@ -112,7 +115,7 @@ func (r *Response1C) FillFrom1C(src io.Reader, db *sqlx.DB) error {
 			if consist.Direction == "" {
 				direction = 0
 			} else {
-				direction =1
+				direction = 1
 			}
 			_, err := db.Exec(`INSERT INTO 
 							consists (product, quantity, price, ext_info, orders_id, direction) 
