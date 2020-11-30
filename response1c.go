@@ -142,26 +142,26 @@ type Response1CElement struct {
 
 // Client1C ...
 type Client1C struct {
-	ClientID      string `json:"client_id" db:"id"`
-	ClientName    string `json:"client_name"`
-	ClientTel     string `json:"client_tel"`
-	OrderID       string `json:"order_id"`
-	PaymentMethod string `json:"payment_method"`
-	OrderCost     int64  `json:"order_cost"`
-	Delivered     string `json:"delivered"`
-	DeliveryDelay string `json:"delivery_delay"`
-	DateStart     string `json:"date_start"`
-	DateFinish    string `json:"date_finish"`
-	TimeStamp     string `json:"time_stamp"`
-	Address       string `json:"address"`
+	ClientID      string  `json:"client_id" db:"id"`
+	ClientName    string  `json:"client_name"`
+	ClientTel     string  `json:"client_tel"`
+	OrderID       string  `json:"order_id"`
+	PaymentMethod string  `json:"payment_method"`
+	OrderCost     float64 `json:"order_cost"`
+	Delivered     string  `json:"delivered"`
+	DeliveryDelay string  `json:"delivery_delay"`
+	DateStart     string  `json:"date_start"`
+	DateFinish    string  `json:"date_finish"`
+	TimeStamp     string  `json:"time_stamp"`
+	Address       string  `json:"address"`
 }
 
 // Consist1C ...
 type Consist1C struct {
-	ID        string `json:"id" db:"orders_id"`
-	Product   string `json:"product"`
-	Quantity  int64  `json:"quantity"`
-	Price     int64  `json:"price"`
-	EXTInfo   string `json:"ext_info" db:"ext_info"`
-	Direction string `json:"direction"`
+	ID        string  `json:"id" db:"orders_id"`
+	Product   string  `json:"product"`
+	Quantity  float64 `json:"quantity"`
+	Price     float64 `json:"price"`
+	EXTInfo   string  `json:"ext_info" db:"ext_info"`
+	Direction string  `json:"direction"`
 }
