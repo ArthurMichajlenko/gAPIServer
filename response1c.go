@@ -3,7 +3,6 @@ package main
 import (
 	"database/sql"
 	"encoding/json"
-	"errors"
 	"io"
 	"io/ioutil"
 	"log"
@@ -38,10 +37,10 @@ func (r *Response1C) FillFrom1C(src io.Reader, db *sqlx.DB) error {
 	for _, res := range *r {
 		// for _, client := range (*r)[0].Clients {
 		var courier Courier
-		err := db.Get(&courier, "SELECT id FROM couriers WHERE id = ?", res.CourierID)
 		if res.CourierID == "" {
-			return errors.New("Courier does not exist in 1C")
+			continue
 		}
+		err := db.Get(&courier, "SELECT id FROM couriers WHERE id = ?", res.CourierID)
 		switch err {
 		case nil:
 			// log.Println("Courier found")
