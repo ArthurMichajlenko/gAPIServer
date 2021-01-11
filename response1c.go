@@ -106,7 +106,7 @@ func (r *Response1C) FillFrom1C(src io.Reader, db *sqlx.DB) error {
 				log.Println(err)
 			}
 		}
-		_, err = db.Exec("TRUNCATE TABLE consists")
+		// _, err = db.Exec("TRUNCATE TABLE consists")
 		if err != nil {
 			log.Println(err)
 		}
