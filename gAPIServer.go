@@ -2,12 +2,13 @@ package main
 
 import (
 	"log"
-	"os"
+	// "os"
+	"time"
 
 	"github.com/dgrijalva/jwt-go"
 
 	"net/http"
-	// "net/url"
+	"net/url"
 
 	"github.com/dimchansky/utfbom"
 	_ "github.com/go-sql-driver/mysql"
@@ -125,6 +126,8 @@ func getClients(c echo.Context) error {
 func getOrders(c echo.Context) error {
 	var orders Orders
 	var couriers Couriers
+	date := time.Now().Format("2006-01-02")
+	// date := time.Now().AddDate(0,0,1).Format("2006-01-02")
 	user := c.Get("user").(*jwt.Token)
 	claims := user.Claims.(jwt.MapClaims)
 	macAddress := claims["macAddress"]
@@ -133,7 +136,8 @@ func getOrders(c echo.Context) error {
 		log.Println(err)
 	}
 	if c.QueryParam("client") == "" {
-		err := db.Select(&orders, "SELECT * FROM orders WHERE courier_id = ?", couriers[0].ID)
+		err := db.Select(&orders, `SELECT * FROM orders 
+								  WHERE courier_id = ? AND date_start >= ? AND date_start < DATE_ADD(?, INTERVAL 1 DAY)`, couriers[0].ID, date, date)
 		if err != nil {
 			log.Println(err)
 		}
@@ -153,6 +157,9 @@ func getOrders(c echo.Context) error {
 			log.Println(err)
 		}
 		orders[i].Consists = order.Consists
+	}
+	if orders == nil {
+		return c.NoContent(http.StatusNoContent)
 	}
 	return c.JSON(http.StatusOK, orders)
 }
@@ -185,26 +192,26 @@ func login(c echo.Context) error {
 	macAddress := c.FormValue("macAddress")
 
 	// From real 1C
-	// url := "http://10.10.11.158/trade/hs/ObmenLogistica/V1/Document?IMEI=" + url.QueryEscape(macAddress)
-	// req, err := http.NewRequest("GET", url, nil)
-	// if err != nil {
-	// 	log.Println(err)
-	// }
-	// req.Header.Add("Authorization", "Basic TG9naXN0aWM6MTIzNA==")
-	// res, err := http.DefaultClient.Do(req)
-	// if err != nil {
-	// 	log.Println(err)
-	// }
-	// defer res.Body.Close()
-	// res1C.FillFrom1C(utfbom.SkipOnly(res.Body), db)
+	url := "http://10.10.11.158/trade/hs/ObmenLogistica/V1/Document?IMEI=" + url.QueryEscape(macAddress)
+	req, err := http.NewRequest("GET", url, nil)
+	if err != nil {
+		log.Println(err)
+	}
+	req.Header.Add("Authorization", "Basic TG9naXN0aWM6MTIzNA==")
+	res, err := http.DefaultClient.Do(req)
+	if err != nil {
+		log.Println(err)
+	}
+	defer res.Body.Close()
+	res1C.FillFrom1C(utfbom.SkipOnly(res.Body), db)
 
 	// From debug JSON file
-	jsonFile, err := os.Open("Response1C_empty.json")
-	if err != nil {
-		return err
-	}
-	defer jsonFile.Close()
-	res1C.FillFrom1C(utfbom.SkipOnly(jsonFile), db)
+	// jsonFile, err := os.Open("Response1C_empty.json")
+	// if err != nil {
+	// 	return err
+	// }
+	// defer jsonFile.Close()
+	// res1C.FillFrom1C(utfbom.SkipOnly(jsonFile), db)
 
 	err = db.Select(&couriers, "SELECT * FROM couriers WHERE mac_address = ?", macAddress)
 	if err != nil {
