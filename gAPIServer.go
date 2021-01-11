@@ -2,12 +2,12 @@ package main
 
 import (
 	"log"
-	// "os"
+	"os"
 
 	"github.com/dgrijalva/jwt-go"
 
 	"net/http"
-	"net/url"
+	// "net/url"
 
 	"github.com/dimchansky/utfbom"
 	_ "github.com/go-sql-driver/mysql"
@@ -184,18 +184,27 @@ func login(c echo.Context) error {
 	// macAddress := c.QueryParam("macAddress")
 	macAddress := c.FormValue("macAddress")
 
-	url := "http://10.10.11.158/trade/hs/ObmenLogistica/V1/Document?IMEI=" + url.QueryEscape(macAddress)
-	req, err := http.NewRequest("GET", url, nil)
+	// From real 1C
+	// url := "http://10.10.11.158/trade/hs/ObmenLogistica/V1/Document?IMEI=" + url.QueryEscape(macAddress)
+	// req, err := http.NewRequest("GET", url, nil)
+	// if err != nil {
+	// 	log.Println(err)
+	// }
+	// req.Header.Add("Authorization", "Basic TG9naXN0aWM6MTIzNA==")
+	// res, err := http.DefaultClient.Do(req)
+	// if err != nil {
+	// 	log.Println(err)
+	// }
+	// defer res.Body.Close()
+	// res1C.FillFrom1C(utfbom.SkipOnly(res.Body), db)
+
+	// From debug JSON file
+	jsonFile, err := os.Open("Response1C_empty.json")
 	if err != nil {
-		log.Println(err)
+		return err
 	}
-	req.Header.Add("Authorization", "Basic TG9naXN0aWM6MTIzNA==")
-	res, err := http.DefaultClient.Do(req)
-	if err != nil {
-		log.Println(err)
-	}
-	defer res.Body.Close()
-	res1C.FillFrom1C(utfbom.SkipOnly(res.Body), db)
+	defer jsonFile.Close()
+	res1C.FillFrom1C(utfbom.SkipOnly(jsonFile), db)
 
 	err = db.Select(&couriers, "SELECT * FROM couriers WHERE mac_address = ?", macAddress)
 	if err != nil {

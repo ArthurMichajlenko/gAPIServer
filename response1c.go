@@ -29,6 +29,8 @@ func (r *Response1C) Marshal() ([]byte, error) {
 
 // FillFrom1C ...
 func (r *Response1C) FillFrom1C(src io.Reader, db *sqlx.DB) error {
+	//For me 
+	log.Println(time.Now().Format("2006-01-02"))
 	data, err := ioutil.ReadAll(src)
 	if err != nil {
 		return err
