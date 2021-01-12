@@ -133,8 +133,18 @@ func getOrders(c echo.Context) error {
 	// date := time.Now().AddDate(0,0,1).Format("2006-01-02")
 	user := c.Get("user").(*jwt.Token)
 	claims := user.Claims.(jwt.MapClaims)
-	macAddress := claims["macAddress"]
-	err := db.Select(&couriers, "SELECT * FROM couriers WHERE mac_address = ?", macAddress)
+	macAddress := claims["macAddress"].(string)
+
+	var res1C Response1C
+	// From real 1C
+	err := res1C.FillFrom1C(FetchDataFromHTTP(url1C, macAddress), db)
+	if err != nil {
+		log.Println(err)
+	}
+	// For debug JSON file
+	// res1C.FillFrom1C(FetchDataFromFile("Response1C_oppo.json", macAddress), db)
+
+	err = db.Select(&couriers, "SELECT * FROM couriers WHERE mac_address = ?", macAddress)
 	if err != nil {
 		log.Println(err)
 	}
@@ -189,17 +199,16 @@ func putOrders(c echo.Context) error {
 }
 
 func login(c echo.Context) error {
-	var couriers Couriers
-	var res1C Response1C
 	// macAddress := c.QueryParam("macAddress")
 	macAddress := c.FormValue("macAddress")
-
+	var couriers Couriers
+	
+	var res1C Response1C
 	// From real 1C
 	err := res1C.FillFrom1C(FetchDataFromHTTP(url1C, macAddress), db)
 	if err != nil {
 		log.Println(err)
 	}
-
 	// For debug JSON file
 	// res1C.FillFrom1C(FetchDataFromFile("Response1C_oppo.json", macAddress), db)
 
