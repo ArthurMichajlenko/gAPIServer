@@ -195,8 +195,7 @@ func login(c echo.Context) error {
 	macAddress := c.FormValue("macAddress")
 
 	// From real 1C
-	url := url1C
-	err := res1C.FillFrom1C(FetchDataFromHTTP(url, macAddress), db)
+	err := res1C.FillFrom1C(FetchDataFromHTTP(url1C, macAddress), db)
 	if err != nil {
 		log.Println(err)
 	}
