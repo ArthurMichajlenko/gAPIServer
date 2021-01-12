@@ -3,8 +3,6 @@ package main
 import (
 	"database/sql"
 	"encoding/json"
-	"io"
-	"io/ioutil"
 	"log"
 	"time"
 
@@ -28,11 +26,8 @@ func (r *Response1C) Marshal() ([]byte, error) {
 }
 
 // FillFrom1C ...
-func (r *Response1C) FillFrom1C(src io.Reader, db *sqlx.DB) error {
-	data, err := ioutil.ReadAll(src)
-	if err != nil {
-		return err
-	}
+func (r *Response1C) FillFrom1C(data []byte, db *sqlx.DB) error {
+	var err error
 	*r, err = UnmarshalResponse1C(data)
 	for _, res := range *r {
 		// for _, client := range (*r)[0].Clients {

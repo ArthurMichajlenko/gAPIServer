@@ -1,8 +1,9 @@
 package main
 
 import (
+	"io/ioutil"
 	"log"
-	// "os"
+	"os"
 	"time"
 
 	"github.com/dgrijalva/jwt-go"
@@ -18,9 +19,11 @@ import (
 )
 
 var db *sqlx.DB
+var url1C string
 
 func init() {
 	var err error
+	url1C = "http://10.10.11.158/trade/hs/ObmenLogistica/V1/Document?IMEI="
 	// db, err = sqlx.Connect("mysql", "root:Nfnmzyf@tcp(localhost:3306)/gelibert?parseTime=true&loc=Local")
 	db, err = sqlx.Connect("mysql", "gelibert:gelibert@tcp(localhost:3306)/gelibert?parseTime=true&loc=Local")
 	if err != nil {
@@ -192,26 +195,14 @@ func login(c echo.Context) error {
 	macAddress := c.FormValue("macAddress")
 
 	// From real 1C
-	url := "http://10.10.11.158/trade/hs/ObmenLogistica/V1/Document?IMEI=" + url.QueryEscape(macAddress)
-	req, err := http.NewRequest("GET", url, nil)
+	url := url1C
+	err := res1C.FillFrom1C(FetchDataFromHTTP(url, macAddress), db)
 	if err != nil {
 		log.Println(err)
 	}
-	req.Header.Add("Authorization", "Basic TG9naXN0aWM6MTIzNA==")
-	res, err := http.DefaultClient.Do(req)
-	if err != nil {
-		log.Println(err)
-	}
-	defer res.Body.Close()
-	res1C.FillFrom1C(utfbom.SkipOnly(res.Body), db)
 
-	// From debug JSON file
-	// jsonFile, err := os.Open("Response1C_empty.json")
-	// if err != nil {
-	// 	return err
-	// }
-	// defer jsonFile.Close()
-	// res1C.FillFrom1C(utfbom.SkipOnly(jsonFile), db)
+	// For debug JSON file
+	// res1C.FillFrom1C(FetchDataFromFile("Response1C_oppo.json", macAddress), db)
 
 	err = db.Select(&couriers, "SELECT * FROM couriers WHERE mac_address = ?", macAddress)
 	if err != nil {
@@ -229,4 +220,38 @@ func login(c echo.Context) error {
 	return c.JSON(http.StatusOK, map[string]string{
 		"token": t,
 	})
+}
+
+// FetchDataFromHTTP read data from 1C server
+func FetchDataFromHTTP(srcURL string, macAddress string) []byte {
+	url := srcURL + url.QueryEscape(macAddress)
+	req, err := http.NewRequest("GET", url, nil)
+	if err != nil {
+		log.Println(err)
+	}
+	req.Header.Add("Authorization", "Basic TG9naXN0aWM6MTIzNA==")
+	res, err := http.DefaultClient.Do(req)
+	if err != nil {
+		log.Println(err)
+	}
+	defer res.Body.Close()
+	content, err := ioutil.ReadAll(utfbom.SkipOnly(res.Body))
+	if err != nil {
+		log.Println(err)
+	}
+	return content
+}
+
+// FetchDataFromFile read JSON file for debug purpose
+func FetchDataFromFile(file string, macAddress string) []byte {
+	jsonFile, err := os.Open(file)
+	if err != nil {
+		log.Println(err)
+	}
+	defer jsonFile.Close()
+	content, err := ioutil.ReadAll(utfbom.SkipOnly(jsonFile))
+	if err != nil {
+		log.Println(err)
+	}
+	return content
 }
