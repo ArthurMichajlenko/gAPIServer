@@ -210,7 +210,10 @@ func login(c echo.Context) error {
 		log.Println(err)
 	}
 	// For debug JSON file
-	// res1C.FillFrom1C(FetchDataFromFile("Response1C_oppo.json", macAddress), db)
+	// err := res1C.FillFrom1C(FetchDataFromFile("Response1C_oppo.json", macAddress), db)
+	// if err != nil {
+	// 	log.Print(err)
+	// }
 
 	err = db.Select(&couriers, "SELECT * FROM couriers WHERE mac_address = ?", macAddress)
 	if err != nil {
