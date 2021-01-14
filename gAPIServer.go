@@ -42,7 +42,7 @@ func main() {
 	e.POST("/login", login)
 	g := e.Group("/data", middleware.JWT([]byte("gelibert")))
 	g.GET("/couriers", getCouriers)
-	g.PUT("/couriers", putCouriers)
+	g.PUT("/geodata", putGeodata)
 	g.GET("/clients", getClients)
 	g.GET("/orders", getOrders)
 	g.PUT("/orders", putOrders)
@@ -70,30 +70,24 @@ func hello(c echo.Context) error {
 
 func getCouriers(c echo.Context) error {
 	var couriers Couriers
-	var courier CourierCl
 	user := c.Get("user").(*jwt.Token)
 	claims := user.Claims.(jwt.MapClaims)
 	macAddress := claims["macAddress"].(string)
 	err := db.Select(&couriers, "SELECT id, mac_address, tel, name, car_number FROM couriers WHERE mac_address = ?", macAddress)
-	courier.ID = couriers[0].ID
-	courier.MacAddress = couriers[0].MacAddress
-	courier.Tel = couriers[0].Tel
-	courier.Name = couriers[0].Name
-	courier.CarNumber = couriers[0].CarNumber
 	if err != nil {
 		log.Println(err)
 	}
 	// return c.JSON(http.StatusOK, couriers)
-	return c.JSON(http.StatusOK, courier)
+	return c.JSON(http.StatusOK, couriers[0])
 }
 
-func putCouriers(c echo.Context) error {
-	var courier CourierCl
-	if err := c.Bind(&courier); err != nil {
+func putGeodata(c echo.Context) error {
+	var geodata Geodata
+	if err := c.Bind(&geodata); err != nil {
 		log.Println(err)
 	}
-	_, err := db.NamedExec(`INSERT INTO geodata (mac_address, courier_id, latitude, longitude, address) 
-							VALUES (:mac_address, :id, :latitude, :longitude, :address)`, &courier)
+	_, err := db.NamedExec(`INSERT INTO geodata (mac_address, courier_id, latitude, longitude, timestamp) 
+							VALUES (:mac_address, :id, :latitude, :longitude, :timestamp)`, &geodata)
 	if err != nil {
 		log.Println(err)
 	}
@@ -189,7 +183,6 @@ func putOrders(c echo.Context) error {
 	if err != nil {
 		log.Println(err)
 	}
-	// err = db.Select(&order.Consists, "SELECT product, quantity, price, ext_info FROM consists WHERE orders_id = ?", order.ID)
 	err = db.Select(&order.Consists, "SELECT product, quantity, price, ext_info FROM consists WHERE orders_id = ?", order.ID)
 	if err != nil {
 		log.Println(err)

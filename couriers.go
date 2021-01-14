@@ -32,12 +32,10 @@ type Courier struct {
 
 // Geodata geodata about courier
 type Geodata struct {
-	ID         int       `json:"id" db:"id"`
 	MacAddress string    `json:"mac_address" db:"mac_address"`
 	CourierID  string    `json:"courier_id" db:"courier_id"`
 	Latitude   float64   `json:"latitude" db:"latitude"`
 	Longitude  float64   `json:"longitude" db:"longitude"`
-	Address    string    `json:"address" db:"address"`
 	TimeStamp  time.Time `json:"timestamp" db:"timestamp"`
 }
 
@@ -50,30 +48,5 @@ func UnmarshalGeodata(data []byte) (Geodata, error) {
 
 // Marshal encode Geodata to JSON
 func (r *Geodata) Marshal() ([]byte, error) {
-	return json.Marshal(r)
-}
-
-// CourierCl courier data for REST from mobile client
-type CourierCl struct {
-	ID         string    `json:"id" db:"id"`
-	MacAddress string    `json:"mac_address" db:"mac_address"`
-	Tel        string    `json:"tel" db:"tel"`
-	Name       string    `json:"name" db:"name"`
-	CarNumber  string    `json:"car_number" db:"car_number"`
-	Latitude   float64   `json:"latitude" db:"latitude"`
-	Longitude  float64   `json:"longitude" db:"longitude"`
-	Address    string    `json:"address" db:"address"`
-	TimeStamp  time.Time `json:"timestamp" db:"timestamp"`
-}
-
-// UnmarshalCourierCl decode CourierCl from JSON
-func UnmarshalCourierCl(data []byte) (CourierCl, error) {
-	var r CourierCl
-	err := json.Unmarshal(data, &r)
-	return r, err
-}
-
-// Marshal encode CourierCl to JSON
-func (r *CourierCl) Marshal() ([]byte, error) {
 	return json.Marshal(r)
 }
