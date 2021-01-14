@@ -32,6 +32,7 @@ type Courier struct {
 
 // Geodata geodata about courier
 type Geodata struct {
+	ID         int       `json:"id" db:"id"`
 	MacAddress string    `json:"mac_address" db:"mac_address"`
 	CourierID  string    `json:"courier_id" db:"courier_id"`
 	Latitude   float64   `json:"latitude" db:"latitude"`
