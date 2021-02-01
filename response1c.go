@@ -83,17 +83,17 @@ func (r *Response1C) FillFrom1C(data []byte, db *sqlx.DB) error {
 			case nil:
 				// log.Println("Order found")
 				_, err1 := db.Exec(`UPDATE orders 
-									SET courier_id=?, payment_method=?, order_cost=?, address=? 
-									WHERE id=?`, res.CourierID, client.PaymentMethod, client.OrderCost, client.Address, client.OrderID)
+									SET courier_id=?, payment_method=?, order_cost=?, address=?, order_routlist=?, order_date=? 
+									WHERE id=?`, res.CourierID, client.PaymentMethod, client.OrderCost, client.Address, client.OrderRoutlist, client.OrderDate, client.OrderID)
 				if err1 != nil {
 					log.Println(err1)
 				}
 			case sql.ErrNoRows:
 				// log.Println("Orders not found")
 				_, err1 := db.Exec(`INSERT INTO 
-									orders (id, courier_id, client_id, payment_method, order_cost, address, date_start) 
-									VALUES (?, ?, ?, ?, ?, ?, ?)
-									`, client.OrderID, res.CourierID, client.ClientID, client.PaymentMethod, client.OrderCost, client.Address, time.Now().Format("2006-01-02 15:04:05"))
+									orders (id, courier_id, client_id, payment_method, order_cost, address, order_routlist, order_date, date_start) 
+									VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+									`, client.OrderID, res.CourierID, client.ClientID, client.PaymentMethod, client.OrderCost, client.Address, client.OrderRoutlist, client.OrderDate, time.Now().Format("2006-01-02 15:04:05"))
 				if err1 != nil {
 					log.Println(err1)
 				}
@@ -137,10 +137,12 @@ type Response1CElement struct {
 
 // Client1C ...
 type Client1C struct {
+	OrderRoutlist string  `json:"order_routlist"`
 	ClientID      string  `json:"client_id" db:"id"`
 	ClientName    string  `json:"client_name"`
 	ClientTel     string  `json:"client_tel"`
 	OrderID       string  `json:"order_id"`
+	OrderDate     string  `json:"order_date"`
 	PaymentMethod string  `json:"payment_method"`
 	OrderCost     float64 `json:"order_cost"`
 	Delivered     string  `json:"delivered"`
