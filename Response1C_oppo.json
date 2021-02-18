@@ -1,921 +1,2747 @@
 [
   {
-    "courier_id": "u00000216",
-    "courier_imei": "14:47:2D:22:C8:2B",
+    "courier_id": "u00000380",
+    "courier_imei": "380",
     "courier_tel": "",
-    "courier_name": "ODAGIU ADRIAN ",
-    "courier_car_number": "RCM517  ",
+    "courier_name": "BEJAN DMITRII",
+    "courier_car_number": "CJM 719 ",
     "courier_timestamp": "",
     "Clients": [
       {
-        "client_id": "u00012682",
-        "client_name": "DEZVOLTAREA DURABILA MILENIUL-III",
-        "client_tel": "078378110",
-        "order_id": "uAQ01099327    ",
+        "order_routlist": "000080258",
+        "client_id": "000001906",
+        "client_name": "DACIA-LV S.A.",
+        "client_tel": "552047,559057",
+        "order_id": "uAQ01107978    ",
+        "order_date": "20201017",
         "payment_method": "Перечисление",
-        "order_cost": 180,
+        "order_cost": 551.32,
         "delivered": "",
         "delivery_delay": "",
         "date_start": "",
         "date_finish": "",
         "time_stamp": "",
-        "address": "R.SINGEREI S.CHISCARENI"
+        "address": "str.Ginta Latina 21/5"
       },
       {
-        "client_id": "u00012675",
-        "client_name": "ROTARU INVEST SRL",
-        "client_tel": "069986699",
-        "order_id": "uAQ01098919    ",
+        "order_routlist": "000080258",
+        "client_id": "000001966",
+        "client_name": "ALIVALDA SRL ",
+        "client_tel": "079596396",
+        "order_id": "uAQ01107981    ",
+        "order_date": "20201017",
         "payment_method": "Перечисление",
-        "order_cost": 640,
+        "order_cost": 791.06,
         "delivered": "",
         "delivery_delay": "",
         "date_start": "",
         "date_finish": "",
         "time_stamp": "",
-        "address": "R.SINGEREI S.PEPENI (PECO TITAN OIL)"
+        "address": "Ion Dumeniuc 26B"
       },
       {
-        "client_id": "u00007653",
-        "client_name": "PRIMARIA SATULUI VEREJENI",
-        "client_tel": "062198504",
-        "order_id": "uAQ01098950    ",
+        "order_routlist": "000080258",
+        "client_id": "УТ0000071",
+        "client_name": "ETOLAUR SRL ",
+        "client_tel": "079405170",
+        "order_id": "uAQ01107987    ",
+        "order_date": "20201017",
         "payment_method": "Перечисление",
-        "order_cost": 50,
+        "order_cost": 452.2,
         "delivered": "",
         "delivery_delay": "",
         "date_start": "",
         "date_finish": "",
         "time_stamp": "",
-        "address": "R.TELENESTI S.VEREJENI(CENTRUL COMUNITAR)"
+        "address": "str I.Vieru 13"
       },
       {
-        "client_id": "u00007653",
-        "client_name": "PRIMARIA SATULUI VEREJENI",
-        "client_tel": "062198504",
-        "order_id": "uAQ01098936    ",
+        "order_routlist": "000080258",
+        "client_id": "000001851",
+        "client_name": "LINADPRIM SRL ",
+        "client_tel": "350322",
+        "order_id": "uAQ01107992    ",
+        "order_date": "20201017",
         "payment_method": "Перечисление",
-        "order_cost": 50,
+        "order_cost": 290.58,
         "delivered": "",
         "delivery_delay": "",
         "date_start": "",
         "date_finish": "",
         "time_stamp": "",
-        "address": "R.TELENESTI S.VEREJENI"
+        "address": "str. M. cel Batrin 20/3"
       },
       {
-        "client_id": "u00007653",
-        "client_name": "PRIMARIA SATULUI VEREJENI",
-        "client_tel": "062198504",
-        "order_id": "uAQ01098933    ",
+        "order_routlist": "000080258",
+        "client_id": "УТ0000047",
+        "client_name": "ARTEMUS PRIM SRL",
+        "client_tel": "438777",
+        "order_id": "uAQ01108006    ",
+        "order_date": "20201017",
         "payment_method": "Перечисление",
-        "order_cost": 100,
+        "order_cost": 1346.3,
         "delivered": "",
         "delivery_delay": "",
         "date_start": "",
         "date_finish": "",
         "time_stamp": "",
-        "address": "R.TELENESTI S.VEREJENI(GRADINITA)"
+        "address": "str.P.Zadnipru 16/7"
       },
       {
-        "client_id": "u00008815",
-        "client_name": "PRIMARIA SATULUI COROPCENI",
-        "client_tel": "025872410",
-        "order_id": "uAQ01098928    ",
+        "order_routlist": "000080258",
+        "client_id": "УТ0000005",
+        "client_name": "CATRANIUC II",
+        "client_tel": "339582",
+        "order_id": "uAQ01108127    ",
+        "order_date": "20201017",
         "payment_method": "Перечисление",
-        "order_cost": 60,
+        "order_cost": 514.36,
         "delivered": "",
         "delivery_delay": "",
         "date_start": "",
         "date_finish": "",
         "time_stamp": "",
-        "address": "R.TELENESTI S.COROPCENI(PRIMARIA)"
+        "address": "str.Ginta Latina 17/2"
       },
       {
-        "client_id": "u00004643",
-        "client_name": "PRIMARIA COMUNEI PREPELITA",
-        "client_tel": "026252331",
-        "order_id": "uAQ01098932    ",
+        "order_routlist": "000080258",
+        "client_id": "u00000789",
+        "client_name": "FIDESCO S.R.L.",
+        "client_tel": "026524617 ANENII",
+        "order_id": "uAQ01108167    ",
+        "order_date": "20201017",
         "payment_method": "Перечисление",
-        "order_cost": 180,
+        "order_cost": 1280.48,
         "delivered": "",
         "delivery_delay": "",
         "date_start": "",
         "date_finish": "",
         "time_stamp": "",
-        "address": "R.SINGEREI S.PREPELITA(PRIMARIA)"
+        "address": "str.Igor Vieru 20"
       },
       {
-        "client_id": "u00009843",
-        "client_name": "PRIMARIA COMUNEI COPACENI",
-        "client_tel": "069227278",
-        "order_id": "uAQ01098934    ",
+        "order_routlist": "000080258",
+        "client_id": "000000307",
+        "client_name": "LUKOIL-Moldova S.R.L . CONTRACT EXPIRAT",
+        "client_tel": "212290,212387",
+        "order_id": "uAQ01108242    ",
+        "order_date": "20201017",
         "payment_method": "Перечисление",
-        "order_cost": 120,
+        "order_cost": 498.3,
         "delivered": "",
         "delivery_delay": "",
         "date_start": "",
         "date_finish": "",
         "time_stamp": "",
-        "address": "R.SINGEREI S.PETROVCA(GRADINITA)"
+        "address": "mun.Chisinau,str.Studentilor 8/1, 498858,069416102"
       },
       {
-        "client_id": "u00009843",
-        "client_name": "PRIMARIA COMUNEI COPACENI",
-        "client_tel": "069227278",
-        "order_id": "uAQ01098931    ",
+        "order_routlist": "000080258",
+        "client_id": "000000511",
+        "client_name": "MOLDRETAIL GROUP S.R.L. ",
+        "client_tel": "060806102",
+        "order_id": "uAQ01108539    ",
+        "order_date": "20201017",
         "payment_method": "Перечисление",
-        "order_cost": 240,
+        "order_cost": 604.8,
         "delivered": "",
         "delivery_delay": "",
         "date_start": "",
         "date_finish": "",
         "time_stamp": "",
-        "address": "R.SINGEREI S.COPACENI(GRADINITA)"
+        "address": "or.Chisinau, str.Ginta Latina 3/1 L-77"
       },
       {
-        "client_id": "u00004096",
-        "client_name": "ORHEI-GAZ SRL PROCREDIT",
-        "client_tel": "023532717",
-        "order_id": "uAQ01098924    ",
-        "payment_method": "Перечисление",
-        "order_cost": 66,
-        "delivered": "",
-        "delivery_delay": "",
-        "date_start": "",
-        "date_finish": "",
-        "time_stamp": "",
-        "address": "OR.TELENESTI"
-      },
-      {
-        "client_id": "u00004667",
-        "client_name": "JUDECATORIA ORHEI APA IOD!!!",
-        "client_tel": "023520292",
-        "order_id": "uAQ01098921    ",
-        "payment_method": "Перечисление",
-        "order_cost": 120,
-        "delivered": "",
-        "delivery_delay": "",
-        "date_start": "",
-        "date_finish": "",
-        "time_stamp": "",
-        "address": "OR.TELENESTI STR.STEFAN CEL MARE 6"
-      },
-      {
-        "client_id": "u00009088",
-        "client_name": "IMSP CENTRUL DE SANATATE FLAMINZENI-COSCODENI",
-        "client_tel": "026236396",
-        "order_id": "uAQ01098942    ",
-        "payment_method": "Перечисление",
-        "order_cost": 180,
-        "delivered": "",
-        "delivery_delay": "",
-        "date_start": "",
-        "date_finish": "",
-        "time_stamp": "",
-        "address": "R.SINGEREI S.FLAMINZENI"
-      },
-      {
-        "client_id": "u00004754",
-        "client_name": "IMSP CENTRUL DE SANATATE COPACENI",
-        "client_tel": "026230342",
-        "order_id": "uAQ01098929    ",
-        "payment_method": "Перечисление",
-        "order_cost": 100,
-        "delivered": "",
-        "delivery_delay": "",
-        "date_start": "",
-        "date_finish": "",
-        "time_stamp": "",
-        "address": "R.SINGEREI S.COPACENI"
-      },
-      {
-        "client_id": "u00004217",
-        "client_name": "APA-CANAL TELENESTI IM",
-        "client_tel": "025822601",
-        "order_id": "uAQ01098920    ",
-        "payment_method": "Перечисление",
-        "order_cost": 50,
-        "delivered": "",
-        "delivery_delay": "",
-        "date_start": "",
-        "date_finish": "",
-        "time_stamp": "",
-        "address": "OR.TELENESTI STR. 31 AUGUST 11(IN AGENTIE SERVICIL"
-      },
-      {
-        "client_id": "u00007321",
-        "client_name": "BUNVOLENTIA GRIGORAUCA ONG",
-        "client_tel": "060585828",
-        "order_id": "uAQ01098923    ",
-        "payment_method": "Перечисление",
-        "order_cost": 250,
-        "delivered": "",
-        "delivery_delay": "",
-        "date_start": "",
-        "date_finish": "",
-        "time_stamp": "",
-        "address": "R.SINGEREI S.GRIGORAUCA"
-      },
-      {
-        "client_id": "u00004689",
-        "client_name": "DIRECTIA EDUCATIE SINGEREI",
-        "client_tel": "026226932",
-        "order_id": "uAQ01099156    ",
-        "payment_method": "Перечисление",
-        "order_cost": 540,
-        "delivered": "",
-        "delivery_delay": "",
-        "date_start": "",
-        "date_finish": "",
-        "time_stamp": "",
-        "address": "R.SINGEREI S.CHISCARENI(CCA CHISCARENI)"
-      },
-      {
-        "client_id": "u00004689",
-        "client_name": "DIRECTIA EDUCATIE SINGEREI",
-        "client_tel": "026226932",
-        "order_id": "uAQ01098945    ",
-        "payment_method": "Перечисление",
-        "order_cost": 60,
-        "delivered": "",
-        "delivery_delay": "",
-        "date_start": "",
-        "date_finish": "",
-        "time_stamp": "",
-        "address": "R.SINGEREI S.GRIGORAUCA(CENTRU DE FORMARE PROFESIO"
-      },
-      {
-        "client_id": "u00009773",
-        "client_name": "GIMNAZIUL BRAVICENI DIN S. BRAVICENI",
-        "client_tel": "061073629",
-        "order_id": "uAQ01098937    ",
-        "payment_method": "Перечисление",
-        "order_cost": 180,
-        "delivered": "",
-        "delivery_delay": "",
-        "date_start": "",
-        "date_finish": "",
-        "time_stamp": "",
-        "address": "R.ORHEI S.BRAVICENI"
-      },
-      {
-        "client_id": "u00008318",
-        "client_name": "GIMNAZIUL MALAIESTI DIN SATUL MALAIESTI",
-        "client_tel": "079050123",
-        "order_id": "uAQ01098938    ",
-        "payment_method": "Фактура чек",
-        "order_cost": 250,
-        "delivered": "",
-        "delivery_delay": "",
-        "date_start": "",
-        "date_finish": "",
-        "time_stamp": "",
-        "address": "R.ORHEI S.MALAIESTI"
-      },
-      {
-        "client_id": "u00012682",
-        "client_name": "DEZVOLTAREA DURABILA MILENIUL-III",
-        "client_tel": "078378110",
-        "order_id": "uAQ01099328    ",
+        "order_routlist": "000080258",
+        "client_id": "u00000997",
+        "client_name": "VULTUR PRIM SRL ",
+        "client_tel": "078708255",
+        "order_id": "uAQ01107886    ",
+        "order_date": "20201016",
         "payment_method": "Кеш",
-        "order_cost": 330,
+        "order_cost": 760.2,
         "delivered": "",
         "delivery_delay": "",
         "date_start": "",
         "date_finish": "",
         "time_stamp": "",
-        "address": "R.SINGEREI S.CHISCARENI"
+        "address": "str.Maria Dragan 38"
       },
       {
-        "client_id": "u00008817",
-        "client_name": "TURCAN FEODORA CULER",
-        "client_tel": "068696746",
-        "order_id": "uAQ01098927    ",
+        "order_routlist": "000080258",
+        "client_id": "u00001312",
+        "client_name": "HIRJAU IGOR SRL ",
+        "client_tel": "068150427,069703217",
+        "order_id": "uAQ01107979    ",
+        "order_date": "20201016",
         "payment_method": "Кеш",
-        "order_cost": 60,
+        "order_cost": 238.86,
         "delivered": "",
         "delivery_delay": "",
         "date_start": "",
         "date_finish": "",
         "time_stamp": "",
-        "address": "R.TELENESTI S.COROPCENI"
+        "address": "bd.Mircea cel Batrin 58"
       },
       {
-        "client_id": "u00012139",
-        "client_name": "STEGARESCU MARIA CULER",
-        "client_tel": "068247367",
-        "order_id": "uAQ01098949    ",
+        "order_routlist": "000080258",
+        "client_id": "000001992",
+        "client_name": "ALVIALEX - GRUP  SRL ",
+        "client_tel": "608442",
+        "order_id": "uAQ01107980    ",
+        "order_date": "20201016",
         "payment_method": "Кеш",
-        "order_cost": 100,
+        "order_cost": 243.3,
         "delivered": "",
         "delivery_delay": "",
         "date_start": "",
         "date_finish": "",
         "time_stamp": "",
-        "address": "R.TELENESTI S.SUHULUCENI"
+        "address": "str. Ion Dumeniuc 20"
       },
       {
-        "client_id": "u00009818",
-        "client_name": "SPRINCEANA OLGA CULER",
-        "client_tel": "068314842",
-        "order_id": "uAQ01098941    ",
+        "order_routlist": "000080258",
+        "client_id": "u00007736",
+        "client_name": "ORANGINA - M SRL",
+        "client_tel": "022425113",
+        "order_id": "uAQ01107982    ",
+        "order_date": "20201016",
         "payment_method": "Кеш",
-        "order_cost": 60,
+        "order_cost": 240.6,
         "delivered": "",
         "delivery_delay": "",
         "date_start": "",
         "date_finish": "",
         "time_stamp": "",
-        "address": "R.TELENESTI S.COROBCENI"
+        "address": "str.Igor Vieru 15/4"
       },
       {
-        "client_id": "u00011034",
-        "client_name": "SOVA VIORICA CULER",
-        "client_tel": "025873397",
-        "order_id": "uAQ01098944    ",
+        "order_routlist": "000080258",
+        "client_id": "u00000455",
+        "client_name": "IGOR VOLCOV II",
+        "client_tel": "487359,487659",
+        "order_id": "uAQ01107983    ",
+        "order_date": "20201016",
         "payment_method": "Кеш",
-        "order_cost": 60,
+        "order_cost": 301.75,
         "delivered": "",
         "delivery_delay": "",
         "date_start": "",
         "date_finish": "",
         "time_stamp": "",
-        "address": "R.TELENESTI SAT.SARATENII VECHI"
+        "address": "Milescu Spataru 23/2"
       },
       {
-        "client_id": "u00009474",
-        "client_name": "SMINTINA ALINA CULER",
-        "client_tel": "069427103",
-        "order_id": "uAQ01098939    ",
+        "order_routlist": "000080258",
+        "client_id": "u00000455",
+        "client_name": "IGOR VOLCOV II",
+        "client_tel": "487359,487659",
+        "order_id": "uAQ01107984    ",
+        "order_date": "20201016",
         "payment_method": "Кеш",
-        "order_cost": 120,
+        "order_cost": 328,
         "delivered": "",
         "delivery_delay": "",
         "date_start": "",
         "date_finish": "",
         "time_stamp": "",
-        "address": "R.SINGEREI S.PREPILITA"
+        "address": "Milescu Spataru 25/2"
       },
       {
-        "client_id": "u00006545",
-        "client_name": "SERGHELIJIU PAVEL CULER",
-        "client_tel": "069141966",
-        "order_id": "uAQ01098940    ",
+        "order_routlist": "000080258",
+        "client_id": "u00010665",
+        "client_name": "SILCENCO IURIE I.I.",
+        "client_tel": "",
+        "order_id": "uAQ01107985    ",
+        "order_date": "20201016",
         "payment_method": "Кеш",
-        "order_cost": 100,
+        "order_cost": 298.08,
         "delivered": "",
         "delivery_delay": "",
         "date_start": "",
         "date_finish": "",
         "time_stamp": "",
-        "address": "R.SINGEREI S.GRIGORAUCA"
+        "address": "str.Igor vieru 19/1"
       },
       {
-        "client_id": "u00008869",
-        "client_name": "BULAT MARCELA CULER",
-        "client_tel": "069889114",
-        "order_id": "uAQ01098922    ",
+        "order_routlist": "000080258",
+        "client_id": "u00007048",
+        "client_name": "RUTA 1 PERSONAL",
+        "client_tel": "",
+        "order_id": "uAQ01107988    ",
+        "order_date": "20201016",
         "payment_method": "Кеш",
-        "order_cost": 120,
+        "order_cost": 100.8,
         "delivered": "",
         "delivery_delay": "",
         "date_start": "",
         "date_finish": "",
         "time_stamp": "",
-        "address": "R.TELENESTI S.COROPCENI"
+        "address": "LIVRARE"
       },
       {
-        "client_id": "u00012226",
-        "client_name": "GRIGORITA LILIA CULER",
-        "client_tel": "076095961",
-        "order_id": "uAQ01098948    ",
+        "order_routlist": "000080258",
+        "client_id": "000001876",
+        "client_name": "NADEJDA CIORNAIA II",
+        "client_tel": "331689",
+        "order_id": "uAQ01107989    ",
+        "order_date": "20201016",
         "payment_method": "Кеш",
-        "order_cost": 60,
+        "order_cost": 270.6,
         "delivered": "",
         "delivery_delay": "",
         "date_start": "",
         "date_finish": "",
         "time_stamp": "",
-        "address": "R.SINGEREI SAT.PREPELITA"
+        "address": "str. I.Vieru 13/1"
       },
       {
-        "client_id": "u00011012",
-        "client_name": "BURINSCHI IGOR",
-        "client_tel": "060931353",
-        "order_id": "uAQ01098918    ",
+        "order_routlist": "000080258",
+        "client_id": "u00007048",
+        "client_name": "RUTA 1 PERSONAL",
+        "client_tel": "",
+        "order_id": "uAQ01107990    ",
+        "order_date": "20201016",
         "payment_method": "Кеш",
-        "order_cost": 50,
+        "order_cost": 76.68,
         "delivered": "",
         "delivery_delay": "",
         "date_start": "",
         "date_finish": "",
         "time_stamp": "",
-        "address": "OR.SINGEREI S.BILICENII NOI"
+        "address": "LIVRARE"
       },
       {
-        "client_id": "u00011216",
-        "client_name": "CHETRARI ELENA CULER",
-        "client_tel": "026230903",
-        "order_id": "uAQ01098946    ",
+        "order_routlist": "000080258",
+        "client_id": "000001847",
+        "client_name": "ROSCA-CEBAN-IANA II",
+        "client_tel": "069659863",
+        "order_id": "uAQ01107991    ",
+        "order_date": "20201016",
         "payment_method": "Кеш",
-        "order_cost": 60,
+        "order_cost": 265.3,
         "delivered": "",
         "delivery_delay": "",
         "date_start": "",
         "date_finish": "",
         "time_stamp": "",
-        "address": "R.SINGEREI SAT.COPACENI"
+        "address": "str.I.Vieru14/1"
       },
       {
-        "client_id": "u00005559",
-        "client_name": "GIMNAZIUL IURIE BOGHIU DIN S.FLAMINZENI",
-        "client_tel": "069211066",
-        "order_id": "uAQ01098952    ",
+        "order_routlist": "000080258",
+        "client_id": "000001877",
+        "client_name": "IULIANA-SPIVACENCO II ",
+        "client_tel": "425411",
+        "order_id": "uAQ01107993    ",
+        "order_date": "20201016",
         "payment_method": "Кеш",
-        "order_cost": 100,
+        "order_cost": 1031.38,
         "delivered": "",
         "delivery_delay": "",
         "date_start": "",
         "date_finish": "",
         "time_stamp": "",
-        "address": "R.SINGEREI S.FLAMINZENI"
+        "address": "bd.M.cel Batrin 18/2"
       },
       {
-        "client_id": "u00009843",
-        "client_name": "PRIMARIA COMUNEI COPACENI",
-        "client_tel": "069227278",
-        "order_id": "uAQ01098935    ",
+        "order_routlist": "000080258",
+        "client_id": "u00001689",
+        "client_name": "VASICOM-LUX SRL ",
+        "client_tel": "060080014",
+        "order_id": "uAQ01107994    ",
+        "order_date": "20201016",
         "payment_method": "Кеш",
-        "order_cost": 70,
+        "order_cost": 283.6,
         "delivered": "",
         "delivery_delay": "",
         "date_start": "",
         "date_finish": "",
         "time_stamp": "",
-        "address": "R.SINGEREI S.PETROVCA(GRADINITA)"
+        "address": "str.M.Spataru 13"
       },
       {
-        "client_id": "u00008107",
-        "client_name": "ISAC ALEXANDRU CULER+++",
-        "client_tel": "025823209",
-        "order_id": "uAQ01098930    ",
+        "order_routlist": "000080258",
+        "client_id": "u00002309",
+        "client_name": "COLTED-M S.R.L.",
+        "client_tel": "079151820",
+        "order_id": "uAQ01107996    ",
+        "order_date": "20201016",
         "payment_method": "Кеш",
-        "order_cost": 4619,
+        "order_cost": 217.8,
         "delivered": "",
         "delivery_delay": "",
         "date_start": "",
         "date_finish": "",
         "time_stamp": "",
-        "address": "OR.TELENESTI STR.STEFAN CEL MARE 2"
+        "address": "str.Milescu Spataru 13/4"
       },
       {
-        "client_id": "u00004985",
-        "client_name": "GIMNAZIUL DUMBRAVITA  DIN S. DUMBRAVITA",
-        "client_tel": "026293925",
-        "order_id": "uAQ01098947    ",
-        "payment_method": "Недовоз",
-        "order_cost": 540,
+        "order_routlist": "000080258",
+        "client_id": "u00000003",
+        "client_name": "PITEL PAVEL II",
+        "client_tel": "347053,069644918",
+        "order_id": "uAQ01107997    ",
+        "order_date": "20201016",
+        "payment_method": "Кеш",
+        "order_cost": 268.2,
         "delivered": "",
         "delivery_delay": "",
         "date_start": "",
         "date_finish": "",
         "time_stamp": "",
-        "address": "R.SINGEREI S.DUMBRAVITA"
+        "address": "str.Milescu Spataru 7"
       },
       {
-        "client_id": "u00004689",
-        "client_name": "DIRECTIA EDUCATIE SINGEREI",
-        "client_tel": "026226932",
-        "order_id": "uAQ01099220    ",
-        "payment_method": "Недовоз",
-        "order_cost": 60,
+        "order_routlist": "000080258",
+        "client_id": "u00001087",
+        "client_name": "FOTINI-COM SRL ",
+        "client_tel": "068325006",
+        "order_id": "uAQ01108004    ",
+        "order_date": "20201016",
+        "payment_method": "Кеш",
+        "order_cost": 513.54,
         "delivered": "",
         "delivery_delay": "",
         "date_start": "",
         "date_finish": "",
         "time_stamp": "",
-        "address": "R.SINGEREI S.CHISCARENI(CCA CHISCARENI)"
+        "address": "or.Chisinau str.P.Zadnipru 19"
       },
       {
-        "client_id": "u00009088",
-        "client_name": "IMSP CENTRUL DE SANATATE FLAMINZENI-COSCODENI",
-        "client_tel": "026236396",
-        "order_id": "uAQ01098943    ",
-        "payment_method": "Недовоз",
-        "order_cost": 60,
+        "order_routlist": "000080258",
+        "client_id": "u00000573",
+        "client_name": "AUTOCOLAR VASILITA II ",
+        "client_tel": "346977",
+        "order_id": "uAQ01108005    ",
+        "order_date": "20201016",
+        "payment_method": "Кеш",
+        "order_cost": 304.7,
         "delivered": "",
         "delivery_delay": "",
         "date_start": "",
         "date_finish": "",
         "time_stamp": "",
-        "address": "R.SINGEREI S.FLAMINZENI"
+        "address": "str.Milescu Spataru 9/2"
       },
       {
-        "client_id": "u00004096",
-        "client_name": "ORHEI-GAZ SRL PROCREDIT",
-        "client_tel": "023532717",
-        "order_id": "uAQ01098925    ",
-        "payment_method": "Недовоз",
-        "order_cost": 50,
+        "order_routlist": "000080258",
+        "client_id": "000001713",
+        "client_name": "LEVDALEX SRL ",
+        "client_tel": "316411,068464013",
+        "order_id": "uAQ01108007    ",
+        "order_date": "20201016",
+        "payment_method": "Кеш",
+        "order_cost": 254,
         "delivered": "",
         "delivery_delay": "",
         "date_start": "",
         "date_finish": "",
         "time_stamp": "",
-        "address": "OR.TELENESTI"
+        "address": "Zadnipru 18/3"
+      },
+      {
+        "order_routlist": "000080258",
+        "client_id": "u00006307",
+        "client_name": "CHISTOL ELENA LEONID AB175066 valab 15.07.15",
+        "client_tel": "",
+        "order_id": "uAQ01108128    ",
+        "order_date": "20201016",
+        "payment_method": "Кеш",
+        "order_cost": 591.36,
+        "delivered": "",
+        "delivery_delay": "",
+        "date_start": "",
+        "date_finish": "",
+        "time_stamp": "",
+        "address": "str.G.Latina 18"
+      },
+      {
+        "order_routlist": "000080258",
+        "client_id": "u00004936",
+        "client_name": "BULIBAS RAISA NICOLAE AB158260 valabil 15.05.2016",
+        "client_tel": "",
+        "order_id": "uAQ01108129    ",
+        "order_date": "20201016",
+        "payment_method": "Кеш",
+        "order_cost": 265.87,
+        "delivered": "",
+        "delivery_delay": "",
+        "date_start": "",
+        "date_finish": "",
+        "time_stamp": "",
+        "address": "str.Ginta Latina,18 (Pavilion Lactate)"
+      },
+      {
+        "order_routlist": "000080258",
+        "client_id": "u00003881",
+        "client_name": "LUNGU ELENA GHEORGHII  AB158129 valab 19.03.16",
+        "client_tel": "069783595",
+        "order_id": "uAQ01108130    ",
+        "order_date": "20201016",
+        "payment_method": "Кеш",
+        "order_cost": 571.92,
+        "delivered": "",
+        "delivery_delay": "",
+        "date_start": "",
+        "date_finish": "",
+        "time_stamp": "",
+        "address": "str.Ginta Latina 18"
+      },
+      {
+        "order_routlist": "000080258",
+        "client_id": "u00005228",
+        "client_name": "SAVIN NATALIA VASILE AB141544 val 15.07.14",
+        "client_tel": "069361492",
+        "order_id": "uAQ01108131    ",
+        "order_date": "20201016",
+        "payment_method": "Кеш",
+        "order_cost": 224,
+        "delivered": "",
+        "delivery_delay": "",
+        "date_start": "",
+        "date_finish": "",
+        "time_stamp": "",
+        "address": "str.Ginta Latina 18"
+      },
+      {
+        "order_routlist": "000080258",
+        "client_id": "u00003585",
+        "client_name": "BORTA GHEORGHII FIODOR AB 149203  Valab 07.11",
+        "client_tel": "069992869",
+        "order_id": "uAQ01108132    ",
+        "order_date": "20201016",
+        "payment_method": "Кеш",
+        "order_cost": 315.78,
+        "delivered": "",
+        "delivery_delay": "",
+        "date_start": "",
+        "date_finish": "",
+        "time_stamp": "",
+        "address": "str..Ginta Latina 18 (agro mondial)"
+      },
+      {
+        "order_routlist": "000080258",
+        "client_id": "u00008755",
+        "client_name": "ANASTASIA-PRIM S.R.L.",
+        "client_tel": "060263327",
+        "order_id": "uAQ01108211    ",
+        "order_date": "20201016",
+        "payment_method": "Кеш",
+        "order_cost": 278.4,
+        "delivered": "",
+        "delivery_delay": "",
+        "date_start": "",
+        "date_finish": "",
+        "time_stamp": "",
+        "address": "str.Vadul lui Voda 100"
+      },
+      {
+        "order_routlist": "000080258",
+        "client_id": "УТ0000104",
+        "client_name": "ECAVIS SRL ",
+        "client_tel": "069180207,079539044",
+        "order_id": "uAQ01108243    ",
+        "order_date": "20201016",
+        "payment_method": "Кеш",
+        "order_cost": 330.3,
+        "delivered": "",
+        "delivery_delay": "",
+        "date_start": "",
+        "date_finish": "",
+        "time_stamp": "",
+        "address": "str.Studentilor 7/2"
+      },
+      {
+        "order_routlist": "000080258",
+        "client_id": "u00000107",
+        "client_name": "VIITORUL MAGAZINUL 3/19  SA ",
+        "client_tel": "443034",
+        "order_id": "uAQ01108244    ",
+        "order_date": "20201016",
+        "payment_method": "Кеш",
+        "order_cost": 766.5,
+        "delivered": "",
+        "delivery_delay": "",
+        "date_start": "",
+        "date_finish": "",
+        "time_stamp": "",
+        "address": "Dimo 17/2"
+      },
+      {
+        "order_routlist": "000080258",
+        "client_id": "u00000018",
+        "client_name": "EMILION COM SRL",
+        "client_tel": "069348427,477004",
+        "order_id": "uAQ01108245    ",
+        "order_date": "20201016",
+        "payment_method": "Кеш",
+        "order_cost": 332.9,
+        "delivered": "",
+        "delivery_delay": "",
+        "date_start": "",
+        "date_finish": "",
+        "time_stamp": "",
+        "address": "str.Miron Costin 1/3"
+      },
+      {
+        "order_routlist": "000080258",
+        "client_id": "u00005772",
+        "client_name": "VEREGA COM SRL",
+        "client_tel": "079951999",
+        "order_id": "uAQ01108246    ",
+        "order_date": "20201016",
+        "payment_method": "Кеш",
+        "order_cost": 314.52,
+        "delivered": "",
+        "delivery_delay": "",
+        "date_start": "",
+        "date_finish": "",
+        "time_stamp": "",
+        "address": "bd.Moscovei 9 (Moldmart but.30-31)"
+      },
+      {
+        "order_routlist": "000080258",
+        "client_id": "u00000119",
+        "client_name": "CREDOPRIM SRL",
+        "client_tel": "468528",
+        "order_id": "uAQ01108468    ",
+        "order_date": "20201016",
+        "payment_method": "Кеш",
+        "order_cost": 865.88,
+        "delivered": "",
+        "delivery_delay": "",
+        "date_start": "",
+        "date_finish": "",
+        "time_stamp": "",
+        "address": "bd.Moscovei 7 (Moldmart,but.12)"
       }
     ],
     "Consists": [
       {
-        "id": "uAQ01099327    ",
-        "product": "A/P AQUA UNIQA 19.0 N",
-        "quantity": 3,
-        "price": 60,
-        "ext_info": "",
-        "direction": ""
-      },
-      {
-        "id": "uAQ01098919    ",
-        "product": "A/U CRISTALINA 19.0L N/G",
+        "id": "uAQ01107978    ",
+        "product": "A/U CRISTALINA 6.0L N/G",
         "quantity": 4,
-        "price": 50,
-        "ext_info": "",
-        "direction": ""
-      },
-      {
-        "id": "uAQ01098919    ",
-        "product": "STICLA 19L",
-        "quantity": 4,
-        "price": 110,
-        "ext_info": "",
-        "direction": ""
-      },
-      {
-        "id": "uAQ01098950    ",
-        "product": "A/U CRISTALINA 19.0L N/G",
-        "quantity": 1,
-        "price": 50,
-        "ext_info": "",
-        "direction": ""
-      },
-      {
-        "id": "uAQ01098936    ",
-        "product": "A/U CRISTALINA 19.0L N/G",
-        "quantity": 1,
-        "price": 50,
-        "ext_info": "",
-        "direction": ""
-      },
-      {
-        "id": "uAQ01098933    ",
-        "product": "A/U CRISTALINA 19.0L N/G",
-        "quantity": 2,
-        "price": 50,
-        "ext_info": "",
-        "direction": ""
-      },
-      {
-        "id": "uAQ01098928    ",
-        "product": "A/P AQUA UNIQA 19.0 N",
-        "quantity": 1,
-        "price": 60,
-        "ext_info": "",
-        "direction": ""
-      },
-      {
-        "id": "uAQ01098932    ",
-        "product": "A/P AQUA UNIQA 19.0 N",
-        "quantity": 3,
-        "price": 60,
-        "ext_info": "",
-        "direction": ""
-      },
-      {
-        "id": "uAQ01098934    ",
-        "product": "A/P AQUA UNIQA 19.0 N",
-        "quantity": 2,
-        "price": 60,
-        "ext_info": "",
-        "direction": ""
-      },
-      {
-        "id": "uAQ01098931    ",
-        "product": "A/P AQUA UNIQA 19.0 N",
-        "quantity": 3,
-        "price": 60,
-        "ext_info": "",
-        "direction": ""
-      },
-      {
-        "id": "uAQ01098931    ",
-        "product": "Pahar carton AQUA UNIQA 180ml/50 buc",
-        "quantity": 3,
-        "price": 16,
-        "ext_info": "",
-        "direction": ""
-      },
-      {
-        "id": "uAQ01098931    ",
-        "product": "Pahar carton AQUA UNIQA 180ml/50 buc",
-        "quantity": 1,
-        "price": 12,
-        "ext_info": "",
-        "direction": ""
-      },
-      {
-        "id": "uAQ01098924    ",
-        "product": "A/U CRISTALINA 19.0L N/G",
-        "quantity": 1,
-        "price": 50,
-        "ext_info": "",
-        "direction": ""
-      },
-      {
-        "id": "uAQ01098924    ",
-        "product": "Pahar carton AQUA UNIQA 180ml/50 buc",
-        "quantity": 1,
-        "price": 16,
-        "ext_info": "",
-        "direction": ""
-      },
-      {
-        "id": "uAQ01098921    ",
-        "product": "A/P AQUA UNIQA 19.0 N",
-        "quantity": 2,
-        "price": 60,
-        "ext_info": "",
-        "direction": ""
-      },
-      {
-        "id": "uAQ01098942    ",
-        "product": "A/P AQUA UNIQA 19.0 N",
-        "quantity": 3,
-        "price": 60,
-        "ext_info": "",
-        "direction": ""
-      },
-      {
-        "id": "uAQ01098929    ",
-        "product": "A/U CRISTALINA 19.0L N/G",
-        "quantity": 2,
-        "price": 50,
-        "ext_info": "",
-        "direction": ""
-      },
-      {
-        "id": "uAQ01098920    ",
-        "product": "A/U CRISTALINA 19.0L N/G",
-        "quantity": 1,
-        "price": 50,
-        "ext_info": "",
-        "direction": ""
-      },
-      {
-        "id": "uAQ01098923    ",
-        "product": "A/U CRISTALINA 19.0L N/G",
-        "quantity": 5,
-        "price": 50,
-        "ext_info": "",
-        "direction": ""
-      },
-      {
-        "id": "uAQ01099156    ",
-        "product": "A/P AQUA UNIQA 19.0 N",
-        "quantity": 2,
-        "price": 60,
-        "ext_info": "",
-        "direction": ""
-      },
-      {
-        "id": "uAQ01099156    ",
-        "product": "Pahar carton AQUA UNIQA 180ml/50 buc",
-        "quantity": 2,
-        "price": 16,
-        "ext_info": "",
-        "direction": ""
-      },
-      {
-        "id": "uAQ01099156    ",
-        "product": "Greenfield Rich Camomile 25*2g",
-        "quantity": 1,
-        "price": 40,
-        "ext_info": "",
-        "direction": ""
-      },
-      {
-        "id": "uAQ01099156    ",
-        "product": "Cafea Jacobs Monarch Solubila 190g",
-        "quantity": 1,
-        "price": 140,
-        "ext_info": "",
-        "direction": ""
-      },
-      {
-        "id": "uAQ01099156    ",
-        "product": "Pahar Plastic 180ml (100 buc)",
-        "quantity": 1,
         "price": 15,
         "ext_info": "",
         "direction": ""
       },
       {
-        "id": "uAQ01099156    ",
-        "product": "Cafea Jacobs Monarch 3 in 1 (12g/24)",
-        "quantity": 1,
-        "price": 60,
+        "id": "uAQ01107978    ",
+        "product": "A/I AQUA UNIQA 6.0+1.0 N",
+        "quantity": 10,
+        "price": 16.65,
         "ext_info": "",
         "direction": ""
       },
       {
-        "id": "uAQ01099156    ",
-        "product": "Greenfield Berry sunset 25*2g",
-        "quantity": 1,
-        "price": 40,
+        "id": "uAQ01107978    ",
+        "product": "A/I AQUA UNIQA 3.5 N",
+        "quantity": 8,
+        "price": 10.5,
         "ext_info": "",
         "direction": ""
       },
       {
-        "id": "uAQ01099156    ",
-        "product": "Cafea Jacobs Millicano 95g/6",
-        "quantity": 1,
-        "price": 93,
+        "id": "uAQ01107978    ",
+        "product": "A/I AQUA UNIQA 0.75L N/G Sport",
+        "quantity": 6,
+        "price": 7.15,
         "ext_info": "",
         "direction": ""
       },
       {
-        "id": "uAQ01098945    ",
-        "product": "A/P AQUA UNIQA 19.0 N",
-        "quantity": 1,
-        "price": 60,
+        "id": "uAQ01107978    ",
+        "product": "Porumb p/u pop-corn 450 gr./12",
+        "quantity": 4,
+        "price": 16.68,
         "ext_info": "",
         "direction": ""
       },
       {
-        "id": "uAQ01098937    ",
-        "product": "A/P AQUA UNIQA 19.0 N",
-        "quantity": 3,
-        "price": 60,
+        "id": "uAQ01107978    ",
+        "product": "Popcorn DELICIO 25*80g UNT",
+        "quantity": 4,
+        "price": 8.5,
         "ext_info": "",
         "direction": ""
       },
       {
-        "id": "uAQ01098938    ",
-        "product": "A/U CRISTALINA 19.0L N/G",
+        "id": "uAQ01107978    ",
+        "product": "PopShow expandat sare 60gr/25",
+        "quantity": 10,
+        "price": 4.86,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107978    ",
+        "product": "PopShow expandat cascaval 60gr/25",
+        "quantity": 10,
+        "price": 4.86,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107981    ",
+        "product": "A/I AQUA UNIQA 6.0+1.0 N",
+        "quantity": 4,
+        "price": 16.65,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107981    ",
+        "product": "A/I AQUA UNIQA 3.5 N",
+        "quantity": 12,
+        "price": 10.4,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107981    ",
+        "product": "A/U CRISTALINA 3.0L gaz",
+        "quantity": 4,
+        "price": 8,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107981    ",
+        "product": "Porumb p/u pop-corn 300 gr./20",
         "quantity": 5,
-        "price": 50,
+        "price": 11.46,
         "ext_info": "",
         "direction": ""
       },
       {
-        "id": "uAQ01099328    ",
-        "product": "STICLA 19L",
+        "id": "uAQ01107981    ",
+        "product": "Porumb p/u pop-corn 450 gr./12",
+        "quantity": 5,
+        "price": 16.68,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107981    ",
+        "product": "Otet de masa 6% 1L (квадратный)",
+        "quantity": 12,
+        "price": 8.51,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107981    ",
+        "product": "Otet de masa 6% 0.5L",
+        "quantity": 6,
+        "price": 5.83,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107981    ",
+        "product": "Otet de masa 9% 1L (квадратный)",
+        "quantity": 12,
+        "price": 9.22,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107981    ",
+        "product": "Otet de mere 5% 1L (квадратный)",
+        "quantity": 6,
+        "price": 9.41,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107981    ",
+        "product": "Otet de mere 5% 0.5L",
+        "quantity": 6,
+        "price": 6.96,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107981    ",
+        "product": "Hrana conservata pt pisici РRОХВОСТ(gaina) 415g/12",
+        "quantity": 2,
+        "price": 13.5,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107981    ",
+        "product": "Hrana conservata pt pisici РRОХВОСТ(iepure) 415g/12",
+        "quantity": 2,
+        "price": 13.5,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107981    ",
+        "product": "Hrana conservata pt pisici РRОХВОСТ(asorti de carne) 415g/12",
+        "quantity": 2,
+        "price": 13.5,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107987    ",
+        "product": "A/U CRISTALINA 0.5L N/G",
+        "quantity": 24,
+        "price": 4.2,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107987    ",
+        "product": "A/I AQUA UNIQA 0.75L N/G Sport  ZERO",
+        "quantity": 6,
+        "price": 7.15,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107987    ",
+        "product": "A/I AQUA UNIQA 0.75L N/G Sport LEMON",
+        "quantity": 6,
+        "price": 7.15,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107987    ",
+        "product": "A/U CRISTALINA 1.5L gaz",
+        "quantity": 6,
+        "price": 6.4,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107987    ",
+        "product": "A/U CRISTALINA 1.5L N/G",
+        "quantity": 6,
+        "price": 6.4,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107987    ",
+        "product": "A/U CRISTALINA 3.0L gaz",
+        "quantity": 4,
+        "price": 8,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107987    ",
+        "product": "A/U CRISTALINA 3.0L F/G",
+        "quantity": 4,
+        "price": 8,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107987    ",
+        "product": "KU MARAKUIA&MANDARIN 1.5L",
+        "quantity": 12,
+        "price": 10.4,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107992    ",
+        "product": "Bors acru 0.5L pet./15",
+        "quantity": 15,
+        "price": 6.1,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107992    ",
+        "product": "Bors acru 1L pet./6",
+        "quantity": 6,
+        "price": 8.65,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107992    ",
+        "product": "Otet de mere 5% 1L (квадратный)",
+        "quantity": 6,
+        "price": 9.41,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107992    ",
+        "product": "Otet de vin 4% 1L (квадратный)",
+        "quantity": 6,
+        "price": 8.42,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107992    ",
+        "product": "Otet de vin 4% 0.5L",
+        "quantity": 6,
+        "price": 6.7,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108006    ",
+        "product": "A/U  PLUS LEMON 1.5L",
+        "quantity": 6,
+        "price": 8,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108006    ",
+        "product": "A/I AQUA UNIQA 1.5 gaz",
+        "quantity": 6,
+        "price": 7.6,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108006    ",
+        "product": "A/I AQUA UNIQA 1.5 SG",
+        "quantity": 6,
+        "price": 7.6,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108006    ",
+        "product": "A/I AQUA UNIQA 1.5 N",
+        "quantity": 6,
+        "price": 7.6,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108006    ",
+        "product": "A/I AQUA UNIQA 0.75L N/G Sport LEMON",
+        "quantity": 6,
+        "price": 7.15,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108006    ",
+        "product": "A/U  STILL PIERSICA 1.25L",
+        "quantity": 6,
+        "price": 8,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108006    ",
+        "product": "A/U CRISTALINA 3.0L gaz",
+        "quantity": 16,
+        "price": 8,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108006    ",
+        "product": "A/M ROUA ARGINTIE 1.5  mediu gaz",
+        "quantity": 12,
+        "price": 5.6,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108006    ",
+        "product": "A/M ROUA ARGINTIE 3.0 gaz",
+        "quantity": 4,
+        "price": 7.6,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108006    ",
+        "product": "A/M ROUA ARGINTIE 1.5 gaz",
+        "quantity": 6,
+        "price": 3.55,
+        "ext_info": "Бонус",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108006    ",
+        "product": "A/M ROUA ARGINTIE 1.5 gaz",
+        "quantity": 18,
+        "price": 5.6,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108006    ",
+        "product": "FRIGUSOR 3.0L",
+        "quantity": 4,
+        "price": 9.2,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108006    ",
+        "product": "CREM SODA 3.0L",
+        "quantity": 4,
+        "price": 9.2,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108006    ",
+        "product": "LEMON FRESH 3.0L",
+        "quantity": 4,
+        "price": 9.2,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108006    ",
+        "product": "LIMONADA 3.0L",
+        "quantity": 4,
+        "price": 9.2,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108006    ",
+        "product": "Bors acru 0.5L pet./15",
+        "quantity": 15,
+        "price": 6.1,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108006    ",
+        "product": "Porumb p/u pop-corn 450 gr./12",
         "quantity": 3,
-        "price": 110,
+        "price": 16.68,
         "ext_info": "",
         "direction": ""
       },
       {
-        "id": "uAQ01098927    ",
-        "product": "A/P AQUA UNIQA 19.0 N",
-        "quantity": 1,
-        "price": 60,
+        "id": "uAQ01108006    ",
+        "product": "Porumb p/u pop-corn 300 gr./20",
+        "quantity": 3,
+        "price": 11.46,
         "ext_info": "",
         "direction": ""
       },
       {
-        "id": "uAQ01098949    ",
-        "product": "A/U CRISTALINA 19.0L N/G",
+        "id": "uAQ01108006    ",
+        "product": "PopShow expandat cascaval 60gr/25",
+        "quantity": 25,
+        "price": 4.86,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108006    ",
+        "product": "Otet de masa 6% 1L (квадратный)",
+        "quantity": 6,
+        "price": 8.51,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108006    ",
+        "product": "Otet de masa 9% 0.5L",
+        "quantity": 6,
+        "price": 6.3,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108006    ",
+        "product": "Otet de mere 5% 1L (квадратный)",
+        "quantity": 6,
+        "price": 9.41,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108006    ",
+        "product": "Otet de mere 5% 0.5L",
+        "quantity": 6,
+        "price": 6.96,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108006    ",
+        "product": "Hrana conservata pt pisici РRОХВОСТ (vitel) 85g/25",
+        "quantity": 25,
+        "price": 4.5,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108127    ",
+        "product": "A/U  PLUS LEMON 1.5L",
+        "quantity": 6,
+        "price": 8,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108127    ",
+        "product": "A/I AQUA UNIQA 0.75L N/G Sport LEMON",
+        "quantity": 6,
+        "price": 7.15,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108127    ",
+        "product": "A/I AQUA UNIQA 0.75L N/G Sport",
+        "quantity": 6,
+        "price": 7.15,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108127    ",
+        "product": "A/U CRISTALINA 3.0L F/G",
+        "quantity": 8,
+        "price": 8,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108127    ",
+        "product": "A/U CRISTALINA 3.0L gaz",
+        "quantity": 12,
+        "price": 8,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108127    ",
+        "product": "Bors acru 0.5L pet./15",
+        "quantity": 6,
+        "price": 6.1,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108127    ",
+        "product": "Bors acru 1L pet./6",
+        "quantity": 6,
+        "price": 8.65,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108127    ",
+        "product": "Otet de masa 6% 0.5L",
+        "quantity": 6,
+        "price": 5.83,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108127    ",
+        "product": "Otet de masa 9% 1L (квадратный)",
+        "quantity": 6,
+        "price": 9.22,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108127    ",
+        "product": "Otet de mere 5% 0.5L",
+        "quantity": 6,
+        "price": 6.96,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108167    ",
+        "product": "A/U CRISTALINA 6.0L N/G",
+        "quantity": 4,
+        "price": 15,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108167    ",
+        "product": "A/I AQUA UNIQA 6.0+1.0 N",
+        "quantity": 20,
+        "price": 16.65,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108167    ",
+        "product": "A/I AQUA UNIQA 3.5 N",
+        "quantity": 12,
+        "price": 10.4,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108167    ",
+        "product": "A/U  PLUS LEMON 1.5L",
+        "quantity": 6,
+        "price": 8,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108167    ",
+        "product": "A/U  PLUS MAR 1.5L",
+        "quantity": 12,
+        "price": 8,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108167    ",
+        "product": "A/I AQUA UNIQA 0.75L N/G Sport LEMON",
+        "quantity": 12,
+        "price": 7.15,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108167    ",
+        "product": "A/U CRISTALINA 3.0L F/G",
+        "quantity": 8,
+        "price": 8,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108167    ",
+        "product": "A/U CRISTALINA 3.0L gaz",
+        "quantity": 8,
+        "price": 8,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108167    ",
+        "product": "A/M ROUA ARGINTIE 1.5 gaz",
+        "quantity": 6,
+        "price": 5.6,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108167    ",
+        "product": "Bors acru 0.5L pet./15",
+        "quantity": 15,
+        "price": 6.1,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108167    ",
+        "product": "Bors acru 1L pet./6",
+        "quantity": 6,
+        "price": 8.65,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108167    ",
+        "product": "PopShow expandat cascaval 60gr/25",
+        "quantity": 25,
+        "price": 4.86,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108167    ",
+        "product": "Otet de masa 6% 1L (квадратный)",
+        "quantity": 6,
+        "price": 8.51,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108167    ",
+        "product": "Otet de masa 9% 1L (квадратный)",
+        "quantity": 6,
+        "price": 9.22,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108242    ",
+        "product": "A/I AQUA UNIQA 6.0+1.0 N",
+        "quantity": 12,
+        "price": 16.65,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108242    ",
+        "product": "A/I AQUA UNIQA 3.5 N",
+        "quantity": 8,
+        "price": 10.5,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108242    ",
+        "product": "A/I AQUA UNIQA 0.75L N/G Sport LEMON",
+        "quantity": 18,
+        "price": 7.15,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108242    ",
+        "product": "A/I AQUA UNIQA 0.75L N/G Sport",
+        "quantity": 12,
+        "price": 7.15,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108539    ",
+        "product": "A/I AQUA UNIQA 6.0+1.0 N",
+        "quantity": 30,
+        "price": 16.65,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108539    ",
+        "product": "A/I AQUA UNIQA 0.75L N/G Sport LEMON",
+        "quantity": 6,
+        "price": 7.15,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108539    ",
+        "product": "A/M ROUA ARGINTIE 3.0 gaz",
+        "quantity": 8,
+        "price": 7.8,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107886    ",
+        "product": "A/I AQUA UNIQA 6.0+1.0 N",
+        "quantity": 8,
+        "price": 16.65,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107886    ",
+        "product": "A/U  PLUS CAPSUNA MILK 1.5L",
+        "quantity": 6,
+        "price": 8,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107886    ",
+        "product": "A/U  PLUS MAR 1.5L",
+        "quantity": 6,
+        "price": 8,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107886    ",
+        "product": "A/U  PLUS LEMON 1.5L",
+        "quantity": 6,
+        "price": 8,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107886    ",
+        "product": "Bors acru 0.5L pet./15",
+        "quantity": 15,
+        "price": 6.1,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107886    ",
+        "product": "PopShow expandat cascaval 60gr/25",
+        "quantity": 25,
+        "price": 4.86,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107886    ",
+        "product": "Hrana conservata pt pisici РRОХВОСТ(somon-foreli) 415g/12",
+        "quantity": 5,
+        "price": 13.5,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107886    ",
+        "product": "Hrana conservata pt pisici РRОХВОСТ(gaina) 415g/12",
+        "quantity": 5,
+        "price": 13.5,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107886    ",
+        "product": "Hrana conservata pt pisici РRОХВОСТ(iepure) 415g/12",
+        "quantity": 5,
+        "price": 13.5,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107886    ",
+        "product": "Hrana conservata pt pisici РRОХВОСТ(asorti de carne) 415g/12",
+        "quantity": 5,
+        "price": 13.5,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107979    ",
+        "product": "A/I AQUA UNIQA 6.0+1.0 N",
+        "quantity": 6,
+        "price": 16.65,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107979    ",
+        "product": "A/I AQUA UNIQA 3.5 N",
+        "quantity": 4,
+        "price": 10.4,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107979    ",
+        "product": "A/U CRISTALINA 3.0L gaz",
+        "quantity": 8,
+        "price": 8,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107979    ",
+        "product": "Porumb p/u pop-corn 450 gr./12",
         "quantity": 2,
-        "price": 50,
+        "price": 16.68,
         "ext_info": "",
         "direction": ""
       },
       {
-        "id": "uAQ01098941    ",
-        "product": "A/P AQUA UNIQA 19.0 N",
-        "quantity": 1,
-        "price": 60,
+        "id": "uAQ01107980    ",
+        "product": "MAIONEZA Provansall 250 g PET",
+        "quantity": 3,
+        "price": 16.38,
         "ext_info": "",
         "direction": ""
       },
       {
-        "id": "uAQ01098944    ",
-        "product": "A/P AQUA UNIQA 19.0 N",
-        "quantity": 1,
-        "price": 60,
+        "id": "uAQ01107980    ",
+        "product": "Otet de masa 9% 1L (квадратный)",
+        "quantity": 12,
+        "price": 9.22,
         "ext_info": "",
         "direction": ""
       },
       {
-        "id": "uAQ01098939    ",
-        "product": "A/P AQUA UNIQA 19.0 N",
+        "id": "uAQ01107980    ",
+        "product": "Otet de mere 5% 0.5L",
+        "quantity": 12,
+        "price": 6.96,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107982    ",
+        "product": "Bors acru 0.5L pet./15",
+        "quantity": 15,
+        "price": 6.1,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107982    ",
+        "product": "Bors acru 1L pet./6",
+        "quantity": 6,
+        "price": 8.65,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107982    ",
+        "product": "PopShow expandat sare 60gr/25",
+        "quantity": 10,
+        "price": 4.86,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107982    ",
+        "product": "PopShow expandat cascaval 60gr/25",
+        "quantity": 10,
+        "price": 4.86,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107983    ",
+        "product": "Servetele albe PAPIROFF 100buc",
+        "quantity": 25,
+        "price": 5.4,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107983    ",
+        "product": "MUSTAR DE MASA 200g pet",
+        "quantity": 5,
+        "price": 11.75,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107983    ",
+        "product": "Hrana conservata pt pisici РRОХВОСТ(somon-foreli) 415g/12",
         "quantity": 2,
-        "price": 60,
+        "price": 13.5,
         "ext_info": "",
         "direction": ""
       },
       {
-        "id": "uAQ01098940    ",
-        "product": "A/U CRISTALINA 19.0L N/G",
+        "id": "uAQ01107983    ",
+        "product": "Hrana conservata pt pisici РRОХВОСТ(gaina) 415g/12",
         "quantity": 2,
-        "price": 50,
+        "price": 13.5,
         "ext_info": "",
         "direction": ""
       },
       {
-        "id": "uAQ01098922    ",
-        "product": "A/P AQUA UNIQA 19.0 N",
+        "id": "uAQ01107983    ",
+        "product": "Hrana conservata pt pisici РRОХВОСТ(iepure) 415g/12",
         "quantity": 2,
-        "price": 60,
+        "price": 13.5,
         "ext_info": "",
         "direction": ""
       },
       {
-        "id": "uAQ01098948    ",
-        "product": "A/P AQUA UNIQA 19.0 N",
-        "quantity": 1,
-        "price": 60,
-        "ext_info": "",
-        "direction": ""
-      },
-      {
-        "id": "uAQ01098918    ",
-        "product": "A/U CRISTALINA 19.0L N/G",
-        "quantity": 1,
-        "price": 50,
-        "ext_info": "",
-        "direction": ""
-      },
-      {
-        "id": "uAQ01098946    ",
-        "product": "A/P AQUA UNIQA 19.0 N",
-        "quantity": 1,
-        "price": 60,
-        "ext_info": "",
-        "direction": ""
-      },
-      {
-        "id": "uAQ01098952    ",
-        "product": "A/U CRISTALINA 19.0L N/G",
+        "id": "uAQ01107983    ",
+        "product": "Hrana conservata pt pisici РRОХВОСТ(asorti de carne) 415g/12",
         "quantity": 2,
-        "price": 50,
+        "price": 13.5,
         "ext_info": "",
         "direction": ""
       },
       {
-        "id": "uAQ01098935    ",
-        "product": "Pompa Manuala \"BLUE RAIN\"",
+        "id": "uAQ01107984    ",
+        "product": "A/I AQUA UNIQA 0.75L N/G Sport LEMON",
+        "quantity": 6,
+        "price": 7.15,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107984    ",
+        "product": "A/I AQUA UNIQA 0.75L N/G Sport",
+        "quantity": 6,
+        "price": 7.15,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107984    ",
+        "product": "TUTI FRUTI 1.5L BAUTURA TOPIC",
+        "quantity": 6,
+        "price": 6.4,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107984    ",
+        "product": "LEMON FRESH 1.5L BAUTURA TOPIC",
+        "quantity": 6,
+        "price": 6.4,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107984    ",
+        "product": "FRIGUSOR 1.5L BAUTURA TOPIC",
+        "quantity": 6,
+        "price": 6.4,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107984    ",
+        "product": "ANANAS 3.0 L",
+        "quantity": 4,
+        "price": 9.2,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107984    ",
+        "product": "LIMONADA 3.0L",
+        "quantity": 4,
+        "price": 9.2,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107984    ",
+        "product": "Porumb p/u pop-corn 100gr/60",
+        "quantity": 5,
+        "price": 3.84,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107984    ",
+        "product": "Hrana uscata pt pisici Kitty Krunch  (iepure) 300g/19",
         "quantity": 1,
-        "price": 70,
+        "price": 11.4,
         "ext_info": "",
         "direction": ""
       },
       {
-        "id": "uAQ01098930    ",
-        "product": "WATER DISPENSER V400BS",
+        "id": "uAQ01107984    ",
+        "product": "Hrana uscata pt pisici Kitty Krunch  (gaina) 300g/19",
         "quantity": 1,
-        "price": 4499,
+        "price": 11.4,
         "ext_info": "",
         "direction": ""
       },
       {
-        "id": "uAQ01098930    ",
-        "product": "A/P AQUA UNIQA 19.0 N",
+        "id": "uAQ01107984    ",
+        "product": "Hrana uscata pt pisici Kitty Krunch  (carne) 300g/19",
+        "quantity": 1,
+        "price": 11.4,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107985    ",
+        "product": "A/I AQUA UNIQA 6.0+1.0 N",
+        "quantity": 6,
+        "price": 16.65,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107985    ",
+        "product": "PopShow expandat sare 60gr/25",
+        "quantity": 15,
+        "price": 4.86,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107985    ",
+        "product": "PopShow expandat cascaval 60gr/25",
+        "quantity": 10,
+        "price": 4.86,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107985    ",
+        "product": "PUFFY hirtie igienica MAXI 9role/bax",
+        "quantity": 18,
+        "price": 4.26,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107988    ",
+        "product": "A/U CRISTALINA 0.5L N/G",
+        "quantity": 24,
+        "price": 4.2,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107989    ",
+        "product": "A/I AQUA UNIQA 6.0+1.0 N",
+        "quantity": 8,
+        "price": 16.65,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107989    ",
+        "product": "A/U CRISTALINA 3.0L gaz",
+        "quantity": 8,
+        "price": 8,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107989    ",
+        "product": "LIMONADA 3.0L",
+        "quantity": 4,
+        "price": 9.2,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107989    ",
+        "product": "Bors acru 0.5L pet./15",
+        "quantity": 6,
+        "price": 6.1,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107990    ",
+        "product": "PUFFY hirtie igienica MAXI 9role/bax",
+        "quantity": 18,
+        "price": 4.26,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107991    ",
+        "product": "A/I AQUA UNIQA 6.0+1.0 N",
+        "quantity": 6,
+        "price": 16.65,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107991    ",
+        "product": "A/I AQUA UNIQA 3.5 N",
+        "quantity": 4,
+        "price": 10.4,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107991    ",
+        "product": "Bors acru 0.5L pet./15",
+        "quantity": 8,
+        "price": 6.1,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107991    ",
+        "product": "Pesmeti cu stafide 2.5kg, 190540100",
+        "quantity": 1,
+        "price": 75,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107993    ",
+        "product": "Servetele albe PAPIROFF 100buc",
+        "quantity": 10,
+        "price": 5.4,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107993    ",
+        "product": "MAIONEZA Provansall 250 g PET",
         "quantity": 2,
-        "price": 60,
+        "price": 16.38,
         "ext_info": "",
         "direction": ""
       },
       {
-        "id": "uAQ01098947    ",
-        "product": "A/P AQUA UNIQA 19.0 N",
+        "id": "uAQ01107993    ",
+        "product": "A/I AQUA UNIQA 6.0+1.0 N",
+        "quantity": 10,
+        "price": 16.65,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107993    ",
+        "product": "A/U  PLUS LEMON 1.5L",
+        "quantity": 6,
+        "price": 8,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107993    ",
+        "product": "A/U  PLUS CAPSUNA MILK 1.5L",
+        "quantity": 6,
+        "price": 8,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107993    ",
+        "product": "A/I AQUA UNIQA 0.75L N/G Sport LEMON",
+        "quantity": 12,
+        "price": 7.15,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107993    ",
+        "product": "Bors acru 0.5L pet./15",
+        "quantity": 15,
+        "price": 6.1,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107993    ",
+        "product": "Bors acru 1L pet./6",
+        "quantity": 6,
+        "price": 8.65,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107993    ",
+        "product": "Porumb p/u pop-corn 300 gr./20",
+        "quantity": 5,
+        "price": 11.46,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107993    ",
+        "product": "Porumb p/u pop-corn 100gr/60",
+        "quantity": 5,
+        "price": 3.84,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107993    ",
+        "product": "Popcorn DELICIO 25*80g SARE",
+        "quantity": 5,
+        "price": 8.5,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107993    ",
+        "product": "Popcorn DELICIO 25*80g UNT",
+        "quantity": 5,
+        "price": 8.5,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107993    ",
+        "product": "Popcorn DELICIO 25*80g CASCAVAL ",
+        "quantity": 5,
+        "price": 8.5,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107993    ",
+        "product": "PopShow expandat sare 60gr/25",
+        "quantity": 10,
+        "price": 4.86,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107993    ",
+        "product": "PopShow expandat cascaval 60gr/25",
+        "quantity": 25,
+        "price": 4.86,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107993    ",
+        "product": "MUSTAR DE MASA 200g pet",
+        "quantity": 2,
+        "price": 11.75,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107993    ",
+        "product": "Otet de masa 9% 1L (квадратный)",
+        "quantity": 6,
+        "price": 9.22,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107994    ",
+        "product": "A/I AQUA UNIQA 6.0+1.0 N",
+        "quantity": 6,
+        "price": 16.65,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107994    ",
+        "product": "A/I AQUA UNIQA 3.5 N",
+        "quantity": 8,
+        "price": 10.4,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107994    ",
+        "product": "A/I AQUA UNIQA 0.66 N/G",
+        "quantity": 12,
+        "price": 4.8,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107994    ",
+        "product": "A/I AQUA UNIQA 0.75L N/G Sport LEMON",
+        "quantity": 6,
+        "price": 7.15,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107996    ",
+        "product": "A/I AQUA UNIQA 6.0+1.0 N",
+        "quantity": 4,
+        "price": 16.65,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107996    ",
+        "product": "A/U CRISTALINA 3.0L gaz",
+        "quantity": 4,
+        "price": 8,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107996    ",
+        "product": "LIMONADA 3.0L",
+        "quantity": 4,
+        "price": 9.2,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107996    ",
+        "product": "Bors acru 0.5L pet./15",
+        "quantity": 5,
+        "price": 6.1,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107996    ",
+        "product": "Bors acru 1L pet./6",
+        "quantity": 6,
+        "price": 8.65,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107997    ",
+        "product": "A/I AQUA UNIQA 6.0+1.0 N",
+        "quantity": 4,
+        "price": 16.65,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107997    ",
+        "product": "A/I AQUA UNIQA 3.5 N",
+        "quantity": 4,
+        "price": 10.4,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107997    ",
+        "product": "A/U CRISTALINA 3.0L gaz",
+        "quantity": 4,
+        "price": 8,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107997    ",
+        "product": "Pahar carton H200ml/50 buc",
+        "quantity": 4,
+        "price": 13.5,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107997    ",
+        "product": "Bors acru 0.5L pet./15",
+        "quantity": 5,
+        "price": 6.1,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107997    ",
+        "product": "Porumb p/u pop-corn 100gr/60",
+        "quantity": 5,
+        "price": 3.84,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01107997    ",
+        "product": "PopShow expandat cascaval 60gr/25",
+        "quantity": 5,
+        "price": 4.86,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108004    ",
+        "product": "A/I AQUA UNIQA 6.0+1.0 N",
+        "quantity": 4,
+        "price": 16.65,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108004    ",
+        "product": "A/U  PLUS MAR 1.5L",
+        "quantity": 6,
+        "price": 8,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108004    ",
+        "product": "A/I AQUA UNIQA 0.75L N/G Sport",
+        "quantity": 6,
+        "price": 7.15,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108004    ",
+        "product": "A/M ROUA ARGINTIE 1.5 gaz",
+        "quantity": 6,
+        "price": 5.6,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108004    ",
+        "product": "Porumb p/u pop-corn 450 gr./12",
+        "quantity": 5,
+        "price": 16.68,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108004    ",
+        "product": "Porumb p/u pop-corn 300 gr./20",
+        "quantity": 5,
+        "price": 11.46,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108004    ",
+        "product": "PopShow expandat sare 60gr/25",
+        "quantity": 5,
+        "price": 4.86,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108004    ",
+        "product": "PopShow expandat cascaval 60gr/25",
+        "quantity": 5,
+        "price": 4.86,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108004    ",
+        "product": "Otet de mere 5% 1L (квадратный)",
+        "quantity": 6,
+        "price": 9.41,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108004    ",
+        "product": "PUFFY hirtie igienica MAXI 9role/bax",
+        "quantity": 18,
+        "price": 4.26,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108005    ",
+        "product": "A/I AQUA UNIQA 6.0+1.0 N",
+        "quantity": 4,
+        "price": 16.65,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108005    ",
+        "product": "TUTI FRUTI 3L",
+        "quantity": 4,
+        "price": 9.2,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108005    ",
+        "product": "FRIGUSOR 3.0L",
+        "quantity": 4,
+        "price": 9.2,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108005    ",
+        "product": "LIMONADA 3.0L",
+        "quantity": 4,
+        "price": 9.2,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108005    ",
+        "product": "Bors acru 0.5L pet./15",
+        "quantity": 5,
+        "price": 6.1,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108005    ",
+        "product": "PopShow expandat sare 60gr/25",
+        "quantity": 10,
+        "price": 4.86,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108005    ",
+        "product": "PopShow expandat cascaval 60gr/25",
+        "quantity": 10,
+        "price": 4.86,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108007    ",
+        "product": "A/I AQUA UNIQA 3.5 N",
+        "quantity": 4,
+        "price": 10.4,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108007    ",
+        "product": "A/U  PLUS LEMON 1.5L",
+        "quantity": 6,
+        "price": 8,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108007    ",
+        "product": "TUTI FRUTI 3L",
+        "quantity": 4,
+        "price": 9.2,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108007    ",
+        "product": "ANANAS 3.0 L",
+        "quantity": 4,
+        "price": 9.2,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108007    ",
+        "product": "FRIGUSOR 3.0L",
+        "quantity": 4,
+        "price": 9.2,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108007    ",
+        "product": "Hrana conservata pt pisici РRОХВОСТ(gaina) 415g/12",
+        "quantity": 2,
+        "price": 13.5,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108007    ",
+        "product": "Hrana conservata pt pisici РRОХВОСТ(asorti de carne) 415g/12",
+        "quantity": 2,
+        "price": 13.5,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108128    ",
+        "product": "A/U  PLUS LEMON 1.5L",
+        "quantity": 6,
+        "price": 8,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108128    ",
+        "product": "A/I AQUA UNIQA 0.75L N/G Sport LEMON",
+        "quantity": 12,
+        "price": 7.15,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108128    ",
+        "product": "A/I AQUA UNIQA 0.75L N/G Sport",
+        "quantity": 12,
+        "price": 7.15,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108128    ",
+        "product": "A/I AQUA UNIQA 0.75L N/G Sport ELLA",
+        "quantity": 12,
+        "price": 7.15,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108128    ",
+        "product": "A/I AQUA UNIQA 0.75L N/G Sport  ZERO",
+        "quantity": 12,
+        "price": 7.15,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108128    ",
+        "product": "Porumb p/u pop-corn 450 gr./12",
+        "quantity": 12,
+        "price": 16.68,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108129    ",
+        "product": "MAIONEZA Provansall 250 g PET",
+        "quantity": 6,
+        "price": 16.38,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108129    ",
+        "product": "MUSTAR DE MASA 200g pet",
+        "quantity": 11,
+        "price": 11.75,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108129    ",
+        "product": "PUFFY hirtie igienica MAXI 9role/bax",
         "quantity": 9,
-        "price": 60,
+        "price": 4.26,
         "ext_info": "",
         "direction": ""
       },
       {
-        "id": "uAQ01099220    ",
-        "product": "A/P AQUA UNIQA 19.0 N",
-        "quantity": 1,
-        "price": 60,
+        "id": "uAQ01108130    ",
+        "product": "A/U  PLUS LEMON 1.5L",
+        "quantity": 6,
+        "price": 8,
         "ext_info": "",
         "direction": ""
       },
       {
-        "id": "uAQ01098943    ",
-        "product": "A/P AQUA UNIQA 19.0 N",
-        "quantity": 1,
-        "price": 60,
+        "id": "uAQ01108130    ",
+        "product": "CREM SODA 1.5L BAUTURA TOPIC",
+        "quantity": 6,
+        "price": 6.4,
         "ext_info": "",
         "direction": ""
       },
       {
-        "id": "uAQ01098925    ",
-        "product": "A/U CRISTALINA 19.0L N/G",
+        "id": "uAQ01108130    ",
+        "product": "LIMONADA 1.5L BAUTURA TOPIC",
+        "quantity": 6,
+        "price": 6.4,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108130    ",
+        "product": "Otet de masa 9% 1L (квадратный)",
+        "quantity": 24,
+        "price": 9.22,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108130    ",
+        "product": "Otet de mere 5% 1L (квадратный)",
+        "quantity": 24,
+        "price": 9.41,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108131    ",
+        "product": "A/U  PLUS LEMON 1.5L",
+        "quantity": 18,
+        "price": 8,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108131    ",
+        "product": "A/U  PLUS MAR 1.5L",
+        "quantity": 6,
+        "price": 8,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108131    ",
+        "product": "A/U CRISTALINA 3.0L F/G",
+        "quantity": 4,
+        "price": 8,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108132    ",
+        "product": "Porumb p/u pop-corn 200 gr. /30",
+        "quantity": 5,
+        "price": 7.68,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108132    ",
+        "product": "Porumb p/u pop-corn 300 gr./20",
+        "quantity": 5,
+        "price": 11.46,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108132    ",
+        "product": "Porumb p/u pop-corn 450 gr./12",
+        "quantity": 4,
+        "price": 16.68,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108132    ",
+        "product": "PUFFY hirtie igienica MAXI 9role/bax",
+        "quantity": 36,
+        "price": 4.26,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108211    ",
+        "product": "A/U CRISTALINA 3.0L gaz",
+        "quantity": 4,
+        "price": 8,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108211    ",
+        "product": "CVAS DEREVENSCHII 1.5L",
+        "quantity": 6,
+        "price": 7.2,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108211    ",
+        "product": "TUTI FRUTI 0.5L",
+        "quantity": 12,
+        "price": 4.4,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108211    ",
+        "product": "TUTI FRUTI 1.5L BAUTURA TOPIC",
+        "quantity": 6,
+        "price": 6.4,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108211    ",
+        "product": "ANANAS 1.5L BAUTURA TOPIC",
+        "quantity": 6,
+        "price": 6.4,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108211    ",
+        "product": "CREM SODA 3.0L",
+        "quantity": 4,
+        "price": 9.2,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108211    ",
+        "product": "LIMONADA 3.0L",
+        "quantity": 4,
+        "price": 9.2,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108243    ",
+        "product": "A/I AQUA UNIQA 3.5 N",
+        "quantity": 4,
+        "price": 10.4,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108243    ",
+        "product": "A/M ROUA ARGINTIE 3.0 gaz",
         "quantity": 1,
-        "price": 50,
+        "price": 5.13,
+        "ext_info": "Брак",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108243    ",
+        "product": "CVAS 3.0L",
+        "quantity": 8,
+        "price": 10.4,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108243    ",
+        "product": "KU LIME&PEPPERMINT 1.5L",
+        "quantity": 12,
+        "price": 10.4,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108243    ",
+        "product": "KU MERE-PERE 1.5L",
+        "quantity": 6,
+        "price": 10.4,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108243    ",
+        "product": "Bors acru 0.5L pet./15",
+        "quantity": 3,
+        "price": 6.1,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108244    ",
+        "product": "Pahar carton AQUA UNIQA 180ml/50 buc",
+        "quantity": 50,
+        "price": 13.5,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108244    ",
+        "product": "Bors acru 0.5L pet./15",
+        "quantity": 15,
+        "price": 6.1,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108245    ",
+        "product": "A/I AQUA UNIQA 6.0+1.0 N",
+        "quantity": 6,
+        "price": 16.65,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108245    ",
+        "product": "A/I AQUA UNIQA 3.5 N",
+        "quantity": 4,
+        "price": 10.4,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108245    ",
+        "product": "A/I AQUA UNIQA 0.75L N/G Sport",
+        "quantity": 6,
+        "price": 7.15,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108245    ",
+        "product": "Hrana conservata pt pisici РRОХВОСТ (gaina) 85g/25",
+        "quantity": 3,
+        "price": 4.5,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108245    ",
+        "product": "Hrana conservata pt pisici РRОХВОСТ (vitel) 85g/25",
+        "quantity": 3,
+        "price": 4.5,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108245    ",
+        "product": "Hrana conservata pt pisici РRОХВОСТ (curcan) 85g/25",
+        "quantity": 3,
+        "price": 4.5,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108245    ",
+        "product": "Hrana conservata pt pisici РRОХВОСТ (iepure) 85g/25",
+        "quantity": 3,
+        "price": 4.5,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108245    ",
+        "product": "Hrana conservata pt pisici РRОХВОСТ (peste) 85g/25",
+        "quantity": 3,
+        "price": 4.5,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108245    ",
+        "product": "Hrana conservata pt pisici РRОХВОСТ(somon-foreli) 415g/12",
+        "quantity": 2,
+        "price": 13.5,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108245    ",
+        "product": "Hrana conservata pt pisici РRОХВОСТ(gaina) 415g/12",
+        "quantity": 2,
+        "price": 13.5,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108245    ",
+        "product": "Hrana conservata pt pisici РRОХВОСТ(iepure) 415g/12",
+        "quantity": 2,
+        "price": 13.5,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108246    ",
+        "product": "Bors acru 0.5L pet./15",
+        "quantity": 15,
+        "price": 6.1,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108246    ",
+        "product": "Bors acru 1L pet./6",
+        "quantity": 6,
+        "price": 8.65,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108246    ",
+        "product": "MUSTAR DE MASA 200g pet",
+        "quantity": 6,
+        "price": 11.75,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108246    ",
+        "product": "Otet de masa 6% 0.5L",
+        "quantity": 6,
+        "price": 5.83,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108246    ",
+        "product": "Otet de masa 9% 0.5L",
+        "quantity": 6,
+        "price": 6.3,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108246    ",
+        "product": "Otet de mere 5% 0.5L",
+        "quantity": 4,
+        "price": 6.96,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108468    ",
+        "product": "MAIONEZA Provansall 250 g PET",
+        "quantity": 5,
+        "price": 16.38,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108468    ",
+        "product": "A/I AQUA UNIQA 6.0+1.0 N",
+        "quantity": 2,
+        "price": 16.65,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108468    ",
+        "product": "A/I AQUA UNIQA 3.5 N",
+        "quantity": 4,
+        "price": 10.4,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108468    ",
+        "product": "A/I AQUA UNIQA 0.66 N/G",
+        "quantity": 12,
+        "price": 4.8,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108468    ",
+        "product": "A/I AQUA UNIQA 0.75L N/G Sport LEMON",
+        "quantity": 12,
+        "price": 7.15,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108468    ",
+        "product": "A/I AQUA UNIQA 0.75L N/G Sport ELLA",
+        "quantity": 12,
+        "price": 7.15,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108468    ",
+        "product": "A/I AQUA UNIQA 0.75L N/G Sport",
+        "quantity": 6,
+        "price": 7.15,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108468    ",
+        "product": "A/U CRISTALINA 3.0L gaz",
+        "quantity": 16,
+        "price": 8,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108468    ",
+        "product": "A/M ROUA ARGINTIE 1.5  mediu gaz",
+        "quantity": 6,
+        "price": 5.6,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108468    ",
+        "product": "A/M ROUA ARGINTIE 3.0 gaz",
+        "quantity": 4,
+        "price": 7.6,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108468    ",
+        "product": "Bors acru 0.5L pet./15",
+        "quantity": 8,
+        "price": 6.1,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108468    ",
+        "product": "Bors acru 1L pet./6",
+        "quantity": 6,
+        "price": 8.65,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108468    ",
+        "product": "Porumb p/u pop-corn 300 gr./20",
+        "quantity": 5,
+        "price": 11.46,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108468    ",
+        "product": "MUSTAR DE MASA 200g pet",
+        "quantity": 5,
+        "price": 11.75,
+        "ext_info": "",
+        "direction": ""
+      },
+      {
+        "id": "uAQ01108468    ",
+        "product": "Otet de mere 5% 1L (квадратный)",
+        "quantity": 3,
+        "price": 9.41,
         "ext_info": "",
         "direction": ""
       }
