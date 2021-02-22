@@ -173,22 +173,23 @@ func getOrders(c echo.Context) error {
 
 func postOrders(c echo.Context) error {
 	var (
-		order  Order
+		// order  Order
 		orders Orders
 	)
-	if err := c.Bind(&order); err != nil {
+	if err := c.Bind(&orders); err != nil {
 		log.Println(err)
 	}
-	err := db.Select(&orders, "SELECT * FROM orders WHERE id = ?", order.ID)
-	if err != nil {
-		log.Println(err)
-	}
-	err = db.Select(&order.Consists, "SELECT product, quantity, price, ext_info FROM consists WHERE orders_id = ?", order.ID)
-	if err != nil {
-		log.Println(err)
-	}
-	orders[0].Consists = order.Consists
-	return c.JSON(http.StatusOK, orders)
+	// err := db.Select(&orders, "SELECT * FROM orders WHERE id = ?", order.ID)
+	// if err != nil {
+	// 	log.Println(err)
+	// }
+	// err = db.Select(&order.Consists, "SELECT product, quantity, price, ext_info FROM consists WHERE orders_id = ?", order.ID)
+	// if err != nil {
+	// 	log.Println(err)
+	// }
+	// orders[0].Consists = order.Consists
+	// return c.JSON(http.StatusOK, orders)
+	return c.NoContent(http.StatusOK)
 }
 
 func login(c echo.Context) error {
