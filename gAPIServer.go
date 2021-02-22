@@ -42,10 +42,10 @@ func main() {
 	e.POST("/login", login)
 	g := e.Group("/data", middleware.JWT([]byte("gelibert")))
 	g.GET("/couriers", getCouriers)
-	g.PUT("/geodata", putGeodata)
+	g.POST("/geodata", postGeodata)
 	g.GET("/clients", getClients)
 	g.GET("/orders", getOrders)
-	g.PUT("/orders", putOrders)
+	g.POST("/orders", postOrders)
 	// Start server
 	// e.HideBanner=true
 	e.Logger.Fatal(e.Start(":1323"))
@@ -81,7 +81,7 @@ func getCouriers(c echo.Context) error {
 	return c.JSON(http.StatusOK, couriers[0])
 }
 
-func putGeodata(c echo.Context) error {
+func postGeodata(c echo.Context) error {
 	var geodata Geodata
 	if err := c.Bind(&geodata); err != nil {
 		log.Println(err)
@@ -171,7 +171,7 @@ func getOrders(c echo.Context) error {
 	return c.JSON(http.StatusOK, orders)
 }
 
-func putOrders(c echo.Context) error {
+func postOrders(c echo.Context) error {
 	var (
 		order  Order
 		orders Orders
