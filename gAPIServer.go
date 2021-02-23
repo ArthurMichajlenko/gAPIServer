@@ -53,18 +53,7 @@ func main() {
 }
 
 // Handlers
-// func hello(c echo.Context) error {
-// 	return c.String(http.StatusOK, "Hello World")
-// }
 func hello(c echo.Context) error {
-	// var res Response1C
-	// jsonFile, err := os.Open("Response1C.json")
-	// if err != nil {
-	// 	return err
-	// }
-	// defer jsonFile.Close()
-	// res.FillFrom1C(jsonFile, db)
-	// return c.JSON(http.StatusOK, res)
 	return c.String(http.StatusOK, "Hello World!")
 }
 
@@ -77,7 +66,6 @@ func getCouriers(c echo.Context) error {
 	if err != nil {
 		log.Println(err)
 	}
-	// return c.JSON(http.StatusOK, couriers)
 	return c.JSON(http.StatusOK, couriers[0])
 }
 
@@ -179,16 +167,7 @@ func postOrders(c echo.Context) error {
 	if err := c.Bind(&orders); err != nil {
 		log.Println(err)
 	}
-	// err := db.Select(&orders, "SELECT * FROM orders WHERE id = ?", order.ID)
-	// if err != nil {
-	// 	log.Println(err)
-	// }
-	// err = db.Select(&order.Consists, "SELECT product, quantity, price, ext_info FROM consists WHERE orders_id = ?", order.ID)
-	// if err != nil {
-	// 	log.Println(err)
-	// }
-	// orders[0].Consists = order.Consists
-	// return c.JSON(http.StatusOK, orders)
+	log.Println(orders)
 	return c.NoContent(http.StatusOK)
 }
 
