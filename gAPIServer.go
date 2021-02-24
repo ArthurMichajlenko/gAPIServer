@@ -160,14 +160,27 @@ func getOrders(c echo.Context) error {
 }
 
 func postOrders(c echo.Context) error {
-	var (
-		// order  Order
-		orders Orders
-	)
+	var orders Orders
+
 	if err := c.Bind(&orders); err != nil {
 		log.Println(err)
 	}
-	log.Println(orders)
+	for _, order := range orders {
+		_, err := db.NamedExec(`REPLACE INTO orders 
+		(id, order_routlist, order_date, courier_id, client_id, payment_method, order_cost, delivered, delivery_delay, date_start, date_finish, address) VALUES 
+		(:id, :order_routlist, :order_date, :courier_id, :client_id, :payment_method, :order_cost, :delivered, :delivery_delay, :date_start, :date_finish, :address)`, &order)
+		if err != nil {
+			log.Println(err)
+		}
+		for _, consist := range order.Consists {
+			_, err = db.NamedExec(`REPLACE INTO consists
+			(id, product, quantity, price, ext_info, direction, orders_id) VALUES
+			(:id, :product, :quantity, :price, :ext_info, :direction, :orders_id)`, &consist)
+			if err != nil {
+				log.Println(err)
+			}
+		}
+	}
 	return c.NoContent(http.StatusOK)
 }
 
@@ -175,7 +188,7 @@ func login(c echo.Context) error {
 	// macAddress := c.QueryParam("macAddress")
 	macAddress := c.FormValue("macAddress")
 	var couriers Couriers
-	
+
 	var res1C Response1C
 	// From real 1C
 	err := res1C.FillFrom1C(FetchDataFromHTTP(url1C, macAddress), db)
