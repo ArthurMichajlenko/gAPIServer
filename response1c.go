@@ -114,7 +114,7 @@ func (r *Response1C) FillFrom1C(data []byte, db *sqlx.DB) error {
 			}
 			_, err := db.Exec(`INSERT INTO 
 							consists (product, quantity, price, ext_info, orders_id, direction) 
-							VALUES (?, ?, ?, ?, ?, ?)`, consist.Product, consist.Quantity, consist.Price, consist.EXTInfo, consist.ID, direction)
+							VALUES (?, ?, ?, ?, ?, ?)`, consist.Product, consist.Quantity, consist.Price, consist.ExtInfo, consist.ID, direction)
 			if err != nil {
 				log.Println(err)
 			}
@@ -159,6 +159,6 @@ type Consist1C struct {
 	Product   string  `json:"product"`
 	Quantity  float64 `json:"quantity"`
 	Price     float64 `json:"price"`
-	EXTInfo   string  `json:"ext_info" db:"ext_info"`
+	ExtInfo   string  `json:"ext_info" db:"ext_info"`
 	Direction string  `json:"direction"`
 }
