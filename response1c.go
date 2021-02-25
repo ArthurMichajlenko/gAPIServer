@@ -103,7 +103,6 @@ func (r *Response1C) FillFrom1C(data []byte, db *sqlx.DB) error {
 		}
 		for _, consist := range res.Consists {
 			var direction int
-			// var tmpConsist Consist
 			var tmpID int
 			if consist.Direction == "" {
 				direction = 0
