@@ -101,22 +101,24 @@ func (r *Response1C) FillFrom1C(data []byte, db *sqlx.DB) error {
 				log.Println(err)
 			}
 		}
-		_, err = db.Exec("TRUNCATE TABLE consists")
-		if err != nil {
-			log.Println(err)
-		}
 		for _, consist := range res.Consists {
 			var direction int
+			// var tmpConsist Consist
+			var tmpID int
 			if consist.Direction == "" {
 				direction = 0
 			} else {
 				direction = 1
 			}
-			_, err := db.Exec(`INSERT INTO 
-							consists (product, quantity, price, ext_info, orders_id, direction) 
-							VALUES (?, ?, ?, ?, ?, ?)`, consist.Product, consist.Quantity, consist.Price, consist.ExtInfo, consist.ID, direction)
-			if err != nil {
-				log.Println(err)
+			err := db.Get(&tmpID, `SELECT id FROM consists 
+			WHERE product = ? AND quantity = ? AND price = ? AND orders_id = ? AND direction = ?`, consist.Product, consist.Quantity, consist.Price, consist.ID, direction)
+			if err == sql.ErrNoRows && tmpID == 0 {
+				_, err := db.Exec(`INSERT INTO 
+								consists (product, quantity, price, ext_info, orders_id, direction) 
+								VALUES (?, ?, ?, ?, ?, ?)`, consist.Product, consist.Quantity, consist.Price, consist.ExtInfo, consist.ID, direction)
+				if err != nil {
+					log.Println(err)
+				}
 			}
 		}
 	}
