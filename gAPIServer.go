@@ -74,8 +74,8 @@ func postGeodata(c echo.Context) error {
 	if err := c.Bind(&geodata); err != nil {
 		log.Println(err)
 	}
-	_, err := db.NamedExec(`REPLACE INTO geodata (id, mac_address, courier_id, latitude, longitude, timestamp) 
-							VALUES (:id, :mac_address, :courier_id, :latitude, :longitude, :timestamp)`, &geodata)
+	_, err := db.NamedExec(`REPLACE IGNORE INTO geodata (mac_address, courier_id, latitude, longitude, timestamp) 
+							VALUES ():mac_address, :courier_id, :latitude, :longitude, :timestamp)`, &geodata)
 	if err != nil {
 		log.Println(err)
 	}
