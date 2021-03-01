@@ -1,6 +1,7 @@
 package main
 
 import (
+	"database/sql"
 	"io/ioutil"
 	"log"
 	"os"
@@ -71,13 +72,23 @@ func getCouriers(c echo.Context) error {
 
 func postGeodata(c echo.Context) error {
 	var geodata Geodata
+	var id int
 	if err := c.Bind(&geodata); err != nil {
 		log.Println(err)
 	}
-	_, err := db.NamedExec(`REPLACE IGNORE INTO geodata (mac_address, courier_id, latitude, longitude, timestamp) 
-							VALUES ():mac_address, :courier_id, :latitude, :longitude, :timestamp)`, &geodata)
-	if err != nil {
-		log.Println(err)
+	err := db.Get(&id, `SELECT id FROM geodata WHERE
+	mac_address = ? AND courier_id = ? AND timestamp = ?`, geodata.MacAddress, geodata.CourierID, geodata.TimeStamp)
+	switch err {
+	case sql.ErrNoRows:
+		_, err = db.NamedExec(`INSERT INTO geodata (mac_address, courier_id, latitude, longitude, timestamp) 
+								VALUES (:mac_address, :courier_id, :latitude, :longitude, :timestamp)`, &geodata)
+		if err != nil {
+			log.Println(err)
+		}
+	default:
+		if err != nil {
+			log.Println(err)
+		}
 	}
 	return c.NoContent(http.StatusNoContent)
 }

@@ -16,4 +16,5 @@
 gAPIServer
 gelibert.db
 test.*
+temp.*
 __debug_bin

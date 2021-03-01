@@ -32,12 +32,12 @@ type Courier struct {
 
 // Geodata geodata about courier
 type Geodata struct {
-	ID         int       `json:"id" db:"id"`
-	MacAddress string    `json:"mac_address" db:"mac_address"`
-	CourierID  string    `json:"courier_id" db:"courier_id"`
-	Latitude   float64   `json:"latitude" db:"latitude"`
-	Longitude  float64   `json:"longitude" db:"longitude"`
-	TimeStamp  time.Time `json:"timestamp" db:"timestamp"`
+	ID         int     `json:"id" db:"id"`
+	MacAddress string  `json:"mac_address" db:"mac_address"`
+	CourierID  string  `json:"courier_id" db:"courier_id"`
+	Latitude   float64 `json:"latitude" db:"latitude"`
+	Longitude  float64 `json:"longitude" db:"longitude"`
+	TimeStamp  string  `json:"timestamp" db:"timestamp"`
 }
 
 // UnmarshalGeodata decode Geodata from JSON
