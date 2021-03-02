@@ -5,7 +5,6 @@ import (
 	"encoding/json"
 	"log"
 	"net/http"
-	"time"
 
 	"github.com/dgrijalva/jwt-go"
 	"github.com/labstack/echo/v4"
@@ -28,12 +27,12 @@ func (r *Couriers) Marshal() ([]byte, error) {
 
 // Courier is a single courier
 type Courier struct {
-	ID         string    `json:"id" db:"id"`
-	MacAddress string    `json:"mac_address" db:"mac_address"`
-	Tel        string    `json:"tel" db:"tel"`
-	Name       string    `json:"name" db:"name"`
-	CarNumber  string    `json:"car_number" db:"car_number"`
-	TimeStamp  time.Time `json:"timestamp" db:"timestamp"`
+	ID         string `json:"id" db:"id"`
+	MacAddress string `json:"mac_address" db:"mac_address"`
+	Tel        string `json:"tel" db:"tel"`
+	Name       string `json:"name" db:"name"`
+	CarNumber  string `json:"car_number" db:"car_number"`
+	TimeStamp  string `json:"timestamp" db:"timestamp"`
 }
 
 // Geodata geodata about courier

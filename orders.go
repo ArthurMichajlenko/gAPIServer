@@ -37,10 +37,10 @@ type Order struct {
 	OrderCost     float64   `json:"order_cost" db:"order_cost"`
 	Delivered     int       `json:"delivered" db:"delivered"`
 	DeliveryDelay int       `json:"delivery_delay" db:"delivery_delay"`
-	DateStart     time.Time `json:"date_start" db:"date_start"`
-	DateFinish    time.Time `json:"date_finish" db:"date_finish"`
-	TimeStamp     time.Time `json:"timestamp" db:"timestamp"`
-	Address       string    `json:"address" db:"address"`
+	DateStart     string    `json:"date_start" db:"date_start"`
+	DateFinish    string    `json:"date_finish" db:"date_finish"`
+	TimeStamp     string    `json:"timestamp" db:"timestamp"`
+	Address string `json:"address" db:"address"`
 }
 
 //Consist products of Order

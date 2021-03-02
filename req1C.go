@@ -5,7 +5,6 @@ import (
 	"encoding/json"
 	"log"
 	"net/http"
-	"time"
 )
 
 // UnmarshalRequest1C ...
@@ -26,7 +25,7 @@ func (r *Request1C) PostTo1C(url string) int {
 	if err != nil {
 		log.Println(err)
 	}
-	req,err := http.NewRequest("POST", url, bytes.NewBuffer(body))
+	req, err := http.NewRequest("POST", url, bytes.NewBuffer(body))
 	if err != nil {
 		log.Println(err)
 	}
@@ -43,18 +42,18 @@ func (r *Request1C) PostTo1C(url string) int {
 
 // Request1C ...
 type Request1C struct {
-	OrderRoutlist string    `json:"order_routlist"`
-	ClientID      string    `json:"client_id"`
-	ClientName    string    `json:"client_name"`
-	ClientTel     string    `json:"client_tel"`
-	OrderID       string    `json:"order_id"`
-	OrderDate     string    `json:"order_date"`
-	PaymentMethod string    `json:"payment_method"`
-	OrderCost     float64   `json:"order_cost"`
-	Delivered     int       `json:"delivered"`
-	DeliveryDelay int       `json:"delivery_delay"`
-	DateStart     time.Time `json:"date_start"`
-	DateFinish    time.Time `json:"date_finish"`
-	TimeStamp     time.Time `json:"time_stamp"`
-	Address       string    `json:"address"`
+	OrderRoutlist string  `json:"order_routlist"`
+	ClientID      string  `json:"client_id"`
+	ClientName    string  `json:"client_name"`
+	ClientTel     string  `json:"client_tel"`
+	OrderID       string  `json:"order_id"`
+	OrderDate     string  `json:"order_date"`
+	PaymentMethod string  `json:"payment_method"`
+	OrderCost     float64 `json:"order_cost"`
+	Delivered     int     `json:"delivered"`
+	DeliveryDelay int     `json:"delivery_delay"`
+	DateStart     string  `json:"date_start"`
+	DateFinish    string  `json:"date_finish"`
+	TimeStamp     string  `json:"time_stamp"`
+	Address string `json:"address"`
 }
