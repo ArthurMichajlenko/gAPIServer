@@ -112,7 +112,32 @@ func postOrders(c echo.Context) error {
 		log.Println(err)
 	}
 	for _, order := range orders {
-		_, err := db.NamedExec(`REPLACE INTO orders 
+		var post1C Request1C
+		var client Client
+		err := db.Get(&client, "SELECT * FROM clients WHERE id = ?", order.ClientID)
+		if err != nil {
+			log.Println(err)
+		}
+		post1C.ClientID = client.ID
+		post1C.ClientName = client.Name
+		post1C.ClientTel = client.Tel
+		post1C.OrderID = order.ID
+		post1C.OrderRoutlist = order.OrderRoutlist
+		post1C.OrderDate = order.OrderDate
+		post1C.PaymentMethod = order.PaymentMethod
+		post1C.OrderCost = order.OrderCost
+		post1C.Delivered = order.Delivered
+		post1C.DeliveryDelay = order.DeliveryDelay
+		post1C.DeliveryDelay = order.DeliveryDelay
+		post1C.DateStart = order.DateStart
+		post1C.DateFinish = order.DateFinish
+		post1C.TimeStamp = order.TimeStamp
+		post1C.Address = order.Address
+		code := post1C.PostTo1C(url1CReq)
+		if code != 200 {
+			log.Printf("Error to connect 1C server. Code: %v\n", code)
+		}
+		_, err = db.NamedExec(`REPLACE INTO orders 
 		(id, order_routlist, order_date, courier_id, client_id, payment_method, order_cost, delivered, delivery_delay, date_start, date_finish, address) VALUES 
 		(:id, :order_routlist, :order_date, :courier_id, :client_id, :payment_method, :order_cost, :delivered, :delivery_delay, :date_start, :date_finish, :address)`, &order)
 		if err != nil {
