@@ -3,9 +3,14 @@ package main
 import (
 	"database/sql"
 	"encoding/json"
+	"io/ioutil"
 	"log"
+	"net/http"
+	"net/url"
+	"os"
 	"time"
 
+	"github.com/dimchansky/utfbom"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/jmoiron/sqlx"
 )
@@ -23,6 +28,40 @@ func UnmarshalResponse1C(data []byte) (Response1C, error) {
 // Marshal method write structure to jSON
 func (r *Response1C) Marshal() ([]byte, error) {
 	return json.Marshal(r)
+}
+
+// FetchDataFromHTTP read data from 1C server
+func FetchDataFromHTTP(srcURL string, macAddress string) []byte {
+	url := srcURL + url.QueryEscape(macAddress)
+	req, err := http.NewRequest("GET", url, nil)
+	if err != nil {
+		log.Println(err)
+	}
+	req.Header.Add("Authorization", "Basic TG9naXN0aWM6MTIzNA==")
+	res, err := http.DefaultClient.Do(req)
+	if err != nil {
+		log.Println(err)
+	}
+	defer res.Body.Close()
+	content, err := ioutil.ReadAll(utfbom.SkipOnly(res.Body))
+	if err != nil {
+		log.Println(err)
+	}
+	return content
+}
+
+// FetchDataFromFile read JSON file for debug purpose
+func FetchDataFromFile(file string, macAddress string) []byte {
+	jsonFile, err := os.Open(file)
+	if err != nil {
+		log.Println(err)
+	}
+	defer jsonFile.Close()
+	content, err := ioutil.ReadAll(utfbom.SkipOnly(jsonFile))
+	if err != nil {
+		log.Println(err)
+	}
+	return content
 }
 
 // FillFrom1C ...

@@ -1,8 +1,14 @@
 package main
 
 import (
+	"database/sql"
 	"encoding/json"
+	"log"
+	"net/http"
 	"time"
+
+	"github.com/dgrijalva/jwt-go"
+	"github.com/labstack/echo/v4"
 )
 
 // Couriers is array of courier
@@ -50,4 +56,39 @@ func UnmarshalGeodata(data []byte) (Geodata, error) {
 // Marshal encode Geodata to JSON
 func (r *Geodata) Marshal() ([]byte, error) {
 	return json.Marshal(r)
+}
+
+func getCouriers(c echo.Context) error {
+	var couriers Couriers
+	user := c.Get("user").(*jwt.Token)
+	claims := user.Claims.(jwt.MapClaims)
+	macAddress := claims["macAddress"].(string)
+	err := db.Select(&couriers, "SELECT id, mac_address, tel, name, car_number FROM couriers WHERE mac_address = ?", macAddress)
+	if err != nil {
+		log.Println(err)
+	}
+	return c.JSON(http.StatusOK, couriers[0])
+}
+
+func postGeodata(c echo.Context) error {
+	var geodata Geodata
+	var id int
+	if err := c.Bind(&geodata); err != nil {
+		log.Println(err)
+	}
+	err := db.Get(&id, `SELECT id FROM geodata WHERE
+	mac_address = ? AND courier_id = ? AND timestamp = ?`, geodata.MacAddress, geodata.CourierID, geodata.TimeStamp)
+	switch err {
+	case sql.ErrNoRows:
+		_, err = db.NamedExec(`INSERT INTO geodata (mac_address, courier_id, latitude, longitude, timestamp) 
+								VALUES (:mac_address, :courier_id, :latitude, :longitude, :timestamp)`, &geodata)
+		if err != nil {
+			log.Println(err)
+		}
+	default:
+		if err != nil {
+			log.Println(err)
+		}
+	}
+	return c.NoContent(http.StatusNoContent)
 }
