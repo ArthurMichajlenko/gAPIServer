@@ -87,6 +87,9 @@ func login(c echo.Context) error {
 	// claims["exp"] = time.Now().Add(time.Hour * 72).Unix()
 	// claims["exp"] = time.Now().Add(time.Minute * 30).Unix()
 	t, err := token.SignedString([]byte("gelibert"))
+	if err != nil {
+		log.Println(err)
+	}
 	return c.JSON(http.StatusOK, map[string]string{
 		"token": t,
 	})
