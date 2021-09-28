@@ -40,7 +40,7 @@ type Order struct {
 	DateStart     string    `json:"date_start" db:"date_start"`
 	DateFinish    string    `json:"date_finish" db:"date_finish"`
 	TimeStamp     string    `json:"timestamp" db:"timestamp"`
-	Address string `json:"address" db:"address"`
+	Address       string    `json:"address" db:"address"`
 }
 
 //Consist products of Order
@@ -55,6 +55,7 @@ type Consist struct {
 }
 
 func getOrders(c echo.Context) error {
+	emptyConsists := []Consist{{ID:0, Product:"Empty", Quantity: 0.00, Price: 0.00, ExtInfo: "Empty", Direction: 0, OrdersID: "Empty"}}
 	var orders Orders
 	var couriers Couriers
 	date := time.Now().Format("2006-01-02")
@@ -97,7 +98,13 @@ func getOrders(c echo.Context) error {
 		if err != nil {
 			log.Println(err)
 		}
-		orders[i].Consists = order.Consists
+		if len(order.Consists) != 0 {
+			orders[i].Consists = order.Consists
+		} else {
+			log.Println("Consists is empty")
+			emptyConsists[0].OrdersID=order.ID
+			orders[i].Consists=emptyConsists
+		}
 	}
 	if orders == nil {
 		return c.NoContent(http.StatusNoContent)
