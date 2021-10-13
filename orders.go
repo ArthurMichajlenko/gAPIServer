@@ -79,7 +79,7 @@ func getOrders(c echo.Context) error {
 	}
 	if c.QueryParam("client") == "" {
 		err := db.Select(&orders, `SELECT * FROM orders 
-								  WHERE courier_id = ? AND date_start >= ? AND date_start < DATE_ADD(?, INTERVAL 1 DAY)`, couriers[0].ID, date, date)
+								  WHERE courier_id = ? AND ((date_start >= ? AND date_start < DATE_ADD(?, INTERVAL 1 DAY)) OR (delivered = -1))`, couriers[0].ID, date, date)
 		if err != nil {
 			log.Println(err)
 		}
