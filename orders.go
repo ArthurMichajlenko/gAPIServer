@@ -55,7 +55,7 @@ type Consist struct {
 }
 
 func getOrders(c echo.Context) error {
-	emptyConsists := []Consist{{ID:0, Product:"Empty", Quantity: 0.00, Price: 0.00, ExtInfo: "Empty", Direction: 0, OrdersID: "Empty"}}
+	emptyConsists := []Consist{{ID: 0, Product: "Empty", Quantity: 0.00, Price: 0.00, ExtInfo: "Empty", Direction: 0, OrdersID: "Empty"}}
 	var orders Orders
 	var couriers Couriers
 	date := time.Now().Format("2006-01-02")
@@ -78,8 +78,12 @@ func getOrders(c echo.Context) error {
 		log.Println(err)
 	}
 	if c.QueryParam("client") == "" {
+		// * Work with delivered
+		// err := db.Select(&orders, `SELECT * FROM orders
+		//   WHERE courier_id = ? AND ((date_start >= ? AND date_start < DATE_ADD(?, INTERVAL 1 DAY)) OR (delivered = -1))`, couriers[0].ID, date, date)
+		// * Work without delivered
 		err := db.Select(&orders, `SELECT * FROM orders 
-								  WHERE courier_id = ? AND ((date_start >= ? AND date_start < DATE_ADD(?, INTERVAL 1 DAY)) OR (delivered = -1))`, couriers[0].ID, date, date)
+								  WHERE courier_id = ? AND date_start >= ? AND date_start < DATE_ADD(?, INTERVAL 1 DAY)`, couriers[0].ID, date, date)
 		if err != nil {
 			log.Println(err)
 		}
@@ -102,8 +106,8 @@ func getOrders(c echo.Context) error {
 			orders[i].Consists = order.Consists
 		} else {
 			log.Println("Consists is empty")
-			emptyConsists[0].OrdersID=order.ID
-			orders[i].Consists=emptyConsists
+			emptyConsists[0].OrdersID = order.ID
+			orders[i].Consists = emptyConsists
 		}
 	}
 	if orders == nil {
