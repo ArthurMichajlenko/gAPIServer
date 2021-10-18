@@ -55,5 +55,5 @@ type Request1C struct {
 	DateStart     string  `json:"date_start"`
 	DateFinish    string  `json:"date_finish"`
 	TimeStamp     string  `json:"time_stamp"`
-	Address string `json:"address"`
+	Address       string  `json:"address"`
 }
