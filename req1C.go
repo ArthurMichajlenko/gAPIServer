@@ -43,6 +43,7 @@ func (r *Request1C) PostTo1C(url string) int {
 // Request1C ...
 type Request1C struct {
 	OrderRoutlist string  `json:"order_routlist"`
+	DateRoutlist  string  `json:"date_routlist"`
 	ClientID      string  `json:"client_id"`
 	ClientName    string  `json:"client_name"`
 	ClientTel     string  `json:"client_tel"`
