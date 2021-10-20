@@ -94,4 +94,3 @@ func login(c echo.Context) error {
 		"token": t,
 	})
 }
-

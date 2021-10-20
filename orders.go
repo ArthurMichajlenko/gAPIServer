@@ -29,6 +29,7 @@ func (r *Orders) Marshal() ([]byte, error) {
 type Order struct {
 	ID            string    `json:"id" db:"id"`
 	OrderRoutlist string    `json:"order_routlist" db:"order_routlist"`
+	DateRoutlist  string    `json:"date_routlist" db:"date_routlist"`
 	OrderDate     string    `json:"order_date" db:"order_date"`
 	CourierID     string    `json:"courier_id" db:"courier_id"`
 	ClientID      string    `json:"client_id" db:"client_id"`
@@ -58,8 +59,11 @@ func getOrders(c echo.Context) error {
 	emptyConsists := []Consist{{ID: 0, Product: "Empty", Quantity: 0.00, Price: 0.00, ExtInfo: "Empty", Direction: 0, OrdersID: "Empty"}}
 	var orders Orders
 	var couriers Couriers
-	date := time.Now().Format("2006-01-02")
 	// date := time.Now().AddDate(0,0,1).Format("2006-01-02")
+	// * Format date for work with DateStart
+	// date := time.Now().Format("2006-01-02")
+	// * Format date for work with DateRoutlist
+	date := time.Now().Format("20060102")
 	user := c.Get("user").(*jwt.Token)
 	claims := user.Claims.(jwt.MapClaims)
 	macAddress := claims["macAddress"].(string)
@@ -82,8 +86,11 @@ func getOrders(c echo.Context) error {
 		// err := db.Select(&orders, `SELECT * FROM orders
 		//   WHERE courier_id = ? AND ((date_start >= ? AND date_start < DATE_ADD(?, INTERVAL 1 DAY)) OR (delivered = -1))`, couriers[0].ID, date, date)
 		// * Work without delivered
+		// err := db.Select(&orders, `SELECT * FROM orders
+		// 						  WHERE courier_id = ? AND date_start >= ? AND date_start < DATE_ADD(?, INTERVAL 1 DAY)`, couriers[0].ID, date, date)
+		// * Work with DateRoutlist
 		err := db.Select(&orders, `SELECT * FROM orders 
-								  WHERE courier_id = ? AND date_start >= ? AND date_start < DATE_ADD(?, INTERVAL 1 DAY)`, couriers[0].ID, date, date)
+								  WHERE courier_id = ? AND date_routlist = ?`, couriers[0].ID, date)
 		if err != nil {
 			log.Println(err)
 		}
@@ -129,16 +136,17 @@ func postOrders(c echo.Context) error {
 		if err != nil {
 			log.Println(err)
 		}
+		order.DateRoutlist = time.Now().Format("20060102")
 		post1C.ClientID = client.ID
 		post1C.ClientName = client.Name
 		post1C.ClientTel = client.Tel
 		post1C.OrderID = order.ID
 		post1C.OrderRoutlist = order.OrderRoutlist
+		post1C.DateRoutlist = order.DateRoutlist
 		post1C.OrderDate = order.OrderDate
 		post1C.PaymentMethod = order.PaymentMethod
 		post1C.OrderCost = order.OrderCost
 		post1C.Delivered = order.Delivered
-		post1C.DeliveryDelay = order.DeliveryDelay
 		post1C.DeliveryDelay = order.DeliveryDelay
 		post1C.DateStart = order.DateStart
 		post1C.DateFinish = order.DateFinish
@@ -149,8 +157,8 @@ func postOrders(c echo.Context) error {
 			log.Printf("Error to connect 1C server. Code: %v\n", code)
 		}
 		_, err = db.NamedExec(`REPLACE INTO orders 
-		(id, order_routlist, order_date, courier_id, client_id, payment_method, order_cost, delivered, delivery_delay, date_start, date_finish, address) VALUES 
-		(:id, :order_routlist, :order_date, :courier_id, :client_id, :payment_method, :order_cost, :delivered, :delivery_delay, :date_start, :date_finish, :address)`, &order)
+		(id, order_routlist, date_routlist, order_date, courier_id, client_id, payment_method, order_cost, delivered, delivery_delay, date_start, date_finish, address) VALUES 
+		(:id, :order_routlist, :date_routlist, :order_date, :courier_id, :client_id, :payment_method, :order_cost, :delivered, :delivery_delay, :date_start, :date_finish, :address)`, &order)
 		if err != nil {
 			log.Println(err)
 		}
