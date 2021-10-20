@@ -136,6 +136,7 @@ func postOrders(c echo.Context) error {
 		if err != nil {
 			log.Println(err)
 		}
+		order.DateRoutlist = time.Now().Format("20060102")
 		post1C.ClientID = client.ID
 		post1C.ClientName = client.Name
 		post1C.ClientTel = client.Tel
