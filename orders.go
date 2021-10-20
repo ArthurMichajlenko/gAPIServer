@@ -157,7 +157,7 @@ func postOrders(c echo.Context) error {
 		}
 		_, err = db.NamedExec(`REPLACE INTO orders 
 		(id, order_routlist, date_routlist, order_date, courier_id, client_id, payment_method, order_cost, delivered, delivery_delay, date_start, date_finish, address) VALUES 
-		(:id, :order_routlist, date_routlist, :order_date, :courier_id, :client_id, :payment_method, :order_cost, :delivered, :delivery_delay, :date_start, :date_finish, :address)`, &order)
+		(:id, :order_routlist, :date_routlist, :order_date, :courier_id, :client_id, :payment_method, :order_cost, :delivered, :delivery_delay, :date_start, :date_finish, :address)`, &order)
 		if err != nil {
 			log.Println(err)
 		}
