@@ -130,8 +130,8 @@ func (r *Response1C) FillFrom1C(data []byte, db *sqlx.DB) error {
 			case sql.ErrNoRows:
 				// log.Println("Orders not found")
 				_, err1 := db.Exec(`INSERT INTO 
-									orders (id, courier_id, client_id, payment_method, order_cost, address, order_routlist, date_routlist=?, order_date, date_start) 
-									VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+									orders (id, courier_id, client_id, payment_method, order_cost, address, order_routlist, date_routlist, order_date, date_start) 
+									VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
 									`, client.OrderID, res.CourierID, client.ClientID, client.PaymentMethod, client.OrderCost, client.Address, client.OrderRoutlist, client.DateRoutlist, client.OrderDate, time.Now().Format("2006-01-02 15:04:05"))
 				if err1 != nil {
 					log.Println(err1)
@@ -174,7 +174,8 @@ type Response1CElement struct {
 	Clients          []Client1C  `json:"Clients"`
 	Consists         []Consist1C `json:"Consists"`
 }
-
+// Type deliver fix when field "delivered" on initialization is string and then is int
+type deliver interface{}
 // Client1C ...
 type Client1C struct {
 	OrderRoutlist string  `json:"order_routlist"`
@@ -186,7 +187,7 @@ type Client1C struct {
 	OrderDate     string  `json:"order_date"`
 	PaymentMethod string  `json:"payment_method"`
 	OrderCost     float64 `json:"order_cost"`
-	Delivered     int     `json:"delivered"`
+	Delivered     deliver `json:"delivered"`
 	DeliveryDelay string  `json:"delivery_delay"`
 	DateStart     string  `json:"date_start"`
 	DateFinish    string  `json:"date_finish"`
@@ -203,3 +204,4 @@ type Consist1C struct {
 	ExtInfo   string  `json:"ext_info" db:"ext_info"`
 	Direction string  `json:"direction"`
 }
+
