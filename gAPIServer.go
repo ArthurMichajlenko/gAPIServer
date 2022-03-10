@@ -19,8 +19,10 @@ var url1CReq string
 
 func init() {
 	var err error
-	url1CResp = "http://194.31.42.254:88/Trade/hs/ObmenLogistica/V1/Document?IMEI="
-	url1CReq = "http://194.31.42.254:88/Trade/hs/ObmenLogistica/postjson"
+	url1CResp = "http://10.10.11.79:88/Trade/hs/ObmenLogistica/V1/Document?IMEI="
+	url1CReq = "http://10.10.11.79:88/Trade/hs/ObmenLogistica/postjson"
+	// url1CResp = "http://194.31.42.254:88/Trade/hs/ObmenLogistica/V1/Document?IMEI="
+	// url1CReq = "http://194.31.42.254:88/Trade/hs/ObmenLogistica/postjson"
 	// url1CResp = "http://10.10.11.158/trade/hs/ObmenLogistica/V1/Document?IMEI="
 	// url1CReq = "http://10.10.11.158/trade/hs/ObmenLogistica/postjson"
 	// db, err = sqlx.Connect("mysql", "root:Nfnmzyf@tcp(localhost:3306)/gelibert?parseTime=true&loc=Local")
