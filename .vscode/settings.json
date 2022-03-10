@@ -16,5 +16,10 @@
             "previewLimit": 50
         }
     ],
-    "sqltools.useNodeRuntime": true
+    "sqltools.useNodeRuntime": true,
+    "inlineSQL.dbDriver": "mysql",
+    "inlineSQL.dbPassword": "Nfnmzyf",
+    "inlineSQL.dbPort": 3306,
+    "inlineSQL.dbUser": "root",
+    "inlineSQL.enableDBIntegration": true
 }
