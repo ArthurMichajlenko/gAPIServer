@@ -35,6 +35,21 @@ type Courier struct {
 	TimeStamp  string `json:"timestamp" db:"timestamp"`
 }
 
+// Geodatas is array of geodata
+type Geodatas []Geodata
+
+//UnmarshalGeodatas decode geodatas from JSON
+func UnmarshalGeodatas(data []byte) (Geodatas, error) {
+	var r Geodatas
+	err := json.Unmarshal(data, &r)
+	return r, err
+}
+
+// Marshal encode geodatas to JSON
+func (r *Geodatas) Marshal() ([]byte, error) {
+	return json.Marshal(r)
+}
+
 // Geodata geodata about courier
 type Geodata struct {
 	ID         int     `json:"id" db:"id"`
@@ -90,4 +105,13 @@ func postGeodata(c echo.Context) error {
 		}
 	}
 	return c.NoContent(http.StatusNoContent)
+}
+
+func getGeodatas(c echo.Context) error {
+	var geodata Geodatas
+	err := db.Select(&geodata, "SELECT * FROM geodata WHERE mac_address = ? AND timestamp >= ? AND timestamp <= ? ORDER BY timestamp", c.QueryParam("mac_address"), c.QueryParam("data_start"), c.QueryParam("data_finish"))
+	if err != nil {
+		log.Println(err)
+	}
+	return c.JSON(http.StatusOK, geodata)
 }
