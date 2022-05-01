@@ -84,6 +84,16 @@ func getCouriers(c echo.Context) error {
 	return c.JSON(http.StatusOK, couriers[0])
 }
 
+func getAllCouriers(c echo.Context) error {
+	var couriers Couriers
+	// err := db.Select(&couriers, "SELECT id, mac_address, tel, name, car_number, timestamp FROM couriers")
+	err := db.Select(&couriers, "SELECT * FROM couriers")
+	if err != nil {
+		log.Println(err)
+	}
+	return c.JSON(http.StatusOK, couriers)
+}
+
 func postGeodata(c echo.Context) error {
 	var geodata Geodata
 	var id int

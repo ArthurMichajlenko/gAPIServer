@@ -44,6 +44,7 @@ func main() {
 	e.POST("/login", login)
 	g := e.Group("/data", middleware.JWT([]byte("gelibert")))
 	g.GET("/couriers", getCouriers)
+	g.GET("/all_couriers", getAllCouriers)
 	g.GET("/geodatas", getGeodatas)
 	g.POST("/geodata", postGeodata)
 	g.GET("/clients", getClients)
