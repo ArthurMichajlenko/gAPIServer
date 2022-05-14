@@ -87,7 +87,8 @@ func getCouriers(c echo.Context) error {
 func getAllCouriers(c echo.Context) error {
 	var couriers Couriers
 	// err := db.Select(&couriers, "SELECT id, mac_address, tel, name, car_number, timestamp FROM couriers")
-	err := db.Select(&couriers, "SELECT * FROM couriers ORDER BY name")
+	// err := db.Select(&couriers, "SELECT * FROM couriers ORDER BY name")
+	err := db.Select(&couriers, `SELECT * FROM couriers WHERE mac_address <> "admin" ORDER BY name`)
 	if err != nil {
 		log.Println(err)
 	}
